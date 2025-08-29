@@ -11,108 +11,122 @@ const Hero = () => {
         <img 
           src={heroMainPortrait} 
           alt="Professional Portrait" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-midnight-blue/40 via-transparent to-midnight-blue/20"></div>
       </div>
 
       {/* Content Overlay */}
       <div className="relative z-10 min-h-screen flex flex-col">
+        {/* Top Navigation Area */}
+        <div className="pt-20">
+          <div className="container mx-auto px-6">
+            <div className="flex justify-end">
+              {/* Service Menu Card */}
+              <div className="bg-ivory/95 backdrop-blur-sm rounded-2xl p-6 shadow-elegant max-w-xs">
+                <div className="space-y-3">
+                  <div className="text-midnight-blue font-medium">Home</div>
+                  <div className="text-midnight-blue/70 text-sm">About us</div>
+                  <div className="text-midnight-blue font-medium">Service</div>
+                  <div className="text-midnight-blue/70 text-sm">Blog</div>
+                  <div className="text-midnight-blue/70 text-sm">Pricing</div>
+                </div>
+                <div className="mt-6 flex items-center gap-2">
+                  <ArrowDown className="w-4 h-4 text-burgundy transform rotate-45" />
+                  <span className="text-midnight-blue/70 text-xs">More info about our services</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Main Content Area */}
         <div className="flex-1 flex items-center">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-12 gap-6 items-center min-h-[70vh]">
-              {/* Left Content - Main Text */}
-              <div className="col-span-12 lg:col-span-7 space-y-6">
-                <div className="space-y-4">
-                  <h1 className="text-7xl md:text-9xl font-bold leading-[0.9] text-white">
+            <div className="grid grid-cols-12 gap-6">
+              {/* Left Content - Massive Typography */}
+              <div className="col-span-12 lg:col-span-8 xl:col-span-9">
+                <div className="space-y-2">
+                  <h1 className="text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-bold leading-[0.85] text-ivory tracking-tight">
                     Strategies
                   </h1>
-                  <h2 className="text-4xl md:text-5xl font-light text-white/90 ml-12">
-                    For branding
-                  </h2>
+                  <div className="ml-8 md:ml-16 lg:ml-24">
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-ivory/90 tracking-wide">
+                      For branding
+                    </h2>
+                  </div>
                 </div>
               </div>
 
-              {/* Right Content - Portfolio Images & Pricing */}
-              <div className="col-span-12 lg:col-span-5 space-y-6">
-                {/* Service Card */}
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 ml-auto max-w-xs">
-                  <div className="space-y-2">
-                    <div className="text-white/80 text-sm">Service</div>
-                    <div className="text-white/60 text-xs">Blog</div>
-                    <div className="text-white/60 text-xs">Pricing</div>
-                  </div>
-                  <div className="mt-4 flex items-center gap-2">
-                    <ArrowDown className="w-4 h-4 text-orange-400" />
-                    <span className="text-white/80 text-xs">More info about our services</span>
-                  </div>
-                </div>
-
-                {/* Portfolio Images */}
-                <div className="space-y-4">
-                  <div className="w-48 h-32 rounded-xl overflow-hidden shadow-xl ml-auto">
+              {/* Right Content - Portfolio Showcase */}
+              <div className="col-span-12 lg:col-span-4 xl:col-span-3">
+                <div className="space-y-6 relative">
+                  {/* Portfolio Image 1 */}
+                  <div className="w-64 h-40 rounded-2xl overflow-hidden shadow-elegant ml-auto">
                     <img 
                       src={brandingWork2} 
-                      alt="Branding Work" 
+                      alt="Creative Branding Work" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="w-40 h-40 rounded-xl overflow-hidden shadow-xl">
+                  
+                  {/* Portfolio Image 2 */}
+                  <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-elegant">
                     <img 
                       src={brandingWork1} 
                       alt="Branding Strategy" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                </div>
 
-                {/* Branding Label */}
-                <div className="text-white/90 text-2xl font-light tracking-wider transform -rotate-90 origin-left absolute right-8 top-1/2">
-                  Branding
+                  {/* Vertical Text Label */}
+                  <div className="absolute -right-6 top-1/2 transform -translate-y-1/2">
+                    <div className="text-ivory/80 text-3xl font-light tracking-widest transform -rotate-90 whitespace-nowrap origin-center">
+                      Branding
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section - Dark with Description & Clients */}
-        <div className="bg-gradient-to-r from-black/80 to-black/60 backdrop-blur-sm">
-          <div className="container mx-auto px-6 py-12">
-            <div className="grid grid-cols-12 gap-6 items-center">
-              {/* Description */}
-              <div className="col-span-12 lg:col-span-6">
-                <h3 className="text-2xl text-white/90 font-light leading-relaxed">
-                  We are dedicated to empowering <span className="text-white font-medium">businesses</span>
+        {/* Bottom Section - Mission Statement & Clients */}
+        <div className="bg-gradient-to-r from-midnight-blue/90 to-midnight-blue/70 backdrop-blur-md border-t border-ivory/10">
+          <div className="container mx-auto px-6 py-16">
+            <div className="grid grid-cols-12 gap-8 items-center">
+              {/* Mission Statement */}
+              <div className="col-span-12 lg:col-span-7">
+                <h3 className="text-3xl lg:text-4xl text-ivory font-light leading-relaxed">
+                  We are dedicated to empowering <span className="text-moss-green font-medium">businesses</span>
                   <br />
                   with strategic insights, innovative solutions and
                   <br />
-                  expert guidance
+                  <span className="text-moss-green font-medium">expert guidance</span>
                 </h3>
               </div>
 
-              {/* Client Logos */}
-              <div className="col-span-12 lg:col-span-6">
-                <div className="text-white/60 text-sm mb-4">Our successful clients</div>
-                <div className="flex flex-wrap gap-6 items-center">
-                  {/* Logo placeholders */}
-                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white/60 text-xs font-mono">LOGO</span>
+              {/* Client Portfolio */}
+              <div className="col-span-12 lg:col-span-5">
+                <div className="text-ivory/60 text-sm mb-6 font-medium">Our successful clients</div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="aspect-square bg-ivory/10 rounded-xl flex items-center justify-center border border-ivory/20 hover:bg-ivory/20 transition-colors">
+                    <span className="text-ivory/70 text-xs font-medium">SERVICE</span>
                   </div>
-                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white/60 text-xs font-mono">BRAND</span>
+                  <div className="aspect-square bg-ivory/10 rounded-xl flex items-center justify-center border border-ivory/20 hover:bg-ivory/20 transition-colors">
+                    <span className="text-ivory/70 text-xs font-medium">BRAND</span>
                   </div>
-                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white/60 text-xs font-mono">CORP</span>
+                  <div className="aspect-square bg-ivory/10 rounded-xl flex items-center justify-center border border-ivory/20 hover:bg-ivory/20 transition-colors">
+                    <span className="text-ivory/70 text-xs font-medium">POWER</span>
                   </div>
-                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white/60 text-xs font-mono">TECH</span>
+                  <div className="aspect-square bg-ivory/10 rounded-xl flex items-center justify-center border border-ivory/20 hover:bg-ivory/20 transition-colors">
+                    <span className="text-ivory/70 text-xs font-medium">TECH</span>
                   </div>
-                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white/60 text-xs font-mono">START</span>
+                  <div className="aspect-square bg-ivory/10 rounded-xl flex items-center justify-center border border-ivory/20 hover:bg-ivory/20 transition-colors">
+                    <span className="text-ivory/70 text-xs font-medium">START</span>
                   </div>
-                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white/60 text-xs font-mono">SCALE</span>
+                  <div className="aspect-square bg-ivory/10 rounded-xl flex items-center justify-center border border-ivory/20 hover:bg-ivory/20 transition-colors">
+                    <span className="text-ivory/70 text-xs font-medium">SCALE</span>
                   </div>
                 </div>
               </div>
@@ -120,15 +134,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Pricing Card - Floating */}
-        <div className="absolute bottom-8 right-8 bg-white rounded-2xl p-6 shadow-2xl max-w-xs">
+        {/* Floating Pricing Card */}
+        <div className="absolute bottom-8 right-8 bg-ivory rounded-2xl p-6 shadow-elegant border border-ivory/20">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">R</span>
+            <div className="w-12 h-12 bg-midnight-blue rounded-xl flex items-center justify-center">
+              <span className="text-ivory font-bold text-lg">R</span>
             </div>
             <div>
-              <div className="font-bold text-xl text-foreground">Regensia</div>
-              <div className="text-2xl font-bold text-foreground">$129 USD</div>
+              <div className="font-bold text-xl text-midnight-blue">Regensia</div>
+              <div className="text-2xl font-bold text-umber">$129 USD</div>
             </div>
           </div>
         </div>
