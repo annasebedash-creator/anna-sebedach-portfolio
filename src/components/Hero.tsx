@@ -11,7 +11,7 @@ const Hero = () => {
         
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 max-w-4xl mx-auto px-6">
-            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight">a professional portfolio</h1>
+            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight">My professional showcase</h1>
             <p className="hero-sub text-lg md:text-xl text-ivory/90 max-w-2xl mx-auto">
               Bridging technology and creativity to build meaningful digital experiences
             </p>
@@ -32,7 +32,7 @@ const Hero = () => {
       <section className="info-slice h-[30vh] flex items-center bg-zinc-500 rounded-none">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <p className="text-lg md:text-xl font-light leading-relaxed text-slate-700">
+            <p className="text-lg leading-relaxed text-slate-50 md:text-xl font-light">
               I bridge the gap between <span className="text-moss-green font-medium text-slate-100">technology and business strategy</span>, creating solutions that drive meaningful impact.
             </p>
 
