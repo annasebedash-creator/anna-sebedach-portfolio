@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import heroMainPortrait from "@/assets/hero-main-portrait.jpg";
 import brandingWork1 from "@/assets/branding-work-1.jpg";
 import brandingWork2 from "@/assets/branding-work-2.jpg";
 import aesthetic1 from "@/assets/aesthetic-1.jpg";
@@ -7,7 +6,7 @@ const Hero = () => {
   return <div>
       {/* Section 1: Hero Slice */}
       <section className="hero-slice relative h-[calc(35vh+3cm)] overflow-hidden">
-        <img src={heroMainPortrait} alt="Where Code Meets Design" className="w-full h-[calc(100%+3cm)] object-cover object-center absolute top-0 left-0" />
+        <img src="/lovable-uploads/8c0b4771-2ce3-4c62-89fc-cb006c684225.png" alt="Where Code Meets Design" className="w-full h-[calc(100%+3cm)] object-cover object-center absolute top-0 left-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
         <div className="absolute inset-0 flex items-center justify-center">
