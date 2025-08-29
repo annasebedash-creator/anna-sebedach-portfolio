@@ -1,128 +1,135 @@
-import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Mail, Play, Sparkles } from "lucide-react";
-import heroMain from "@/assets/hero-main.jpg";
-import techVisual from "@/assets/tech-visual.jpg";
-import strategyVisual from "@/assets/strategy-visual.jpg";
+import { ArrowDown } from "lucide-react";
+import heroMainPortrait from "@/assets/hero-main-portrait.jpg";
+import brandingWork1 from "@/assets/branding-work-1.jpg";
+import brandingWork2 from "@/assets/branding-work-2.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-background to-accent/5">
-      {/* Animated Background Elements */}
+    <section id="home" className="min-h-screen relative overflow-hidden">
+      {/* Main Hero Image Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-accent/10 rounded-full blur-lg animate-bounce delay-500"></div>
+        <img 
+          src={heroMainPortrait} 
+          alt="Professional Portrait" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
       </div>
 
-      <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Left Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
-              <Sparkles className="w-4 h-4" />
-              Innovation & Excellence
-            </div>
-
-            {/* Main Heading */}
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
-                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Strategic
-                </span>
-                <br />
-                <span className="text-foreground">Solutions</span>
-                <br />
-                <span className="text-2xl md:text-3xl font-light text-muted-foreground">
-                  For Modern Business
-                </span>
-              </h1>
-              
-              <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Empowering businesses with strategic insights, innovative solutions, 
-                and expert guidance to navigate the digital landscape.
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="group relative overflow-hidden bg-primary hover:bg-primary/90 shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <Mail className="w-5 h-5 mr-2 relative z-10" />
-                <span className="relative z-10">Start Conversation</span>
-              </Button>
-              <Button variant="outline" size="lg" className="group border-2 border-primary/20 hover:border-primary/40 bg-background/50 backdrop-blur-sm">
-                <Play className="w-5 h-5 mr-2 transition-transform group-hover:scale-110" />
-                View Portfolio
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="flex gap-8 pt-8 border-t border-border">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-secondary">5+</div>
-                <div className="text-sm text-muted-foreground">Years</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent">99%</div>
-                <div className="text-sm text-muted-foreground">Success</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Visual Content */}
-          <div className="relative">
-            {/* Main Image */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src={heroMain} 
-                alt="Professional IT & Business Solutions" 
-                className="w-full h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
-              
-              {/* Floating Cards */}
-              <div className="absolute top-6 right-6 bg-background/90 backdrop-blur-md rounded-xl p-4 shadow-lg border border-border animate-pulse">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium">Live Projects</span>
+      {/* Content Overlay */}
+      <div className="relative z-10 min-h-screen flex flex-col">
+        {/* Main Content Area */}
+        <div className="flex-1 flex items-center">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-12 gap-6 items-center min-h-[70vh]">
+              {/* Left Content - Main Text */}
+              <div className="col-span-12 lg:col-span-7 space-y-6">
+                <div className="space-y-4">
+                  <h1 className="text-7xl md:text-9xl font-bold leading-[0.9] text-white">
+                    Strategies
+                  </h1>
+                  <h2 className="text-4xl md:text-5xl font-light text-white/90 ml-12">
+                    For branding
+                  </h2>
                 </div>
-                <div className="text-2xl font-bold text-primary mt-1">12</div>
+              </div>
+
+              {/* Right Content - Portfolio Images & Pricing */}
+              <div className="col-span-12 lg:col-span-5 space-y-6">
+                {/* Service Card */}
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 ml-auto max-w-xs">
+                  <div className="space-y-2">
+                    <div className="text-white/80 text-sm">Service</div>
+                    <div className="text-white/60 text-xs">Blog</div>
+                    <div className="text-white/60 text-xs">Pricing</div>
+                  </div>
+                  <div className="mt-4 flex items-center gap-2">
+                    <ArrowDown className="w-4 h-4 text-orange-400" />
+                    <span className="text-white/80 text-xs">More info about our services</span>
+                  </div>
+                </div>
+
+                {/* Portfolio Images */}
+                <div className="space-y-4">
+                  <div className="w-48 h-32 rounded-xl overflow-hidden shadow-xl ml-auto">
+                    <img 
+                      src={brandingWork2} 
+                      alt="Branding Work" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-40 h-40 rounded-xl overflow-hidden shadow-xl">
+                    <img 
+                      src={brandingWork1} 
+                      alt="Branding Strategy" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Branding Label */}
+                <div className="text-white/90 text-2xl font-light tracking-wider transform -rotate-90 origin-left absolute right-8 top-1/2">
+                  Branding
+                </div>
               </div>
             </div>
-
-            {/* Secondary Images */}
-            <div className="absolute -bottom-6 -left-6 w-48 h-36 rounded-2xl overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-              <img 
-                src={techVisual} 
-                alt="Technology Innovation" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="absolute -top-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden shadow-xl transform -rotate-6 hover:rotate-0 transition-transform duration-300">
-              <img 
-                src={strategyVisual} 
-                alt="Business Strategy" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute top-1/2 left-0 w-4 h-4 bg-primary rounded-full animate-ping"></div>
-            <div className="absolute bottom-1/4 right-0 w-6 h-6 bg-secondary/30 rounded-full"></div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center space-y-2 text-muted-foreground">
-            <span className="text-sm font-medium">Discover More</span>
-            <ArrowDown className="w-5 h-5" />
+        {/* Bottom Section - Dark with Description & Clients */}
+        <div className="bg-gradient-to-r from-black/80 to-black/60 backdrop-blur-sm">
+          <div className="container mx-auto px-6 py-12">
+            <div className="grid grid-cols-12 gap-6 items-center">
+              {/* Description */}
+              <div className="col-span-12 lg:col-span-6">
+                <h3 className="text-2xl text-white/90 font-light leading-relaxed">
+                  We are dedicated to empowering <span className="text-white font-medium">businesses</span>
+                  <br />
+                  with strategic insights, innovative solutions and
+                  <br />
+                  expert guidance
+                </h3>
+              </div>
+
+              {/* Client Logos */}
+              <div className="col-span-12 lg:col-span-6">
+                <div className="text-white/60 text-sm mb-4">Our successful clients</div>
+                <div className="flex flex-wrap gap-6 items-center">
+                  {/* Logo placeholders */}
+                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/60 text-xs font-mono">LOGO</span>
+                  </div>
+                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/60 text-xs font-mono">BRAND</span>
+                  </div>
+                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/60 text-xs font-mono">CORP</span>
+                  </div>
+                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/60 text-xs font-mono">TECH</span>
+                  </div>
+                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/60 text-xs font-mono">START</span>
+                  </div>
+                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white/60 text-xs font-mono">SCALE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Card - Floating */}
+        <div className="absolute bottom-8 right-8 bg-white rounded-2xl p-6 shadow-2xl max-w-xs">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+              <span className="text-white font-bold text-lg">R</span>
+            </div>
+            <div>
+              <div className="font-bold text-xl text-foreground">Regensia</div>
+              <div className="text-2xl font-bold text-foreground">$129 USD</div>
+            </div>
           </div>
         </div>
       </div>
