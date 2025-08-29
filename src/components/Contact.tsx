@@ -33,19 +33,19 @@ const Contact = () => {
                 {
                   icon: <Mail className="w-5 h-5" />,
                   label: "Email",
-                  value: "your.email@domain.com",
-                  link: "mailto:your.email@domain.com"
+                  value: "anna.sebedash.email@gmail.com",
+                  link: "mailto:anna.sebedash.email@gmail.com"
                 },
                 {
                   icon: <Phone className="w-5 h-5" />,
                   label: "Phone",
-                  value: "+1 (555) 123-4567",
-                  link: "tel:+15551234567"
+                  value: "+358 44 312 3030",
+                  link: "tel:+358443123030"
                 },
                 {
                   icon: <MapPin className="w-5 h-5" />,
                   label: "Location",
-                  value: "New York, NY",
+                  value: "Helsinki, Finland",
                   link: null
                 }
               ].map((contact, index) => (
@@ -127,7 +127,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-primary">Message</label>
                 <Textarea 
-                  placeholder="Tell me about your project, goals, and how I can help you achieve them..."
+                  placeholder="Tell me about your project..."
                   className="min-h-[120px]"
                 />
               </div>
