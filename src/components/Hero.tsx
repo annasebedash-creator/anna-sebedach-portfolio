@@ -7,7 +7,6 @@ import aesthetic2 from "@/assets/aesthetic-2.jpg";
 import aesthetic3 from "@/assets/aesthetic-3.jpg";
 
 const Hero = () => {
-  console.log("Hero component rendering");
   return (
     <div className="min-h-screen">
       {/* Layer 1: Hero Layer - Full-bleed image with strong titles */}
