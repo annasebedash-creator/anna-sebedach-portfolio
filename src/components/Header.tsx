@@ -24,16 +24,22 @@ const Header = () => {
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none">
       <div className="container mx-auto px-[24px] py-4">
-        <div className="flex items-center justify-between px-0 rounded-none mx-0 my-0 py-0">
-          <div className="text-2xl font-bold text-ivory">Portfolio
-
-        </div>
+        <div className="flex items-center justify-between mx-0 px-0 py-0 my-0 rounded-none">
+          <div className="text-2xl font-bold text-ivory">
+            Portfolio
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {menuItems.map(item => <a key={item.label} href={item.href} className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium">
+            {menuItems.map(item => (
+              <a 
+                key={item.label} 
+                href={item.href} 
+                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium"
+              >
                 {item.label}
-              </a>)}
+              </a>
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
