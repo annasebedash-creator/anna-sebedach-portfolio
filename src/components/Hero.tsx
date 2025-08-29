@@ -51,51 +51,7 @@ const Hero = () => {
       </section>
 
       {/* Section 3: Projects Slice */}
-      <section className="projects-slice bg-ivory h-[35vh]">
-        <div className="container mx-auto px-6 h-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
-            
-            {/* Left: Large Project */}
-            <div className="proj-large group cursor-pointer">
-              <div className="relative h-full overflow-hidden rounded-xl shadow-lg">
-                <img src={aesthetic1} alt="IoT Dashboard Project" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-midnight-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-ivory opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-xl font-semibold mb-1">IoT Dashboard</h3>
-                  <p className="text-sm opacity-90">Real-time monitoring</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Two Stacked Projects */}
-            <div className="space-y-6">
-              
-              {/* Right Top */}
-              <div className="proj-small group cursor-pointer">
-                <div className="relative h-[calc(50%-12px)] overflow-hidden rounded-xl shadow-lg">
-                  <img src={brandingWork1} alt="Bias Lab Project" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-burgundy/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-3 left-3 text-midnight-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h4 className="text-lg font-semibold">Bias Lab</h4>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Bottom */}
-              <div className="proj-small group cursor-pointer">
-                <div className="relative h-[calc(50%-12px)] overflow-hidden rounded-xl shadow-lg">
-                  <img src={brandingWork2} alt="3D Visualization" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-moss-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-3 left-3 text-midnight-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h4 className="text-lg font-semibold">3D Visualization</h4>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>;
 };
 export default Hero;
