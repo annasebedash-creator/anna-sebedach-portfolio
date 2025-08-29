@@ -34,24 +34,22 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {skillCategories.map((category, index) => <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-3">
-                  <div className={category.color}>
-                    {category.icon}
-                  </div>
-                  <span className="text-xl font-bold">{category.title}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-sm py-1 px-3 hover:text-primary-foreground transition-colors duration-200 bg-zinc-600">
-                      {skill}
-                    </Badge>)}
-                </div>
-              </CardContent>
-            </Card>)}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="text-center space-y-4">
+              <div className={`${category.color} mx-auto w-fit`}>
+                {category.icon}
+              </div>
+              <h3 className="text-lg font-semibold">{category.title}</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {category.skills.map((skill, skillIndex) => (
+                  <Badge key={skillIndex} variant="secondary" className="text-xs">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Key Metrics */}
