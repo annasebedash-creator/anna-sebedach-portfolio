@@ -11,7 +11,7 @@ const Hero = () => {
         
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 max-w-4xl mx-auto px-6">
-            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight">Anna Sebedach portfolio</h1>
+            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight">a professional portfolio</h1>
             <p className="hero-sub text-lg md:text-xl text-ivory/90 max-w-2xl mx-auto">
               Bridging technology and creativity to build meaningful digital experiences
             </p>
