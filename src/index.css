@@ -123,3 +123,25 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Three-section layout utilities */
+  .hero-slice {
+    scroll-snap-align: start;
+  }
+  
+  .info-slice {
+    scroll-snap-align: start;
+  }
+  
+  .projects-slice {
+    scroll-snap-align: start;
+  }
+  
+  /* Optional: Add scroll snapping to container */
+  .snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+}
