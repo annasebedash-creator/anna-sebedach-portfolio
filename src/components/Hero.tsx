@@ -32,7 +32,7 @@ const Hero = () => {
       <section className="info-slice h-[30vh] flex items-center bg-zinc-500 rounded-none">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <p className="text-lg leading-relaxed text-slate-50 md:text-xl font-medium">
+            <p className="text-lg leading-relaxed text-slate-50 md:text-xl font-light">
               I bridge the gap between <span className="text-moss-green font-medium text-slate-100">technology and business strategy</span>, creating solutions that drive meaningful impact.
             </p>
 
