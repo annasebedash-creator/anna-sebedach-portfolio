@@ -7,7 +7,7 @@ const Hero = () => {
   return <div>
       {/* Section 1: Hero Slice */}
       <section className="hero-slice relative h-[35vh] overflow-hidden">
-        <img src={heroMainPortrait} alt="Where Code Meets Design" className="w-full h-full object-cover object-center" />
+        <img src={heroMainPortrait} alt="Where Code Meets Design" className="w-full h-[calc(100%+3cm)] object-cover object-center absolute top-0 left-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
         <div className="absolute inset-0 flex items-center justify-center">

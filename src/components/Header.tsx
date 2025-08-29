@@ -31,7 +31,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {menuItems.map(item => {})}
+            {menuItems.map(item => (
+              <a 
+                key={item.label} 
+                href={item.href} 
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
