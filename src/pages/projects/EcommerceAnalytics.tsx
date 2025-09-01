@@ -2,11 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink, Github, Calendar, Users, Target } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const EcommerceAnalytics = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleBackToProjects = () => {
+    navigate("/#projects");
+    setTimeout(() => {
+      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -15,10 +29,13 @@ const EcommerceAnalytics = () => {
         <section className="py-16 bg-gradient-primary">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <Link to="/#projects" className="inline-flex items-center space-x-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors">
+              <button 
+                onClick={handleBackToProjects}
+                className="inline-flex items-center space-x-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors cursor-pointer"
+              >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Projects</span>
-              </Link>
+              </button>
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 E-Commerce Analytics Platform
               </h1>
