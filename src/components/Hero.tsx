@@ -6,7 +6,7 @@ const Hero = () => {
   return <div>
       {/* Section 1: Hero Slice */}
       <section className="hero-slice relative h-[calc(35vh+3cm)] overflow-hidden">
-        <img src="/lovable-uploads/8c0b4771-2ce3-4c62-89fc-cb006c684225.png" alt="Where Code Meets Design" className="w-full h-[calc(100%+3cm)] object-cover object-center absolute top-[-2cm] left-0" />
+        <img src="/lovable-uploads/0cfb88b1-b7e7-4855-8bfb-c8d781a2665f.png" alt="Where Code Meets Design" className="w-full h-[calc(100%+3cm)] object-cover object-center absolute top-[-2cm] left-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
         <div className="absolute inset-0 flex items-center justify-center">
@@ -20,7 +20,9 @@ const Hero = () => {
               <Button className="bg-burgundy hover:bg-burgundy/90 text-ivory px-6 py-3">
                 View Projects
               </Button>
-              <Button variant="outline" className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-6 py-3">Download CV</Button>
+              <Button variant="outline" className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-6 py-3">
+                Get in Touch
+              </Button>
             </div>
           </div>
         </div>
@@ -30,18 +32,18 @@ const Hero = () => {
       <section className="info-slice h-[30vh] flex items-center bg-zinc-500 rounded-none">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <p className="text-lg leading-relaxed text-slate-50 font-light md:text-xl">
+            <p className="text-lg leading-relaxed text-slate-50 md:text-xl font-light">
               I bridge the gap between <span className="text-moss-green font-medium text-slate-100">technology and business strategy</span>, creating solutions that drive meaningful impact.
             </p>
 
             <div className="info-points flex flex-wrap justify-center items-center gap-6 md:gap-8">
-              <span className="text-ivory/80 font-medium text-base">IT Systems</span>
+              <span className="text-ivory/80 text-sm font-medium">IT Systems</span>
               <div className="w-1 h-1 bg-ivory/40 rounded-full"></div>
-              <span className="text-ivory/80 font-medium text-base">Data Viz</span>
+              <span className="text-ivory/80 text-sm font-medium">Data Viz</span>
               <div className="w-1 h-1 bg-ivory/40 rounded-full"></div>
-              <span className="text-ivory/80 font-medium text-base">UX/Product</span>
+              <span className="text-ivory/80 text-sm font-medium">UX/Product</span>
               <div className="w-1 h-1 bg-ivory/40 rounded-full"></div>
-              <span className="text-ivory/80 font-medium text-base">Psychology</span>
+              <span className="text-ivory/80 text-sm font-medium">Psychology</span>
             </div>
           </div>
         </div>
