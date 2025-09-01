@@ -48,11 +48,25 @@ const Experience = () => {
       skills: ["Digital Media", "Video Production", "Article Writing", "Communications"]
     },
     {
+      title: "Volunteer",
+      company: "Slush",
+      location: "Helsinki, Finland",
+      period: "2021 - 2023",
+      type: "Volunteer",
+      description: "Active volunteer at one of Europe's leading startup and tech conferences. Contributed to various aspects of event organization, attendee experience, and community building in the Nordic startup ecosystem.",
+      achievements: [
+        "Successfully supported major tech conference operations and logistics",
+        "Engaged with international startup community and industry professionals",
+        "Contributed to creating memorable experiences for thousands of attendees"
+      ],
+      skills: ["Event Management", "Community Building", "International Relations", "Team Collaboration", "Startup Ecosystem"]
+    },
+    {
       title: "Journalist (Youth Voice - Editorial)",
       company: "Various Media Outlets",
       location: "Helsinki, Finland",
       period: "2021 - 2022",
-      type: "Freelance",
+      type: "Volunteer",
       description: "Worked as journalist in various media including newspapers, TV, blogs, and social media stories. Actively participated in the voluntary Youth Voice editorial team with roles in ideation, planning, chairing, directing, interviewing, writing, editing, and information retrieval.",
       achievements: [
         "Published article in Helsingin Sanomat addressing youth well-being",
@@ -62,11 +76,11 @@ const Experience = () => {
       skills: ["Journalism", "Editorial Work", "Interviewing", "Writing", "Research"]
     },
     {
-      title: "Short Movie Script Writer",
+      title: "Script Writer",
       company: "Independent Projects",
       location: "Helsinki, Finland",
       period: "2022",
-      type: "Freelance",
+      type: "Project",
       description: "Learning and refining creative writing skills with the goal to create scripts for short films from scratch. Gained valuable insights into brainstorming, collaborative creation, and enhanced general writing skills.",
       achievements: [
         "Successfully completed script writing projects from conception to final draft",
