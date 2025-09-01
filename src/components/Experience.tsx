@@ -5,32 +5,19 @@ import { Calendar, MapPin, Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Dance Teacher (KPOP, Dance for Kids)",
-      company: "Sport Club Vantaa",
-      location: "Vantaa, Finland",
+      title: "Content Creator & Brand Manager",
+      company: "GIRLHOOD Dance Studio",
+      location: "Helsinki, Finland",
       period: "2023 - Present",
       type: "Full-time",
-      description: "Hold 3 regular dance classes per week in addition to weekly substitute classes. Teach groups ranging from general dance for 5-6 year olds, Kpop for 7-9 year olds, and Kpop for 10+ year olds. Prepare and lead performances for local showcases.",
+      description: "Lead Commercial and Kpop classes while managing comprehensive brand strategy and content creation. Direct competitive Kpop group preparation for competitions, performances, and video productions. Actively engage audiences through multi-platform marketing campaigns and community building.",
       achievements: [
-        "Substitute as Family Circus instructor for 3 year olds and their parents",
-        "Lead performances at Street Dance for 7-9 year olds",
-        "Participate in different camp activities throughout the season"
+        "Successfully promote classes through strategic social media campaigns and audience engagement",
+        "Lead team content creation initiatives to expand studio reach and brand awareness",
+        "Manage end-to-end video production from concept to post-production editing",
+        "Build and maintain strong brand identity across all touchpoints and communications"
       ],
-      skills: ["Dance Instruction", "KPOP", "Performance Choreography", "Youth Development"]
-    },
-    {
-      title: "Dance Teacher (Street, KPOP, Projects)",
-      company: "The City of Helsinki",
-      location: "Helsinki, Finland",
-      period: "2022 - Present",
-      type: "Full-time",
-      description: "Hold 4-5 regular dance classes per week plus weekly substitute classes. Create different style choreographies and lead creative dance projects. Produce professional video content with unique choreographies.",
-      achievements: [
-        "Created multiple unique choreographies for different skill levels",
-        "Produced professional video content for dance performances",
-        "Prepared seasonal performances for groups ranging from 9-15 year olds"
-      ],
-      skills: ["Street Dance", "KPOP", "Choreography", "Video Production", "Creative Direction"]
+      skills: ["Content Creation", "Video Editing", "Brand Management", "Audience Engagement", "Social Media Marketing", "Team Leadership"]
     },
     {
       title: "Youth Work Leader (Teaching, Content Creation)",
