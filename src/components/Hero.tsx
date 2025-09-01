@@ -37,13 +37,13 @@ const Hero = () => {
             </p>
 
             <div className="info-points flex flex-wrap justify-center items-center gap-6 md:gap-8">
-              <span className="text-ivory/80 text-sm font-medium">IT Systems</span>
+              <span className="text-ivory/80 text-base font-medium">IT Systems</span>
               <div className="w-1 h-1 bg-ivory/40 rounded-full"></div>
-              <span className="text-ivory/80 text-sm font-medium">Data Viz</span>
+              <span className="text-ivory/80 text-base font-medium">Data Viz</span>
               <div className="w-1 h-1 bg-ivory/40 rounded-full"></div>
-              <span className="text-ivory/80 text-sm font-medium">UX/Product</span>
+              <span className="text-ivory/80 text-base font-medium">UX/Product</span>
               <div className="w-1 h-1 bg-ivory/40 rounded-full"></div>
-              <span className="text-ivory/80 text-sm font-medium">Psychology</span>
+              <span className="text-ivory/80 text-base font-medium">Psychology</span>
             </div>
           </div>
         </div>
