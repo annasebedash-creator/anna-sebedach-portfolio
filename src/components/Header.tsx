@@ -1,8 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY < lastScrollY || currentScrollY < 50) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
   const menuItems = [{
     label: "Home",
     href: "#home"
@@ -22,7 +42,7 @@ const Header = () => {
     label: "Contact",
     href: "#contact"
   }];
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none">
+  return <header className={`fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto px-[24px] py-4">
         <div className="flex items-center justify-between mx-0 px-0 py-0 my-0 rounded-none">
           <div className="text-2xl font-bold text-ivory">
