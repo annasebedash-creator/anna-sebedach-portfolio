@@ -55,7 +55,7 @@ const Header = () => {
               <a 
                 key={item.label} 
                 href={item.href} 
-                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium"
+                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium text-xl"
               >
                 {item.label}
               </a>
@@ -71,7 +71,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-ivory/20">
             <nav className="flex flex-col space-y-4 pt-4">
-              {menuItems.map(item => <a key={item.label} href={item.href} className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+              {menuItems.map(item => <a key={item.label} href={item.href} className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2 text-xl" onClick={() => setIsMenuOpen(false)}>
                   {item.label}
                 </a>)}
             </nav>
