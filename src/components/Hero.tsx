@@ -6,7 +6,7 @@ const Hero = () => {
   return <div>
       {/* Section 1: Hero Slice */}
       <section className="hero-slice relative h-[calc(35vh+3cm)] overflow-hidden">
-        <img src="/lovable-uploads/0cfb88b1-b7e7-4855-8bfb-c8d781a2665f.png" alt="Where Code Meets Design" className="w-full h-[calc(100%+5cm)] object-cover object-center absolute top-[-3.5cm] left-0 scale-75" />
+        <img src="/lovable-uploads/0cfb88b1-b7e7-4855-8bfb-c8d781a2665f.png" alt="Where Code Meets Design" className="w-full h-[calc(100%+5cm)] object-cover object-center absolute top-[-3.5cm] left-0 scale-105" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
         <div className="absolute inset-0 flex items-center justify-center">
