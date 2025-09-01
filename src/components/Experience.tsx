@@ -5,60 +5,88 @@ import { Calendar, MapPin, Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Business Analyst",
-      company: "TechCorp Solutions",
-      location: "New York, NY",
+      title: "Dance Teacher (KPOP, Dance for Kids)",
+      company: "Sport Club Vantaa",
+      location: "Vantaa, Finland",
+      period: "2023 - Present",
+      type: "Full-time",
+      description: "Hold 3 regular dance classes per week in addition to weekly substitute classes. Teach groups ranging from general dance for 5-6 year olds, Kpop for 7-9 year olds, and Kpop for 10+ year olds. Prepare and lead performances for local showcases.",
+      achievements: [
+        "Substitute as Family Circus instructor for 3 year olds and their parents",
+        "Lead performances at Street Dance for 7-9 year olds",
+        "Participate in different camp activities throughout the season"
+      ],
+      skills: ["Dance Instruction", "KPOP", "Performance Choreography", "Youth Development"]
+    },
+    {
+      title: "Dance Teacher (Street, KPOP, Projects)",
+      company: "The City of Helsinki",
+      location: "Helsinki, Finland",
       period: "2022 - Present",
       type: "Full-time",
-      description: "Lead digital transformation initiatives and data-driven decision making across multiple business units. Manage cross-functional teams and drive process optimization projects.",
+      description: "Hold 4-5 regular dance classes per week plus weekly substitute classes. Create different style choreographies and lead creative dance projects. Produce professional video content with unique choreographies.",
       achievements: [
-        "Reduced operational costs by 25% through process automation",
-        "Led implementation of new CRM system for 500+ users",
-        "Developed KPI dashboards improving decision-making speed by 40%"
+        "Created multiple unique choreographies for different skill levels",
+        "Produced professional video content for dance performances",
+        "Prepared seasonal performances for groups ranging from 9-15 year olds"
       ],
-      skills: ["Strategic Planning", "Data Analysis", "Project Management", "Stakeholder Management"]
+      skills: ["Street Dance", "KPOP", "Choreography", "Video Production", "Creative Direction"]
     },
     {
-      title: "Full-Stack Developer",
-      company: "Innovation Labs",
-      location: "San Francisco, CA",
-      period: "2020 - 2022",
-      type: "Full-time",
-      description: "Developed scalable web applications and maintained cloud infrastructure. Collaborated with product teams to deliver high-quality software solutions.",
-      achievements: [
-        "Built 5+ production applications serving 10k+ users",
-        "Improved application performance by 60%",
-        "Mentored 3 junior developers"
-      ],
-      skills: ["React", "Node.js", "AWS", "MongoDB", "Docker"]
-    },
-    {
-      title: "IT Consultant",
-      company: "FreelanceWork",
-      location: "Remote",
-      period: "2019 - 2020",
+      title: "Youth Work Leader (Teaching, Content Creation)",
+      company: "The City of Helsinki",
+      location: "Helsinki, Finland",
+      period: "Summer 2022",
       type: "Contract",
-      description: "Provided IT consulting services to small and medium businesses, focusing on digital transformation and system integration.",
+      description: "Diverse roles in content production, media marketing, customer service, and youth work. Responsible for promoting classes on various social media platforms, creating content that garnered tens of thousands of views.",
       achievements: [
-        "Successfully completed 15+ projects",
-        "Achieved 98% client satisfaction rate",
-        "Specialized in cloud migration and data security"
+        "Successfully created dance performances at Triple Mall",
+        "Established K-pop beginners group at Pasila Youth Center from scratch",
+        "Prepared and taught dance classes to all ages in styles like Hiphop, Street and Hiphop"
       ],
-      skills: ["System Integration", "Cloud Migration", "Data Security", "Client Relations"]
+      skills: ["Content Creation", "Social Media Marketing", "Youth Work", "Dance Instruction"]
     },
     {
-      title: "Junior Business Analyst",
-      company: "DataFlow Inc",
-      location: "Boston, MA",
-      period: "2018 - 2019",
-      type: "Full-time",
-      description: "Analyzed business processes and supported data-driven initiatives. Created detailed reports and recommendations for management.",
+      title: "Communication Office Trainee",
+      company: "Ruuti Communications Office",
+      location: "Helsinki, Finland",
+      period: "Summer 2021",
+      type: "Internship",
+      description: "Actively involved in using digital media, producing complete videos for Helsinki's channels across various projects. Played key role in crafting articles for Helsingin Sanomat throughout the entire process.",
       achievements: [
-        "Streamlined reporting processes saving 20 hours/week",
-        "Created comprehensive business requirements documentation",
-        "Supported successful ERP implementation"
+        "Promoted important initiatives from young people extensively across the metropolitan area",
+        "Described as inspirational multitasker with positive impact on all projects",
+        "Successfully completed comprehensive digital media production projects"
       ],
-      skills: ["Business Process Analysis", "Requirements Gathering", "SQL", "Excel"]
+      skills: ["Digital Media", "Video Production", "Article Writing", "Communications"]
+    },
+    {
+      title: "Journalist (Youth Voice - Editorial)",
+      company: "Various Media Outlets",
+      location: "Helsinki, Finland",
+      period: "2021 - 2022",
+      type: "Freelance",
+      description: "Worked as journalist in various media including newspapers, TV, blogs, and social media stories. Actively participated in the voluntary Youth Voice editorial team with roles in ideation, planning, chairing, directing, interviewing, writing, editing, and information retrieval.",
+      achievements: [
+        "Published article in Helsingin Sanomat addressing youth well-being",
+        "Successfully managed two-person editorial team projects",
+        "Gained recognition for comprehensive journalistic work"
+      ],
+      skills: ["Journalism", "Editorial Work", "Interviewing", "Writing", "Research"]
+    },
+    {
+      title: "Short Movie Script Writer",
+      company: "Independent Projects",
+      location: "Helsinki, Finland",
+      period: "2022",
+      type: "Freelance",
+      description: "Learning and refining creative writing skills with the goal to create scripts for short films from scratch. Gained valuable insights into brainstorming, collaborative creation, and enhanced general writing skills.",
+      achievements: [
+        "Successfully completed script writing projects from conception to final draft",
+        "Developed collaborative creation processes",
+        "Enhanced creative writing and storytelling abilities"
+      ],
+      skills: ["Creative Writing", "Script Writing", "Storytelling", "Collaboration"]
     }
   ];
 
@@ -70,7 +98,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A proven track record of delivering results across IT and business domains
+            A diverse background in dance instruction, content creation, and youth work
           </p>
         </div>
 
