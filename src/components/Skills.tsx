@@ -23,7 +23,7 @@ const Skills = () => {
     skills: ["Team Leadership", "Project Management", "Agile/Scrum", "Cross-functional Collaboration", "Mentoring", "Communication", "Problem Solving", "Decision Making"],
     color: "text-burgundy"
   }];
-  return <section id="skills" className="py-20 bg-gradient-subtle">
+  return <section id="skills" className="py-20 bg-ivory">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 inline-block whitespace-nowrap">
@@ -46,7 +46,7 @@ const Skills = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-sm py-1 px-3 hover:text-primary-foreground transition-colors duration-200 bg-zinc-600">
+                  {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-sm py-1 px-3 hover:text-primary-foreground transition-colors duration-200">
                       {skill}
                     </Badge>)}
                 </div>
