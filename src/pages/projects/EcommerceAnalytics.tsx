@@ -37,13 +37,13 @@ const EcommerceAnalytics = () => {
                 <span>Back to Projects</span>
               </button>
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                E-Commerce Analytics Platform
+                Finland Mental Health Research Dashboard
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                A comprehensive analytics dashboard for tracking sales performance, customer behavior, and inventory management
+                A research-grade analytical pipeline and interactive dashboard to examine the evolution of mental health indicators in Finland
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["React", "Node.js", "MongoDB", "D3.js", "AWS"].map((tag, index) => (
+                {["Python", "Streamlit", "Pandas", "THL API", "Eurostat"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -65,9 +65,7 @@ const EcommerceAnalytics = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    This comprehensive e-commerce analytics platform was designed to provide deep insights into sales performance, 
-                    customer behavior patterns, and inventory management for online retailers. The solution integrates multiple 
-                    data sources and provides real-time dashboards for business decision-making.
+                    Developed a research-grade analytical pipeline and interactive dashboard to examine the evolution of mental health indicators in Finland, including suicide burden, alcohol consumption, depressive symptoms, and antidepressant use. Integrated data from multiple public health sources (THL, Eurostat, Our World in Data) into a unified framework, performing advanced statistical analyses and generating both static reports and an interactive web-based exploration tool. The project demonstrates the combination of IT engineering, data science, and psychological theory in applied research.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
@@ -75,22 +73,22 @@ const EcommerceAnalytics = () => {
                       <div className="text-primary mx-auto w-fit">
                         <Target className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">40%</div>
-                      <div className="text-sm text-muted-foreground">Performance Increase</div>
+                      <div className="text-2xl font-bold text-primary">4</div>
+                      <div className="text-sm text-muted-foreground">Data Sources</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Users className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">10k+</div>
-                      <div className="text-sm text-muted-foreground">Active Users</div>
+                      <div className="text-2xl font-bold text-primary">Advanced</div>
+                      <div className="text-sm text-muted-foreground">Statistical Analysis</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Calendar className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">6</div>
-                      <div className="text-sm text-muted-foreground">Months Duration</div>
+                      <div className="text-2xl font-bold text-primary">Interactive</div>
+                      <div className="text-sm text-muted-foreground">Dashboard</div>
                     </div>
                   </div>
                 </CardContent>
@@ -104,35 +102,35 @@ const EcommerceAnalytics = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Real-time Analytics</h4>
+                      <h4 className="font-semibold text-primary">Automated Data Ingestion</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Live sales tracking and reporting</li>
-                        <li>• Customer behavior analysis</li>
-                        <li>• Revenue forecasting models</li>
+                        <li>• Heterogeneous APIs integration (THL, Eurostat, OWID)</li>
+                        <li>• Caching and error handling</li>
+                        <li>• Modular pipeline architecture</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Inventory Management</h4>
+                      <h4 className="font-semibold text-primary">Statistical Analysis</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Automated stock level monitoring</li>
-                        <li>• Predictive restocking alerts</li>
-                        <li>• Supply chain optimization</li>
+                        <li>• Correlation and lag analysis</li>
+                        <li>• Interrupted time series modeling</li>
+                        <li>• Advanced statistical methods</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Data Visualization</h4>
+                      <h4 className="font-semibold text-primary">Reporting & Visualization</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Interactive D3.js charts</li>
-                        <li>• Customizable dashboard widgets</li>
-                        <li>• Export capabilities for reports</li>
+                        <li>• Publication-ready static reports (PDF)</li>
+                        <li>• Interactive Streamlit dashboard</li>
+                        <li>• Data filtering and download capabilities</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Cloud Infrastructure</h4>
+                      <h4 className="font-semibold text-primary">Framework Integration</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• AWS cloud deployment</li>
-                        <li>• Scalable architecture</li>
-                        <li>• Secure data handling</li>
+                        <li>• Psychological theory integration</li>
+                        <li>• Contextual annotations</li>
+                        <li>• Professional dashboard design</li>
                       </ul>
                     </div>
                   </div>
@@ -147,39 +145,39 @@ const EcommerceAnalytics = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-4 gap-4">
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Frontend</h4>
+                      <h4 className="font-semibold text-primary mb-2">Languages/Libraries</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>React.js</p>
-                        <p>TypeScript</p>
-                        <p>D3.js</p>
-                        <p>Tailwind CSS</p>
+                        <p>Python</p>
+                        <p>Pandas</p>
+                        <p>NumPy</p>
+                        <p>Statsmodels</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Backend</h4>
+                      <h4 className="font-semibold text-primary mb-2">Visualization</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Node.js</p>
-                        <p>Express.js</p>
-                        <p>MongoDB</p>
-                        <p>Redis</p>
+                        <p>Streamlit</p>
+                        <p>Matplotlib</p>
+                        <p>Seaborn</p>
+                        <p>Plotly</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Cloud & DevOps</h4>
+                      <h4 className="font-semibold text-primary mb-2">Data Sources</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>AWS EC2</p>
-                        <p>AWS S3</p>
-                        <p>Docker</p>
-                        <p>CI/CD</p>
+                        <p>THL Sotkanet API</p>
+                        <p>Eurostat API</p>
+                        <p>Our World in Data</p>
+                        <p>OECD Health Statistics</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Analytics</h4>
+                      <h4 className="font-semibold text-primary mb-2">Development</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Google Analytics</p>
-                        <p>Custom Tracking</p>
-                        <p>Data Pipelines</p>
-                        <p>ML Models</p>
+                        <p>Virtual environments (venv)</p>
+                        <p>Modular Python architecture</p>
+                        <p>Logging</p>
+                        <p>Markdown documentation</p>
                       </div>
                     </div>
                   </div>
