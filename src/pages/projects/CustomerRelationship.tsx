@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, ExternalLink, Github, Calendar, Users, Heart } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Calendar, Users, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -26,24 +26,24 @@ const CustomerRelationship = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 bg-burgundy">
+        <section className="py-16 bg-gradient-primary">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <button 
                 onClick={handleBackToProjects}
-                className="inline-flex items-center space-x-2 text-white/80 hover:text-white mb-6 transition-colors cursor-pointer"
+                className="inline-flex items-center space-x-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Projects</span>
               </button>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Customer Relationship Platform
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+                QualiLab – Qualitative Data Analysis Platform
               </h1>
-              <p className="text-xl text-white/90 mb-8">
-                Created a comprehensive CRM system with automated workflows, improving customer satisfaction scores by 40%
+              <p className="text-xl text-primary-foreground/90 mb-8">
+                A research-grade web application for qualitative data analysis in psychology with NLP pipelines and collaborative coding
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["React", "Express.js", "MySQL", "API Integration"].map((tag, index) => (
+                {["Next.js", "React", "Supabase", "NLP", "OpenAI API"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -65,32 +65,30 @@ const CustomerRelationship = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    This comprehensive CRM platform was designed to streamline customer interactions, automate sales processes, 
-                    and provide detailed analytics on customer behavior. The system integrates multiple communication channels 
-                    and provides a unified view of customer relationships for improved service delivery.
+                    Designed and implemented a research-grade web application for qualitative data analysis in psychology. The platform enables researchers to upload transcripts and open-ended survey responses, automatically segment and categorize the text using NLP pipelines, and collaborate on human-in-the-loop coding with inter-rater reliability statistics. QualiLab bridges IT engineering and psychological research methodology, providing both automation and rigorous control.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <Heart className="w-8 h-8" />
+                        <Target className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">40%</div>
-                      <div className="text-sm text-muted-foreground">Satisfaction Increase</div>
+                      <div className="text-2xl font-bold text-primary">NLP</div>
+                      <div className="text-sm text-muted-foreground">Automated Processing</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Users className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">5k+</div>
-                      <div className="text-sm text-muted-foreground">Customers Managed</div>
+                      <div className="text-2xl font-bold text-primary">Collaborative</div>
+                      <div className="text-sm text-muted-foreground">Review Environment</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Calendar className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">10</div>
-                      <div className="text-sm text-muted-foreground">Months Duration</div>
+                      <div className="text-2xl font-bold text-primary">Research</div>
+                      <div className="text-sm text-muted-foreground">Grade Platform</div>
                     </div>
                   </div>
                 </CardContent>
@@ -104,35 +102,35 @@ const CustomerRelationship = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Customer Management</h4>
+                      <h4 className="font-semibold text-primary">Automated Text Processing</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• 360-degree customer profiles</li>
-                        <li>• Interaction history tracking</li>
-                        <li>• Automated data enrichment</li>
+                        <li>• Upload CSV, TXT, or PDF files</li>
+                        <li>• PII redaction and metadata handling</li>
+                        <li>• Document segmentation</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Sales Automation</h4>
+                      <h4 className="font-semibold text-primary">NLP-Powered Coding</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Lead scoring and qualification</li>
-                        <li>• Automated follow-up sequences</li>
-                        <li>• Pipeline management tools</li>
+                        <li>• Sentiment and emotion analysis</li>
+                        <li>• Topic modeling with confidence scores</li>
+                        <li>• Model versioning for reproducibility</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Communication Hub</h4>
+                      <h4 className="font-semibold text-primary">Collaborative Review</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Multi-channel integration</li>
-                        <li>• Email automation campaigns</li>
-                        <li>• Real-time chat support</li>
+                        <li>• Human-in-the-loop coding workflows</li>
+                        <li>• Role-based access control</li>
+                        <li>• Keyboard-driven review interface</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
                       <h4 className="font-semibold text-primary">Analytics & Reporting</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Customer behavior analytics</li>
-                        <li>• Sales performance metrics</li>
-                        <li>• Custom dashboard creation</li>
+                        <li>• Inter-rater reliability statistics</li>
+                        <li>• Interactive dashboards</li>
+                        <li>• Publication-ready exports</li>
                       </ul>
                     </div>
                   </div>
@@ -147,39 +145,39 @@ const CustomerRelationship = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-4 gap-4">
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Frontend</h4>
+                      <h4 className="font-semibold text-primary mb-2">Frontend & UI</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>React.js</p>
-                        <p>Redux Toolkit</p>
-                        <p>Material-UI</p>
-                        <p>TypeScript</p>
+                        <p>Next.js</p>
+                        <p>React</p>
+                        <p>TailwindCSS</p>
+                        <p>Responsive design</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Backend</h4>
+                      <h4 className="font-semibold text-primary mb-2">Backend & APIs</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Express.js</p>
-                        <p>Node.js</p>
-                        <p>MySQL</p>
-                        <p>JWT Auth</p>
+                        <p>Supabase (Postgres)</p>
+                        <p>Edge Functions</p>
+                        <p>Row-level security</p>
+                        <p>Deno/TypeScript</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Integrations</h4>
+                      <h4 className="font-semibold text-primary mb-2">NLP & Processing</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Stripe API</p>
-                        <p>Twilio</p>
-                        <p>SendGrid</p>
-                        <p>Zapier</p>
+                        <p>OpenAI API</p>
+                        <p>HuggingFace models</p>
+                        <p>RoBERTa/DistilBERT</p>
+                        <p>Topic modeling</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Infrastructure</h4>
+                      <h4 className="font-semibold text-primary mb-2">Visualization</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>AWS EC2</p>
-                        <p>RDS</p>
-                        <p>ElastiCache</p>
-                        <p>CloudFront</p>
+                        <p>Chart.js/Plotly</p>
+                        <p>PDF generation</p>
+                        <p>Structured reporting</p>
+                        <p>Audit trails</p>
                       </div>
                     </div>
                   </div>
@@ -189,12 +187,12 @@ const CustomerRelationship = () => {
               {/* Project Actions */}
               <div className="flex justify-center space-x-4">
                 <Button size="lg" className="shadow-card">
-                  <Github className="w-4 h-4 mr-2" />
-                  View Code
-                </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
+                </Button>
+                <Button size="lg" variant="outline" className="shadow-card">
+                  <Github className="w-4 h-4 mr-2" />
+                  View Code
                 </Button>
               </div>
             </div>

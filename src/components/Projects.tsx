@@ -23,18 +23,18 @@ const Projects = () => {
       slug: "/projects/supply-chain-optimization"
     },
     {
-      title: "Digital Transformation Strategy",
-      description: "Led digital transformation initiative for mid-size company, implementing cloud infrastructure and modernizing legacy systems.",
-      tags: ["Strategy", "Cloud Migration", "Change Management", "ROI Analysis"],
-      category: "Business Strategy",
+      title: "Bias & Fallacy Lab",
+      description: "Designed and developed a gamified web platform that teaches logical fallacies and cognitive biases through interactive scenarios, adaptive feedback, and dynamic practice system.",
+      tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
+      category: "Educational Technology",
       gradient: "bg-moss-green",
       slug: "/projects/digital-transformation"
     },
     {
-      title: "Customer Relationship Platform",
-      description: "Created a comprehensive CRM system with automated workflows, improving customer satisfaction scores by 40%.",
-      tags: ["React", "Express.js", "MySQL", "API Integration"],
-      category: "Full-Stack Development",
+      title: "QualiLab – Qualitative Data Analysis Platform",
+      description: "Designed and implemented a research-grade web application for qualitative data analysis in psychology with NLP pipelines and collaborative coding.",
+      tags: ["Next.js", "React", "Supabase", "NLP", "OpenAI API"],
+      category: "Research Technology",
       gradient: "bg-burgundy",
       slug: "/projects/customer-relationship"
     },
