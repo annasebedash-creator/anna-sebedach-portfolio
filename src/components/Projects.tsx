@@ -7,84 +7,113 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   const projects = [
     {
-      title: "Finland Mental Health Research Dashboard",
-      description: "Interactive data visualization platform analyzing mental health trends across Finnish demographics using comprehensive statistical analysis and machine learning models. Features real-time data processing, predictive analytics, and customizable filtering for healthcare professionals and researchers.",
-      tags: ["Python", "Pandas", "Matplotlib", "Plotly", "Statistical Analysis", "Machine Learning", "Data Visualization"],
-      category: "Data Analytics & Research",
+      title: "E-Commerce Analytics Platform",
+      description: "Built a comprehensive analytics dashboard for tracking sales performance, customer behavior, and inventory management using React, Node.js, and MongoDB.",
+      tags: ["React", "Node.js", "MongoDB", "D3.js", "AWS"],
+      category: "Full-Stack Development",
       gradient: "bg-gradient-primary",
-      slug: "/projects/finland-mental-health-dashboard"
+      slug: "/projects/ecommerce-analytics"
     },
     {
-      title: "Psychology Concepts Learning Platform",
-      description: "Educational web application designed to help students master core psychology concepts through interactive learning modules, quizzes, and progress tracking. Incorporates gamification elements and adaptive learning algorithms to enhance retention and engagement.",
-      tags: ["React", "Node.js", "MongoDB", "Educational Technology", "UX Design", "Gamification"],
-      category: "Educational Technology",
+      title: "Supply Chain Optimization System",
+      description: "Developed an AI-powered system that reduced operational costs by 23% through predictive analytics and automated inventory management.",
+      tags: ["Python", "Machine Learning", "PostgreSQL", "Docker"],
+      category: "Business Intelligence",
       gradient: "bg-gradient-accent",
-      slug: "/projects/psychology-learning-platform"
+      slug: "/projects/supply-chain-optimization"
     },
     {
-      title: "Bias & Fallacy Lab",
-      description: "Research-focused web platform for identifying and analyzing cognitive biases and logical fallacies in decision-making processes. Features interactive experiments, real-time bias detection tools, and comprehensive reporting for behavioral research applications.",
-      tags: ["JavaScript", "D3.js", "Research Methods", "Cognitive Psychology", "Data Analysis", "Interactive Design"],
-      category: "Research & Psychology",
+      title: "Digital Transformation Strategy",
+      description: "Led digital transformation initiative for mid-size company, implementing cloud infrastructure and modernizing legacy systems.",
+      tags: ["Strategy", "Cloud Migration", "Change Management", "ROI Analysis"],
+      category: "Business Strategy",
       gradient: "bg-moss-green",
-      slug: "/projects/bias-fallacy-lab"
+      slug: "/projects/digital-transformation"
     },
     {
-      title: "QualiLab",
-      description: "Advanced qualitative research analysis tool streamlining the coding, categorization, and interpretation of qualitative data. Includes automated transcription services, collaborative coding features, and advanced text analysis capabilities for researchers and academics.",
-      tags: ["Natural Language Processing", "Text Analysis", "Research Tools", "Collaboration Features", "API Integration", "Data Management"],
-      category: "Research Technology",
-      gradient: "bg-gradient-secondary",
-      slug: "/projects/qualilab"
+      title: "Customer Relationship Platform",
+      description: "Created a comprehensive CRM system with automated workflows, improving customer satisfaction scores by 40%.",
+      tags: ["React", "Express.js", "MySQL", "API Integration"],
+      category: "Full-Stack Development",
+      gradient: "bg-burgundy",
+      slug: "/projects/customer-relationship"
+    },
+    {
+      title: "Financial Reporting Dashboard",
+      description: "Designed and implemented real-time financial reporting system with interactive visualizations for executive decision-making.",
+      tags: ["Power BI", "SQL Server", "Excel VBA", "Data Modeling"],
+      category: "Data Analytics",
+      gradient: "bg-umber",
+      slug: "/projects/financial-reporting"
+    },
+    {
+      title: "Process Automation Framework",
+      description: "Built automation framework that reduced manual processing time by 60% across multiple business units.",
+      tags: ["Python", "RPA", "Process Design", "Integration"],
+      category: "Business Process",
+      gradient: "bg-secondary",
+      slug: "/projects/process-automation"
     }
   ];
 
   return (
-    <section id="projects" className="pt-12 pb-20 bg-gradient-to-br from-sage-mist to-ivory">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-charcoal-gray">
-          Featured Projects
-        </h2>
-        <p className="text-lg text-charcoal-gray/80 text-center mb-16 max-w-3xl mx-auto">
-          Showcasing innovative solutions that bridge psychology, technology, and research methodology
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <section id="projects" className="pt-12 pb-20">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            Featured Projects
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Showcasing innovative solutions that bridge technology and business value
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
-            <Link to={project.slug} key={index} className="block">
-              <Card className="h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer group">
-                <CardHeader className={`${project.gradient} text-white p-6`}>
-                  <div className="flex justify-between items-start mb-2">
-                    <Badge variant="secondary" className="text-xs font-medium bg-white/20 text-white border-none">
-                      {project.category}
-                    </Badge>
-                    <ExternalLink className="h-5 w-5 opacity-70 group-hover:opacity-100 transition-opacity" />
+            <Link key={index} to={project.slug} className="group">
+              <Card className="shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
+                <CardHeader className="pb-4">
+                  <div className={`h-32 rounded-lg ${project.gradient} mb-4 relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute bottom-3 left-3">
+                      <Badge variant="secondary" className="text-xs">
+                        {project.category}
+                      </Badge>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                    {project.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <p className="text-charcoal-gray/80 mb-6 leading-relaxed">
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground leading-relaxed text-sm">
                     {project.description}
                   </p>
+                  
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="outline" className="text-xs bg-sage-mist/30 border-sage-green text-charcoal-gray">
+                      <Badge key={tagIndex} variant="outline" className="text-xs">
                         {tag}
                       </Badge>
                     ))}
+                  </div>
+
+                  <div className="flex space-x-2 pt-2">
+                    <Button size="sm" variant="ghost" className="p-2 h-8" onClick={(e) => e.stopPropagation()}>
+                      <Github className="w-4 h-4" />
+                    </Button>
+                    <Button size="sm" variant="ghost" className="p-2 h-8" onClick={(e) => e.stopPropagation()}>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
             </Link>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            className="bg-gradient-primary hover:bg-gradient-primary/90 text-white px-8 py-3 text-lg font-semibold"
-          >
+          <Button variant="outline" size="lg" className="shadow-card">
             View All Projects
           </Button>
         </div>
