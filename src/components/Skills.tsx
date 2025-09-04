@@ -47,18 +47,32 @@ const Skills = () => {
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6 text-sm">
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <GraduationCap className="w-4 h-4 text-primary" />
-                    <span className="font-medium">Bachelor's in Applied Sciences</span>
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <GraduationCap className="w-4 h-4 text-primary" />
+                      <span className="font-medium">Bachelor's in Applied Sciences</span>
+                    </div>
+                    <p className="text-muted-foreground ml-6">IT & Business Administration, Digital Services - Haaga-Helia</p>
                   </div>
-                  <p className="text-muted-foreground ml-6">IT & Business Administration, Digital Services - Haaga-Helia</p>
-                  <div className="flex items-center space-x-2 mt-3">
-                    <GraduationCap className="w-4 h-4 text-primary" />
-                    <span className="font-medium">Academic Foundation</span>
+                  
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <GraduationCap className="w-4 h-4 text-primary" />
+                      <span className="font-medium">University Psychology Studies</span>
+                    </div>
+                    <p className="text-muted-foreground ml-6">5+ Bachelor's level courses - University of Helsinki</p>
                   </div>
-                  <p className="text-muted-foreground ml-6">IB Diploma + 5+ Psychology Courses (University of Helsinki)</p>
+                  
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <GraduationCap className="w-4 h-4 text-secondary" />
+                      <span className="font-medium">IB Diploma</span>
+                    </div>
+                    <p className="text-muted-foreground ml-6">International Baccalaureate - Secondary Education</p>
+                  </div>
                 </div>
+                
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <Globe className="w-4 h-4 text-primary" />
