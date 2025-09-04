@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, ExternalLink, Github, Calendar, BarChart, DollarSign } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Calendar, Database, Code } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -37,13 +37,13 @@ const FinancialReporting = () => {
                 <span>Back to Projects</span>
               </button>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Financial Reporting Dashboard
+                SQL & Data Management Fusion Project
               </h1>
               <p className="text-xl text-white/90 mb-8">
-                Designed and implemented real-time financial reporting system with interactive visualizations for executive decision-making
+                Comprehensive suite of SQL and data management solutions integrating theoretical concepts with practical database design and implementation
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["Power BI", "SQL Server", "Excel VBA", "Data Modeling"].map((tag, index) => (
+                {["SQL Server", "ER Modeling", "Normalization", "Transaction Control"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -65,32 +65,33 @@ const FinancialReporting = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    This advanced financial reporting system transforms complex financial data into actionable insights through 
-                    interactive dashboards and real-time analytics. The platform consolidates multiple data sources and provides 
-                    executives with comprehensive financial visibility for strategic decision-making.
+                    Designed and implemented a comprehensive suite of SQL and data management solutions that integrated theoretical concepts 
+                    (relational modeling, normalization, ER diagramming, data integrity, and transaction control) with practical exercises 
+                    in schema creation, query design, and database validation. This work showcases the ability to move fluidly between 
+                    theory and practice while maintaining professional-level precision in data modeling and relational design.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <BarChart className="w-8 h-8" />
+                        <Database className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">50%</div>
-                      <div className="text-sm text-muted-foreground">Faster Reporting</div>
+                      <div className="text-2xl font-bold text-primary">3NF</div>
+                      <div className="text-sm text-muted-foreground">Normalization Level</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <DollarSign className="w-8 h-8" />
+                        <Code className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">$2M+</div>
-                      <div className="text-sm text-muted-foreground">Revenue Tracked</div>
+                      <div className="text-2xl font-bold text-primary">50+</div>
+                      <div className="text-sm text-muted-foreground">SQL Queries</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Calendar className="w-8 h-8" />
                       </div>
                       <div className="text-2xl font-bold text-primary">4</div>
-                      <div className="text-sm text-muted-foreground">Months Duration</div>
+                      <div className="text-sm text-muted-foreground">Case Studies</div>
                     </div>
                   </div>
                 </CardContent>
@@ -104,35 +105,35 @@ const FinancialReporting = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Real-time Analytics</h4>
+                      <h4 className="font-semibold text-primary">ER Diagramming & Conceptual Design</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Live financial data streaming</li>
-                        <li>• Automated report generation</li>
-                        <li>• Performance trend analysis</li>
+                        <li>• ER diagrams with entities, relationships, and cardinalities</li>
+                        <li>• Real-world cases (libraries, clubs, cultural associations)</li>
+                        <li>• Music reservation systems modeling</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Interactive Dashboards</h4>
+                      <h4 className="font-semibold text-primary">Relational Schema & Normalization</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Customizable visualization widgets</li>
-                        <li>• Drill-down capabilities</li>
-                        <li>• Mobile-responsive design</li>
+                        <li>• Translated conceptual models into relational schemas</li>
+                        <li>• Applied 1NF, 2NF, and 3NF normalization</li>
+                        <li>• Functional dependency analysis</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Data Integration</h4>
+                      <h4 className="font-semibold text-primary">SQL Schema Implementation</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Multi-source data consolidation</li>
-                        <li>• Automated data validation</li>
-                        <li>• ETL pipeline management</li>
+                        <li>• Normalized SQL tables with constraints</li>
+                        <li>• Primary keys, foreign keys, and integrity</li>
+                        <li>• NOT NULL, UNIQUE, CHECK constraints</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Advanced Reporting</h4>
+                      <h4 className="font-semibold text-primary">Transaction & Concurrency Control</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Executive summary reports</li>
-                        <li>• Variance analysis tools</li>
-                        <li>• Forecasting models</li>
+                        <li>• Transaction isolation levels analysis</li>
+                        <li>• ACID properties demonstration</li>
+                        <li>• Concurrency anomalies handling</li>
                       </ul>
                     </div>
                   </div>
@@ -147,39 +148,39 @@ const FinancialReporting = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-4 gap-4">
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Business Intelligence</h4>
+                      <h4 className="font-semibold text-primary mb-2">SQL Development</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Power BI</p>
-                        <p>Tableau</p>
-                        <p>DAX Formulas</p>
-                        <p>Custom Visuals</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Database</h4>
-                      <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>SQL Server</p>
-                        <p>Azure SQL</p>
-                        <p>SSRS</p>
-                        <p>Data Warehouse</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Automation</h4>
-                      <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Excel VBA</p>
-                        <p>Power Automate</p>
-                        <p>SSIS</p>
-                        <p>Scheduled Jobs</p>
+                        <p>Microsoft SQL Server</p>
+                        <p>DDL & DML</p>
+                        <p>Complex Joins</p>
+                        <p>Subqueries</p>
                       </div>
                     </div>
                     <div>
                       <h4 className="font-semibold text-primary mb-2">Data Modeling</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Star Schema</p>
-                        <p>Dimensional Modeling</p>
-                        <p>Data Marts</p>
-                        <p>KPI Design</p>
+                        <p>ER Diagrams (UML)</p>
+                        <p>Relational Schemas</p>
+                        <p>Normalization</p>
+                        <p>Business Rules</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Analysis</h4>
+                      <div className="space-y-1 text-sm text-muted-foreground">
+                        <p>Functional Dependencies</p>
+                        <p>Transaction Isolation</p>
+                        <p>ACID Properties</p>
+                        <p>Concurrency Control</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Documentation</h4>
+                      <div className="space-y-1 text-sm text-muted-foreground">
+                        <p>Technical Specifications</p>
+                        <p>Repository Templates</p>
+                        <p>Data Dictionary</p>
+                        <p>Case Study Reports</p>
                       </div>
                     </div>
                   </div>
@@ -190,11 +191,11 @@ const FinancialReporting = () => {
               <div className="flex justify-center space-x-4">
                 <Button size="lg" className="shadow-card">
                   <Github className="w-4 h-4 mr-2" />
-                  View Templates
+                  View Repository
                 </Button>
                 <Button size="lg" variant="outline" className="shadow-card">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Demo Dashboard
+                  Case Studies
                 </Button>
               </div>
             </div>

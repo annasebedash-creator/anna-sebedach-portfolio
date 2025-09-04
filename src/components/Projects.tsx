@@ -39,18 +39,18 @@ const Projects = () => {
       slug: "/projects/customer-relationship"
     },
     {
-      title: "Financial Reporting Dashboard",
-      description: "Designed and implemented real-time financial reporting system with interactive visualizations for executive decision-making.",
-      tags: ["Power BI", "SQL Server", "Excel VBA", "Data Modeling"],
-      category: "Data Analytics",
+      title: "SQL & Data Management Fusion Project",
+      description: "Comprehensive suite of SQL and data management solutions integrating theoretical concepts with practical database design and implementation.",
+      tags: ["SQL Server", "ER Modeling", "Normalization", "Transaction Control"],
+      category: "Database Engineering",
       gradient: "bg-umber",
       slug: "/projects/financial-reporting"
     },
     {
-      title: "Process Automation Framework",
-      description: "Built automation framework that reduced manual processing time by 60% across multiple business units.",
-      tags: ["Python", "RPA", "Process Design", "Integration"],
-      category: "Business Process",
+      title: "Sauna Slot Booking System",
+      description: "Full requirements specification for a digital sauna booking system, covering complete requirements engineering process from stakeholder needs to technical documentation.",
+      tags: ["UML", "Requirements Engineering", "Risk Analysis", "Software Design"],
+      category: "Software Engineering",
       gradient: "bg-secondary",
       slug: "/projects/process-automation"
     }
