@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code2, Database, Cloud, BarChart3, Users, Target, Briefcase, TrendingUp } from "lucide-react";
+import { Code2, Database, Cloud, BarChart3, Users, Target, Briefcase, TrendingUp, GraduationCap, Globe } from "lucide-react";
 const Skills = () => {
   const skillCategories = [{
     title: "Technical Skills",
@@ -52,6 +52,47 @@ const Skills = () => {
                 </div>
               </CardContent>
             </Card>)}
+        </div>
+
+        {/* Background & Education */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <Card className="shadow-card bg-muted/30">
+            <CardHeader>
+              <CardTitle className="flex items-center space-x-3 text-lg">
+                <div className="text-primary">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                <span>Background & Education</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6 text-sm">
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <GraduationCap className="w-4 h-4 text-primary" />
+                    <span className="font-medium">Bachelor's in Applied Sciences</span>
+                  </div>
+                  <p className="text-muted-foreground ml-6">IT & Business Administration, Digital Services - Haaga-Helia</p>
+                  <div className="flex items-center space-x-2 mt-3">
+                    <GraduationCap className="w-4 h-4 text-primary" />
+                    <span className="font-medium">Academic Foundation</span>
+                  </div>
+                  <p className="text-muted-foreground ml-6">IB Diploma + 5+ Psychology Courses (University of Helsinki)</p>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Globe className="w-4 h-4 text-primary" />
+                    <span className="font-medium">Languages</span>
+                  </div>
+                  <div className="ml-6 space-y-1">
+                    <Badge variant="secondary" className="mr-2">English (Fluent)</Badge>
+                    <Badge variant="secondary" className="mr-2">Finnish (Native)</Badge>
+                    <Badge variant="secondary">Russian (Fluent)</Badge>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Key Metrics */}
