@@ -7,18 +7,18 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Analytics Platform",
-      description: "Built a comprehensive analytics dashboard for tracking sales performance, customer behavior, and inventory management using React, Node.js, and MongoDB.",
-      tags: ["React", "Node.js", "MongoDB", "D3.js", "AWS"],
-      category: "Full-Stack Development",
+      title: "Finland Mental Health Research Dashboard",
+      description: "Built a research-grade analytical pipeline and interactive dashboard to examine mental health indicators in Finland, integrating data from multiple public health sources.",
+      tags: ["Python", "Streamlit", "Pandas", "THL API", "Eurostat"],
+      category: "Data Science",
       gradient: "bg-gradient-primary",
       slug: "/projects/ecommerce-analytics"
     },
     {
-      title: "Supply Chain Optimization System",
-      description: "Developed an AI-powered system that reduced operational costs by 23% through predictive analytics and automated inventory management.",
-      tags: ["Python", "Machine Learning", "PostgreSQL", "Docker"],
-      category: "Business Intelligence",
+      title: "Psychology Concepts Learning Platform",
+      description: "Developed an interactive learning platform systematizing psychology concepts across multiple domains through three complementary learning modes.",
+      tags: ["Cursor AI", "Markdown", "Mermaid.js", "Python", "Psychology"],
+      category: "Educational Technology",
       gradient: "bg-gradient-accent",
       slug: "/projects/supply-chain-optimization"
     },
