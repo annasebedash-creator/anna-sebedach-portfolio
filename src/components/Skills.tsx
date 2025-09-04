@@ -65,9 +65,9 @@ const Skills = () => {
           value: "20+",
           label: "Projects Completed"
         }, {
-          icon: <TrendingUp className="w-8 h-8" />,
-          value: "15%",
-          label: "Avg Cost Reduction"
+          icon: <BarChart3 className="w-8 h-8" />,
+          value: "100+",
+          label: "Data Points Analyzed"
         }, {
           icon: <Cloud className="w-8 h-8" />,
           value: "3",
