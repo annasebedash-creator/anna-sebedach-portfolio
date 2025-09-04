@@ -34,28 +34,8 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {skillCategories.map((category, index) => <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-3">
-                  <div className={category.color}>
-                    {category.icon}
-                  </div>
-                  <span className="text-xl font-bold">{category.title}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-sm py-1 px-3 hover:text-primary-foreground transition-colors duration-200 bg-zinc-600">
-                      {skill}
-                    </Badge>)}
-                </div>
-              </CardContent>
-            </Card>)}
-        </div>
-
         {/* Background & Education */}
-        <div className="max-w-4xl mx-auto mt-16">
+        <div className="max-w-4xl mx-auto mb-16">
           <Card className="shadow-card bg-muted/30">
             <CardHeader>
               <CardTitle className="flex items-center space-x-3 text-lg">
@@ -90,6 +70,41 @@ const Skills = () => {
                     <Badge variant="secondary">Russian (Fluent)</Badge>
                   </div>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Skills & Expertise */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <Card className="shadow-card bg-muted/30">
+            <CardHeader>
+              <CardTitle className="flex items-center space-x-3 text-lg">
+                <div className="text-primary">
+                  <Code2 className="w-5 h-5" />
+                </div>
+                <span>Skills & Expertise</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-8 text-sm">
+                {skillCategories.map((category, index) => (
+                  <div key={index} className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <div className={category.color}>
+                        {category.icon}
+                      </div>
+                      <span className="font-medium text-base">{category.title}</span>
+                    </div>
+                    <div className="ml-8 flex flex-wrap gap-1.5">
+                      {category.skills.map((skill, skillIndex) => (
+                        <Badge key={skillIndex} variant="secondary" className="text-xs py-0.5 px-2">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
