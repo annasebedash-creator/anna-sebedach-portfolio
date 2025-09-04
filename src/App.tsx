@@ -11,6 +11,10 @@ import DigitalTransformation from "./pages/projects/DigitalTransformation";
 import CustomerRelationship from "./pages/projects/CustomerRelationship";
 import FinancialReporting from "./pages/projects/FinancialReporting";
 import ProcessAutomation from "./pages/projects/ProcessAutomation";
+import FinlandMentalHealthDashboard from "./pages/projects/FinlandMentalHealthDashboard";
+import PsychologyLearningPlatform from "./pages/projects/PsychologyLearningPlatform";
+import BiasFallacyLab from "./pages/projects/BiasFallacyLab";
+import QualiLab from "./pages/projects/QualiLab";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,10 @@ const App = () => (
           <Route path="/projects/customer-relationship" element={<CustomerRelationship />} />
           <Route path="/projects/financial-reporting" element={<FinancialReporting />} />
           <Route path="/projects/process-automation" element={<ProcessAutomation />} />
+          <Route path="/projects/finland-mental-health-dashboard" element={<FinlandMentalHealthDashboard />} />
+          <Route path="/projects/psychology-learning-platform" element={<PsychologyLearningPlatform />} />
+          <Route path="/projects/bias-fallacy-lab" element={<BiasFallacyLab />} />
+          <Route path="/projects/qualilab" element={<QualiLab />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
