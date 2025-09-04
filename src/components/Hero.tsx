@@ -17,7 +17,10 @@ const Hero = () => {
             </p>
             
             <div className="hero-ctas flex gap-4 justify-center pt-6">
-              <Button className="bg-burgundy hover:bg-burgundy/90 text-ivory px-6 py-3">
+              <Button 
+                className="bg-burgundy hover:bg-burgundy/90 text-ivory px-6 py-3"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 View Projects
               </Button>
               <Button variant="outline" className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-6 py-3">Download CV</Button>
