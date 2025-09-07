@@ -152,18 +152,7 @@ const Projects = () => {
             variant="outline" 
             size="lg" 
             className="shadow-card"
-            onClick={() => {
-              setShowAllProjects(!showAllProjects);
-              if (showAllProjects) {
-                // Scroll to projects section when showing less
-                setTimeout(() => {
-                  document.getElementById('projects')?.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                  });
-                }, 100);
-              }
-            }}
+            onClick={() => setShowAllProjects(!showAllProjects)}
           >
             {showAllProjects ? "Show Less Projects" : "View All Projects"}
           </Button>
