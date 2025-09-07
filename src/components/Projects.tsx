@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
+  
   const projects = [
     {
       title: "Finland Mental Health Research Dashboard",
