@@ -3,8 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Projects = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
   const projects = [
     {
       title: "Finland Mental Health Research Dashboard",
@@ -53,6 +55,22 @@ const Projects = () => {
       category: "Software Engineering",
       gradient: "bg-secondary",
       slug: "/projects/process-automation"
+    },
+    {
+      title: "Smart Home IoT Ecosystem",
+      description: "Developed a comprehensive IoT prototype integrating multiple sensors and actuators with real-time monitoring, automated environmental controls, and predictive analytics for energy optimization.",
+      tags: ["Arduino", "Raspberry Pi", "MQTT", "Node.js", "InfluxDB", "Grafana"],
+      category: "IoT & Hardware",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/iot-ecosystem"
+    },
+    {
+      title: "Cross-Functional Team Leadership Initiative",
+      description: "Led a 12-person cross-disciplinary team through a complex digital transformation project, implementing agile methodologies and stakeholder management frameworks to deliver results 3 weeks ahead of schedule.",
+      tags: ["Agile", "Scrum", "Stakeholder Management", "Team Leadership", "Risk Management"],
+      category: "Project Management",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/team-leadership"
     }
   ];
 
@@ -69,7 +87,7 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
+          {(showAllProjects ? projects : projects.slice(0, 6)).map((project, index) => (
             <Link key={index} to={project.slug} className="group">
               <Card className="shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
                 <CardHeader className="pb-4">
@@ -113,8 +131,13 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="shadow-card">
-            View All Projects
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="shadow-card"
+            onClick={() => setShowAllProjects(!showAllProjects)}
+          >
+            {showAllProjects ? "Show Less Projects" : "View All Projects"}
           </Button>
         </div>
       </div>
