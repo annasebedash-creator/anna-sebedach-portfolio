@@ -81,7 +81,7 @@ const Skills = () => {
                   <div className="ml-6 space-y-1">
                     <Badge variant="secondary" className="mr-2">English (Fluent)</Badge>
                     <Badge variant="secondary" className="mr-2">Finnish (Native)</Badge>
-                    <Badge variant="secondary">Russian (Fluent)</Badge>
+                    <Badge variant="secondary">Russian (Native)</Badge>
                   </div>
                 </div>
               </div>
@@ -102,8 +102,7 @@ const Skills = () => {
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-8 text-sm">
-                {skillCategories.map((category, index) => (
-                  <div key={index} className="space-y-3">
+                {skillCategories.map((category, index) => <div key={index} className="space-y-3">
                     <div className="flex items-center space-x-2">
                       <div className={category.color}>
                         {category.icon}
@@ -111,14 +110,11 @@ const Skills = () => {
                       <span className="font-medium text-base">{category.title}</span>
                     </div>
                     <div className="ml-8 flex flex-wrap gap-1.5">
-                      {category.skills.map((skill, skillIndex) => (
-                        <Badge key={skillIndex} variant="secondary" className="text-xs py-0.5 px-2">
+                      {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-xs py-0.5 px-2">
                           {skill}
-                        </Badge>
-                      ))}
+                        </Badge>)}
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </CardContent>
           </Card>
