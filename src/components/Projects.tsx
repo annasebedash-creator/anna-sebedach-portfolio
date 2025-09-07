@@ -71,6 +71,22 @@ const Projects = () => {
       category: "Project Management",
       gradient: "bg-gradient-accent",
       slug: "/projects/team-leadership"
+    },
+    {
+      title: "Automated Spotify Playlist Creator",
+      description: "Built an intelligent n8n automation workflow that analyzes user listening patterns, mood preferences, and social trends to automatically curate personalized Spotify playlists with scheduling and collaborative features.",
+      tags: ["n8n", "Spotify API", "REST APIs", "Automation", "Data Analysis", "Webhooks"],
+      category: "Workflow Automation",
+      gradient: "bg-moss-green",
+      slug: "/projects/spotify-automation"
+    },
+    {
+      title: "3D Animation & Motion Graphics Portfolio",
+      description: "Created a comprehensive collection of 3D animations, character models, and motion graphics using Blender, featuring photorealistic rendering, particle systems, and dynamic simulations for various media projects.",
+      tags: ["Blender", "3D Modeling", "Animation", "Cycles Rendering", "Motion Graphics", "VFX"],
+      category: "3D Design & Animation",
+      gradient: "bg-burgundy",
+      slug: "/projects/blender-portfolio"
     }
   ];
 
