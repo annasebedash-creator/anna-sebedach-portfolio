@@ -23,7 +23,13 @@ const Hero = () => {
               >
                 View Projects
               </Button>
-              <Button variant="outline" className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-6 py-3">Download CV</Button>
+              <Button 
+                variant="outline" 
+                className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-6 py-3"
+                onClick={() => window.open('/lovable-uploads/c5833f94-f48a-41dc-b71d-c627829e9ba7.png', '_blank')}
+              >
+                Download CV
+              </Button>
             </div>
           </div>
         </div>
