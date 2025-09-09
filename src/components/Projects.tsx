@@ -3,10 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const projectsRef = useRef<HTMLDivElement>(null);
   
   const projects = [
     {
@@ -107,6 +108,26 @@ const Projects = () => {
     }
   ];
 
+  const handleToggleProjects = () => {
+    if (showAllProjects) {
+      // When hiding projects, scroll to show the last visible projects
+      setShowAllProjects(false);
+      setTimeout(() => {
+        if (projectsRef.current) {
+          const projectCards = projectsRef.current.querySelectorAll('.project-card');
+          if (projectCards.length >= 6) {
+            projectCards[4].scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'center' 
+            });
+          }
+        }
+      }, 100);
+    } else {
+      setShowAllProjects(true);
+    }
+  };
+
   return (
     <section id="projects" className="pt-12 pb-20">
       <div className="container mx-auto px-6">
@@ -119,10 +140,10 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div ref={projectsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {(showAllProjects ? projects : projects.slice(0, 6)).map((project, index) => (
             <Link key={index} to={project.slug} className="group">
-              <Card className="shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
+              <Card className="project-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
                 <CardHeader className="pb-4">
                   <div className={`h-32 rounded-lg ${project.gradient} mb-4 relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20"></div>
@@ -168,7 +189,7 @@ const Projects = () => {
             variant="outline" 
             size="lg" 
             className="shadow-card"
-            onClick={() => setShowAllProjects(!showAllProjects)}
+            onClick={handleToggleProjects}
           >
             {showAllProjects ? "Show Less Projects" : "View All Projects"}
           </Button>
