@@ -10,6 +10,14 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "IBM Watsonx Assistant with Embedded Analytics",
+      description: "Implemented an advanced chatbot extension that embeds dynamic charts and tables directly into conversation interfaces, bridging conversational AI with real-time data visualization and serving as both a technical proof-of-concept and educational evaluation platform.",
+      tags: ["JavaScript", "Node.js", "IBM Watsonx", "Chart.js", "API Integration", "Conversational AI"],
+      category: "AI Development",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/watsonx-assistant"
+    },
+    {
       title: "Finland Mental Health Research Dashboard",
       description: "Built a research-grade analytical pipeline and interactive dashboard to examine mental health indicators in Finland, integrating data from multiple public health sources.",
       tags: ["Python", "Streamlit", "Pandas", "THL API", "Eurostat"],
