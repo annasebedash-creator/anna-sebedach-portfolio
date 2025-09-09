@@ -18,6 +18,14 @@ const Projects = () => {
       slug: "/projects/watsonx-assistant"
     },
     {
+      title: "Extended Essay in Psychology: Mental Imagery in Social Anxiety Disorder",
+      description: "Authored a 4,000-word IB research paper investigating mental imagery's dual role in Social Anxiety Disorder - both as a negative symptom maintenance factor and as a therapeutic tool through imagery rescripting techniques, synthesizing findings from seven peer-reviewed studies.",
+      tags: ["Psychology Research", "Academic Writing", "Literature Review", "IB Extended Essay", "Mental Health", "Cognitive Behavioral Therapy"],
+      category: "Academic Research",
+      gradient: "bg-burgundy",
+      slug: "/projects/psychology-extended-essay"
+    },
+    {
       title: "Finland Mental Health Research Dashboard",
       description: "Built a research-grade analytical pipeline and interactive dashboard to examine mental health indicators in Finland, integrating data from multiple public health sources.",
       tags: ["Python", "Streamlit", "Pandas", "THL API", "Eurostat"],
