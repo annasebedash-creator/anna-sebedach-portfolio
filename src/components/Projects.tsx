@@ -10,28 +10,12 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "IBM Watsonx Assistant with Embedded Analytics",
-      description: "Implemented an advanced chatbot extension that embeds dynamic charts and tables directly into conversation interfaces, bridging conversational AI with real-time data visualization and serving as both a technical proof-of-concept and educational evaluation platform.",
-      tags: ["JavaScript", "Node.js", "IBM Watsonx", "Chart.js", "API Integration", "Conversational AI"],
-      category: "AI Development",
-      gradient: "bg-gradient-accent",
-      slug: "/projects/watsonx-assistant"
-    },
-    {
-      title: "Extended Essay in Psychology: Mental Imagery in Social Anxiety Disorder",
-      description: "Authored a 4,000-word IB research paper investigating mental imagery's dual role in Social Anxiety Disorder - both as a negative symptom maintenance factor and as a therapeutic tool through imagery rescripting techniques, synthesizing findings from seven peer-reviewed studies.",
-      tags: ["Psychology Research", "Academic Writing", "Literature Review", "IB Extended Essay", "Mental Health", "Cognitive Behavioral Therapy"],
-      category: "Academic Research",
-      gradient: "bg-burgundy",
-      slug: "/projects/psychology-extended-essay"
-    },
-    {
-      title: "Finland Mental Health Research Dashboard",
-      description: "Built a research-grade analytical pipeline and interactive dashboard to examine mental health indicators in Finland, integrating data from multiple public health sources.",
-      tags: ["Python", "Streamlit", "Pandas", "THL API", "Eurostat"],
-      category: "Data Science",
-      gradient: "bg-gradient-primary",
-      slug: "/projects/ecommerce-analytics"
+      title: "Bias & Fallacy Lab",
+      description: "Designed and developed a gamified web platform that teaches logical fallacies and cognitive biases through interactive scenarios, adaptive feedback, and dynamic practice system.",
+      tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
+      category: "Educational Technology",
+      gradient: "bg-moss-green",
+      slug: "/projects/digital-transformation"
     },
     {
       title: "Psychology Concepts Learning Platform",
@@ -42,28 +26,20 @@ const Projects = () => {
       slug: "/projects/supply-chain-optimization"
     },
     {
-      title: "Bias & Fallacy Lab",
-      description: "Designed and developed a gamified web platform that teaches logical fallacies and cognitive biases through interactive scenarios, adaptive feedback, and dynamic practice system.",
-      tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
-      category: "Educational Technology",
-      gradient: "bg-moss-green",
-      slug: "/projects/digital-transformation"
-    },
-    {
-      title: "QualiLab – Qualitative Data Analysis Platform",
-      description: "Designed and implemented a research-grade web application for qualitative data analysis in psychology with NLP pipelines and collaborative coding.",
-      tags: ["Next.js", "React", "Supabase", "NLP", "OpenAI API"],
-      category: "Research Technology",
-      gradient: "bg-burgundy",
-      slug: "/projects/customer-relationship"
-    },
-    {
       title: "SQL & Data Management Fusion Project",
       description: "Comprehensive suite of SQL and data management solutions integrating theoretical concepts with practical database design and implementation.",
       tags: ["SQL Server", "ER Modeling", "Normalization", "Transaction Control"],
       category: "Database Engineering",
       gradient: "bg-umber",
       slug: "/projects/financial-reporting"
+    },
+    {
+      title: "Finland Mental Health Research Dashboard",
+      description: "Built a research-grade analytical pipeline and interactive dashboard to examine mental health indicators in Finland, integrating data from multiple public health sources.",
+      tags: ["Python", "Streamlit", "Pandas", "THL API", "Eurostat"],
+      category: "Data Science",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/ecommerce-analytics"
     },
     {
       title: "Sauna Slot Booking System",
@@ -90,6 +66,14 @@ const Projects = () => {
       slug: "/projects/team-leadership"
     },
     {
+      title: "3D Animation & Motion Graphics Portfolio",
+      description: "Created a comprehensive collection of 3D animations, character models, and motion graphics using Blender, featuring photorealistic rendering, particle systems, and dynamic simulations for various media projects.",
+      tags: ["Blender", "3D Modeling", "Animation", "Cycles Rendering", "Motion Graphics", "VFX"],
+      category: "3D Design & Animation",
+      gradient: "bg-burgundy",
+      slug: "/projects/blender-portfolio"
+    },
+    {
       title: "Automated Spotify Playlist Creator",
       description: "Built an intelligent n8n automation workflow that analyzes user listening patterns, mood preferences, and social trends to automatically curate personalized Spotify playlists with scheduling and collaborative features.",
       tags: ["n8n", "Spotify API", "REST APIs", "Automation", "Data Analysis", "Webhooks"],
@@ -98,12 +82,28 @@ const Projects = () => {
       slug: "/projects/spotify-automation"
     },
     {
-      title: "3D Animation & Motion Graphics Portfolio",
-      description: "Created a comprehensive collection of 3D animations, character models, and motion graphics using Blender, featuring photorealistic rendering, particle systems, and dynamic simulations for various media projects.",
-      tags: ["Blender", "3D Modeling", "Animation", "Cycles Rendering", "Motion Graphics", "VFX"],
-      category: "3D Design & Animation",
+      title: "Extended Essay in Psychology: Mental Imagery in Social Anxiety Disorder",
+      description: "Authored a 4,000-word IB research paper investigating mental imagery's dual role in Social Anxiety Disorder - both as a negative symptom maintenance factor and as a therapeutic tool through imagery rescripting techniques, synthesizing findings from seven peer-reviewed studies.",
+      tags: ["Psychology Research", "Academic Writing", "Literature Review", "IB Extended Essay", "Mental Health", "Cognitive Behavioral Therapy"],
+      category: "Academic Research",
       gradient: "bg-burgundy",
-      slug: "/projects/blender-portfolio"
+      slug: "/projects/psychology-extended-essay"
+    },
+    {
+      title: "IBM Watsonx Assistant with Embedded Analytics",
+      description: "Implemented an advanced chatbot extension that embeds dynamic charts and tables directly into conversation interfaces, bridging conversational AI with real-time data visualization and serving as both a technical proof-of-concept and educational evaluation platform.",
+      tags: ["JavaScript", "Node.js", "IBM Watsonx", "Chart.js", "API Integration", "Conversational AI"],
+      category: "AI Development",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/watsonx-assistant"
+    },
+    {
+      title: "QualiLab – Qualitative Data Analysis Platform",
+      description: "Designed and implemented a research-grade web application for qualitative data analysis in psychology with NLP pipelines and collaborative coding.",
+      tags: ["Next.js", "React", "Supabase", "NLP", "OpenAI API"],
+      category: "Research Technology",
+      gradient: "bg-burgundy",
+      slug: "/projects/customer-relationship"
     }
   ];
 
