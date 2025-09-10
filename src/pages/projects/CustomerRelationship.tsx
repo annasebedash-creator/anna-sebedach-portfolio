@@ -187,12 +187,12 @@ const CustomerRelationship = () => {
               {/* Project Actions */}
               <div className="flex justify-center space-x-4">
                 <Button size="lg" className="shadow-card">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
-                </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
                   <Github className="w-4 h-4 mr-2" />
                   View Code
+                </Button>
+                <Button size="lg" variant="outline" className="shadow-card">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Live Demo
                 </Button>
               </div>
             </div>
