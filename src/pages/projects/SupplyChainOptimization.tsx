@@ -190,9 +190,14 @@ const SupplyChainOptimization = () => {
                   <Github className="w-4 h-4 mr-2" />
                   View Code
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="shadow-card"
+                  onClick={() => window.open('https://annasebedash-creator.github.io/Psychology-Learning-Platfrom/', '_blank')}
+                >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Case Study
+                  Live Demo
                 </Button>
               </div>
             </div>
