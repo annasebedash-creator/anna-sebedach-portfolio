@@ -190,7 +190,12 @@ const DigitalTransformation = () => {
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="shadow-card"
+                  onClick={() => window.open('https://github.com/annasebedash-creator/bias-lab', '_blank')}
+                >
                   <Github className="w-4 h-4 mr-2" />
                   View Code
                 </Button>
