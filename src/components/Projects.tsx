@@ -7,14 +7,16 @@ import { useState, useRef, useEffect } from "react";
 
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [pendingScrollTo, setPendingScrollTo] = useState<string | null>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   
   // Check URL parameter to determine initial state
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('expanded') === 'true') {
-      setShowAllProjects(true);
-    }
+    const isExpanded = urlParams.get('expanded') === 'true';
+    const scrollTo = urlParams.get('scrollTo');
+    if (isExpanded) setShowAllProjects(true);
+    if (scrollTo) setPendingScrollTo(scrollTo);
   }, []);
   
   const projects = [
@@ -145,6 +147,24 @@ const Projects = () => {
     }
   };
 
+  useEffect(() => {
+    if (!pendingScrollTo) return;
+
+    const scroll = () => {
+      const target = projectsRef.current?.querySelector(`[data-slug="${pendingScrollTo}"]`);
+      if (target) {
+        (target as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const url = new URL(window.location.href);
+        url.searchParams.delete('scrollTo');
+        window.history.replaceState({}, '', url.toString());
+        setPendingScrollTo(null);
+      }
+    };
+
+    const t = setTimeout(scroll, 60);
+    return () => clearTimeout(t);
+  }, [pendingScrollTo, showAllProjects]);
+
   return (
     <section id="projects" className="pt-12 pb-20">
       <div className="container mx-auto px-6">
@@ -159,8 +179,8 @@ const Projects = () => {
 
         <div ref={projectsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {(showAllProjects ? projects : projects.slice(0, 6)).map((project, index) => (
-            <Link key={index} to={`${project.slug}${showAllProjects ? '?from=expanded' : ''}`} className="group">
-              <Card className="project-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
+            <Link key={index} to={`${project.slug}?${showAllProjects ? 'expanded=true&' : ''}scrollTo=${encodeURIComponent(project.slug)}`} className="group">
+              <Card data-slug={project.slug} className="project-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
                 <CardHeader className="pb-4">
                   <div className={`h-32 rounded-lg ${project.gradient} mb-4 relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20"></div>

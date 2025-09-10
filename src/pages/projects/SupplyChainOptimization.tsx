@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink, Github, Calendar, TrendingDown, Target } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,11 +14,16 @@ const SupplyChainOptimization = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const location = useLocation();
+
   const handleBackToProjects = () => {
-    navigate("/#projects");
-    setTimeout(() => {
-      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+    const params = new URLSearchParams(window.location.search);
+    const expanded = params.get('expanded') === 'true';
+    const scrollTo = params.get('scrollTo') || location.pathname;
+    const query = new URLSearchParams();
+    if (expanded) query.set('expanded', 'true');
+    query.set('scrollTo', scrollTo);
+    navigate(`/?${query.toString()}#projects`);
   };
 
   return (
