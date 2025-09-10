@@ -3,11 +3,19 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const projectsRef = useRef<HTMLDivElement>(null);
+  
+  // Check URL parameter to determine initial state
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('expanded') === 'true') {
+      setShowAllProjects(true);
+    }
+  }, []);
   
   const projects = [
     {
@@ -109,9 +117,20 @@ const Projects = () => {
   ];
 
   const handleToggleProjects = () => {
-    if (showAllProjects) {
+    const newExpandedState = !showAllProjects;
+    setShowAllProjects(newExpandedState);
+    
+    // Update URL to reflect expanded state
+    const url = new URL(window.location.href);
+    if (newExpandedState) {
+      url.searchParams.set('expanded', 'true');
+    } else {
+      url.searchParams.delete('expanded');
+    }
+    window.history.replaceState({}, '', url.toString());
+    
+    if (!newExpandedState) {
       // When hiding projects, scroll to show the last visible projects
-      setShowAllProjects(false);
       setTimeout(() => {
         if (projectsRef.current) {
           const projectCards = projectsRef.current.querySelectorAll('.project-card');
@@ -123,8 +142,6 @@ const Projects = () => {
           }
         }
       }, 100);
-    } else {
-      setShowAllProjects(true);
     }
   };
 
@@ -142,7 +159,7 @@ const Projects = () => {
 
         <div ref={projectsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {(showAllProjects ? projects : projects.slice(0, 6)).map((project, index) => (
-            <Link key={index} to={project.slug} className="group">
+            <Link key={index} to={`${project.slug}${showAllProjects ? '?from=expanded' : ''}`} className="group">
               <Card className="project-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
                 <CardHeader className="pb-4">
                   <div className={`h-32 rounded-lg ${project.gradient} mb-4 relative overflow-hidden`}>

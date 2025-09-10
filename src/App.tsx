@@ -11,6 +11,12 @@ import DigitalTransformation from "./pages/projects/DigitalTransformation";
 import CustomerRelationship from "./pages/projects/CustomerRelationship";
 import FinancialReporting from "./pages/projects/FinancialReporting";
 import ProcessAutomation from "./pages/projects/ProcessAutomation";
+import IotEcosystem from "./pages/projects/IotEcosystem";
+import BlenderPortfolio from "./pages/projects/BlenderPortfolio";
+import TeamLeadership from "./pages/projects/TeamLeadership";
+import SpotifyAutomation from "./pages/projects/SpotifyAutomation";
+import PsychologyExtendedEssay from "./pages/projects/PsychologyExtendedEssay";
+import WatsonxAssistant from "./pages/projects/WatsonxAssistant";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +34,12 @@ const App = () => (
           <Route path="/projects/customer-relationship" element={<CustomerRelationship />} />
           <Route path="/projects/financial-reporting" element={<FinancialReporting />} />
           <Route path="/projects/process-automation" element={<ProcessAutomation />} />
+          <Route path="/projects/iot-ecosystem" element={<IotEcosystem />} />
+          <Route path="/projects/blender-portfolio" element={<BlenderPortfolio />} />
+          <Route path="/projects/team-leadership" element={<TeamLeadership />} />
+          <Route path="/projects/spotify-automation" element={<SpotifyAutomation />} />
+          <Route path="/projects/psychology-extended-essay" element={<PsychologyExtendedEssay />} />
+          <Route path="/projects/watsonx-assistant" element={<WatsonxAssistant />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
