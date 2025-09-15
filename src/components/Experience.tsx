@@ -115,7 +115,7 @@ const Experience = () => {
                   </div>
                   <div className="flex flex-col items-start md:items-end space-y-2">
                     <div className="flex items-center space-x-1 text-muted-foreground">
-                      <Calendar className="w-4 h-4" />
+                      <Calendar className="w-5 h-5" />
                       <span className="font-medium">{exp.period}</span>
                     </div>
                     <Badge variant={exp.type === 'Full-time' || exp.type === 'Freelance' ? 'default' : 'secondary'}>
