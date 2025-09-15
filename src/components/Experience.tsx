@@ -5,89 +5,79 @@ import { Calendar, MapPin, Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Content Creator & Brand Manager",
-      company: "GIRLHOOD Dance Studio",
+      title: "Dance Instructor & Content Creator",
+      company: "Multiple Organizations (City of Helsinki, Girlhood Studio, Sport Club Vantaa)",
       location: "Helsinki, Finland",
-      period: "2023 - Present",
-      type: "Full-time",
-      description: "Lead Commercial and Kpop classes while managing comprehensive brand strategy and content creation. Direct competitive Kpop group preparation for competitions, performances, and video productions. Actively engage audiences through multi-platform marketing campaigns and community building.",
+      period: "2022 - Present",
+      type: "Freelance",
+      description: "Led brand strategy and multi-channel content creation to expand digital presence across multiple dance organizations. Managed end-to-end production of marketing materials, social media, and videos while teaching dance classes.",
       achievements: [
-        "Successfully promote classes through strategic social media campaigns and audience engagement",
-        "Lead team content creation initiatives to expand studio reach and brand awareness",
-        "Manage end-to-end video production from concept to post-production editing",
-        "Build and maintain strong brand identity across all touchpoints and communications"
+        "Led brand strategy and multi-channel content creation to expand digital presence",
+        "Managed end-to-end production of marketing materials, social media, and videos",
+        "Drove audience engagement and community growth via targeted campaigns",
+        "Successfully taught and choreographed dance classes across multiple venues"
       ],
-      skills: ["Content Creation", "Video Editing", "Brand Management", "Audience Engagement", "Social Media Marketing", "Team Leadership"]
+      skills: ["Content Creation", "Brand Strategy", "Video Production", "Social Media Marketing", "Dance Instruction", "Community Building"]
     },
     {
-      title: "Youth Work Leader (Teaching, Content Creation)",
-      company: "The City of Helsinki",
+      title: "Youth Work Leader (Content, Media & Teaching)",
+      company: "City of Helsinki",
       location: "Helsinki, Finland",
       period: "Summer 2022",
-      type: "Contract",
-      description: "Diverse roles in content production, media marketing, customer service, and youth work. Responsible for promoting classes on various social media platforms, creating content that garnered tens of thousands of views.",
+      type: "Seasonal",
+      description: "Produced digital content, managed youth events, and led social media marketing for community initiatives. Established new groups, taught classes, and increased engagement through strategic outreach.",
       achievements: [
-        "Successfully created dance performances at Triple Mall",
-        "Established K-pop beginners group at Pasila Youth Center from scratch",
-        "Prepared and taught dance classes to all ages in styles like Hiphop, Street and Hiphop"
+        "Produced digital content and managed youth events effectively",
+        "Led social media marketing for community initiatives",
+        "Established new groups and taught classes to diverse age groups",
+        "Increased engagement through strategic outreach and community building"
       ],
-      skills: ["Content Creation", "Social Media Marketing", "Youth Work", "Dance Instruction"]
+      skills: ["Digital Content Production", "Event Management", "Social Media Marketing", "Youth Work", "Community Outreach"]
     },
     {
-      title: "Communication Office Trainee",
-      company: "Ruuti Communications Office",
+      title: "Communications Office Intern",
+      company: "City of Helsinki",
       location: "Helsinki, Finland",
       period: "Summer 2021",
       type: "Internship",
-      description: "Actively involved in using digital media, producing complete videos for Helsinki's channels across various projects. Played key role in crafting articles for Helsingin Sanomat throughout the entire process.",
+      description: "Created digital media, coordinated outreach, and produced promotional articles. Supported key initiatives through video production and multimedia communication across various city projects.",
       achievements: [
-        "Promoted important initiatives from young people extensively across the metropolitan area",
-        "Described as inspirational multitasker with positive impact on all projects",
-        "Successfully completed comprehensive digital media production projects"
+        "Created digital media and coordinated effective outreach campaigns",
+        "Produced promotional articles and multimedia content",
+        "Supported key city initiatives through comprehensive video production",
+        "Contributed to multimedia communication strategies across departments"
       ],
-      skills: ["Digital Media", "Video Production", "Article Writing", "Communications"]
+      skills: ["Digital Media Creation", "Video Production", "Article Writing", "Communications", "Multimedia Production"]
     },
     {
       title: "Volunteer",
-      company: "Slush",
+      company: "SLUSH",
       location: "Helsinki, Finland",
-      period: "2021 - 2023",
+      period: "Summer 2021",
       type: "Volunteer",
-      description: "Active volunteer at one of Europe's leading startup and tech conferences. Contributed to various aspects of event organization, attendee experience, and community building in the Nordic startup ecosystem.",
+      description: "Supported operations and guest experience at one of Europe's top tech/startup events. Contributed to various aspects of event organization and attendee experience in the Nordic startup ecosystem.",
       achievements: [
-        "Successfully supported major tech conference operations and logistics",
+        "Supported operations and guest experience at major European tech event",
+        "Contributed to event organization and logistics management",
         "Engaged with international startup community and industry professionals",
-        "Contributed to creating memorable experiences for thousands of attendees"
+        "Helped create memorable experiences for thousands of attendees"
       ],
-      skills: ["Event Management", "Community Building", "International Relations", "Team Collaboration", "Startup Ecosystem"]
+      skills: ["Event Operations", "Guest Experience", "Startup Ecosystem", "International Relations", "Team Collaboration"]
     },
     {
-      title: "Journalist (Youth Voice - Editorial)",
-      company: "Various Media Outlets",
+      title: "Youth Journalist",
+      company: "Youth Voice Editorial Team",
       location: "Helsinki, Finland",
       period: "2021 - 2022",
       type: "Volunteer",
-      description: "Worked as journalist in various media including newspapers, TV, blogs, and social media stories. Actively participated in the voluntary Youth Voice editorial team with roles in ideation, planning, chairing, directing, interviewing, writing, editing, and information retrieval.",
+      description: "Published multi-platform content on youth issues and led 2-person editorial projects. Worked across various media including newspapers, TV, blogs, and social media stories with comprehensive editorial responsibilities.",
       achievements: [
-        "Published article in Helsingin Sanomat addressing youth well-being",
-        "Successfully managed two-person editorial team projects",
-        "Gained recognition for comprehensive journalistic work"
+        "Published multi-platform content addressing youth issues and community topics",
+        "Successfully led 2-person editorial projects from conception to publication",
+        "Gained recognition for comprehensive journalistic work and research skills",
+        "Contributed to youth voice representation in mainstream media outlets"
       ],
-      skills: ["Journalism", "Editorial Work", "Interviewing", "Writing", "Research"]
-    },
-    {
-      title: "Script Writer",
-      company: "Independent Projects",
-      location: "Helsinki, Finland",
-      period: "2022",
-      type: "Project",
-      description: "Learning and refining creative writing skills with the goal to create scripts for short films from scratch. Gained valuable insights into brainstorming, collaborative creation, and enhanced general writing skills.",
-      achievements: [
-        "Successfully completed script writing projects from conception to final draft",
-        "Developed collaborative creation processes",
-        "Enhanced creative writing and storytelling abilities"
-      ],
-      skills: ["Creative Writing", "Script Writing", "Storytelling", "Collaboration"]
+      skills: ["Journalism", "Editorial Leadership", "Multi-platform Publishing", "Research", "Content Strategy"]
     }
   ];
 
@@ -99,7 +89,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A diverse background in dance instruction, content creation, and youth work
+            Digital services specialist with experience in content creation, youth engagement, and communications
           </p>
         </div>
 
@@ -128,7 +118,7 @@ const Experience = () => {
                       <Calendar className="w-4 h-4" />
                       <span className="font-medium">{exp.period}</span>
                     </div>
-                    <Badge variant={exp.type === 'Full-time' ? 'default' : 'secondary'}>
+                    <Badge variant={exp.type === 'Full-time' || exp.type === 'Freelance' ? 'default' : 'secondary'}>
                       {exp.type}
                     </Badge>
                   </div>
