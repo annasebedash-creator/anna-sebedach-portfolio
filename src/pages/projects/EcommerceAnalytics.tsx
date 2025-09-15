@@ -195,9 +195,11 @@ const EcommerceAnalytics = () => {
                   <Github className="w-4 h-4 mr-2" />
                   View Code
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
+                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                  <a href="https://finland-psychology-report-dashboard-kjtvduh5rphhid7jnwysqf.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Live Demo
+                  </a>
                 </Button>
               </div>
             </div>
