@@ -191,9 +191,11 @@ const EcommerceAnalytics = () => {
 
               {/* Project Actions */}
               <div className="flex justify-center space-x-4">
-                <Button size="lg" className="shadow-card">
-                  <Github className="w-4 h-4 mr-2" />
-                  View Code
+                <Button size="lg" className="shadow-card" asChild>
+                  <a href="https://github.com/annasebedash-creator/Finland-Psychology-Report-Dashboard" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    View Code
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" className="shadow-card" asChild>
                   <a href="https://finland-psychology-report-dashboard-kjtvduh5rphhid7jnwysqf.streamlit.app/" target="_blank" rel="noopener noreferrer">
