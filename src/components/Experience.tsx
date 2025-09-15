@@ -104,11 +104,11 @@ const Experience = () => {
                     </CardTitle>
                     <div className="flex items-center space-x-4 text-muted-foreground">
                       <div className="flex items-center space-x-1">
-                        <Briefcase className="w-4 h-4" />
+                        <Briefcase className="w-5 h-5" />
                         <span className="font-semibold">{exp.company}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-5 h-5" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
