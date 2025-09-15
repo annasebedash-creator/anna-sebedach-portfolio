@@ -173,7 +173,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Featured projects showcasing technical expertise and strategic thinking across diverse domains
+            Showcasing innovative solutions that bridge technology and business value
           </p>
         </div>
 
