@@ -190,14 +190,8 @@ const PsychologyExtendedEssay = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex justify-center">
                 <Button size="lg" className="shadow-card" asChild>
-                  <a href="/documents/AnnaSebedach_Psych_EE.pdf" target="_blank" rel="noopener noreferrer">
-                    <BookOpen className="w-4 h-4 mr-2" />
-                    Read Paper
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
                   <a href="/documents/AnnaSebedach_Psych_EE.pdf" download="Mental_Imagery_Social_Anxiety_Extended_Essay.pdf">
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
