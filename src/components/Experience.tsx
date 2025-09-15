@@ -6,7 +6,7 @@ const Experience = () => {
   const experiences = [
     {
       title: "Dance Instructor & Content Creator",
-      company: "Multiple Organizations (City of Helsinki, Girlhood Studio, Sport Club Vantaa)",
+      company: "Girlhood Studio and many other studios",
       location: "Helsinki, Finland",
       period: "2022 - Present",
       type: "Freelance",
