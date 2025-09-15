@@ -104,18 +104,18 @@ const Experience = () => {
                     </CardTitle>
                     <div className="flex items-center space-x-4 text-muted-foreground">
                       <div className="flex items-center space-x-1">
-                        <Briefcase className="w-5 h-5" />
+                        <Briefcase className="w-6 h-6" />
                         <span className="font-semibold">{exp.company}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <MapPin className="w-5 h-5" />
+                        <MapPin className="w-6 h-6" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col items-start md:items-end space-y-2">
                     <div className="flex items-center space-x-1 text-muted-foreground">
-                      <Calendar className="w-5 h-5" />
+                      <Calendar className="w-6 h-6" />
                       <span className="font-medium">{exp.period}</span>
                     </div>
                     <Badge variant={exp.type === 'Full-time' || exp.type === 'Freelance' ? 'default' : 'secondary'}>
