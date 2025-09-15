@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, ExternalLink, Github, Calendar, BookOpen, Target } from "lucide-react";
+import { ArrowLeft, Download, BookOpen, Calendar, FileText, Target } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -42,10 +42,10 @@ const PsychologyExtendedEssay = () => {
                 <span>Back to Projects</span>
               </button>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Extended Essay in Psychology: Mental Imagery in Social Anxiety Disorder
+                Mental Imagery in Social Anxiety Disorder
               </h1>
               <p className="text-xl text-white/90 mb-8">
-                4,000-word IB research paper investigating mental imagery's dual role in Social Anxiety Disorder - both as a negative symptom maintenance factor and as a therapeutic tool through imagery rescripting techniques
+                "To what extent does mental imagery serve a negative role in social anxiety disorder?" - A 3,991-word IB Extended Essay investigating how mental imagery both maintains SAD symptoms and serves as a therapeutic intervention through imagery rescripting techniques.
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
                 {["Psychology Research", "Academic Writing", "Literature Review", "IB Extended Essay", "Mental Health", "Cognitive Behavioral Therapy"].map((tag, index) => (
@@ -70,11 +70,7 @@ const PsychologyExtendedEssay = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    Authored a 4,000-word IB Extended Essay investigating the dual role of mental imagery in Social Anxiety 
-                    Disorder (SAD) - examining how it functions both as a negative symptom maintenance factor and as a 
-                    therapeutic tool through imagery rescripting techniques. The research synthesizes findings from seven 
-                    peer-reviewed studies, demonstrating advanced academic writing skills and deep understanding of cognitive 
-                    behavioral therapy principles.
+                    Authored a 3,991-word IB Extended Essay exploring the research question "To what extent does mental imagery serve a negative role in social anxiety disorder?" The paper examines how individuals with SAD experience distorted negative imagery of themselves from an observer's perspective, which maintains anxiety symptoms. However, it also investigates imagery rescripting as an emerging therapeutic technique that transforms negative mental images into positive, realistic ones. The research demonstrates that while mental imagery strongly contributes to developing and maintaining SAD, it can simultaneously serve as a powerful therapeutic tool when properly harnessed through evidence-based interventions.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
@@ -82,14 +78,14 @@ const PsychologyExtendedEssay = () => {
                       <div className="text-primary mx-auto w-fit">
                         <BookOpen className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">4000</div>
+                      <div className="text-2xl font-bold text-primary">3,991</div>
                       <div className="text-sm text-muted-foreground">Words Written</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Target className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">7</div>
+                      <div className="text-2xl font-bold text-primary">Multiple</div>
                       <div className="text-sm text-muted-foreground">Peer-Reviewed Sources</div>
                     </div>
                     <div className="text-center space-y-2">
@@ -127,11 +123,11 @@ const PsychologyExtendedEssay = () => {
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Research Analysis</h4>
+                      <h4 className="font-semibold text-primary">Key Findings</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Dual role of mental imagery examination</li>
-                        <li>• Therapeutic intervention effectiveness</li>
-                        <li>• Evidence-based treatment recommendations</li>
+                        <li>• Mental imagery maintains SAD through negative self-perception</li>
+                        <li>• Observer perspective imagery increases anxiety symptoms</li>
+                        <li>• Imagery rescripting shows therapeutic promise</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
@@ -195,13 +191,17 @@ const PsychologyExtendedEssay = () => {
 
               {/* Project Actions */}
               <div className="flex justify-center space-x-4">
-                <Button size="lg" className="shadow-card">
-                  <Github className="w-4 h-4 mr-2" />
-                  View Code
+                <Button size="lg" className="shadow-card" asChild>
+                  <a href="/documents/AnnaSebedach_Psych_EE.pdf" target="_blank" rel="noopener noreferrer">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Read Paper
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
+                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                  <a href="/documents/AnnaSebedach_Psych_EE.pdf" download="Mental_Imagery_Social_Anxiety_Extended_Essay.pdf">
+                    <Download className="w-4 h-4 mr-2" />
+                    Download PDF
+                  </a>
                 </Button>
               </div>
             </div>
