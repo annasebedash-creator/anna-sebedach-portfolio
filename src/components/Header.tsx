@@ -78,22 +78,28 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation - Compact and right-aligned */}
+        {/* Mobile Navigation - Compact, right-aligned, and elevated */}
         {isMenuOpen && (
-          <div className="md:hidden absolute right-6 top-full mt-2 w-32 bg-black/80 backdrop-blur-md rounded-lg border border-ivory/20 shadow-lg">
-            <nav className="flex flex-col py-1">
-              {menuItems.map(item => (
-                <a 
-                  key={item.label} 
-                  href={item.href} 
-                  className="text-ivory/80 hover:text-ivory hover:bg-ivory/10 transition-colors duration-200 font-medium px-3 py-1.5 text-sm whitespace-nowrap" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-          </div>
+          <>
+            {/* Backdrop blur overlay */}
+            <div className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm -z-10" onClick={() => setIsMenuOpen(false)} />
+            
+            {/* Menu dropdown */}
+            <div className="md:hidden absolute right-2 top-12 w-28 bg-black/90 backdrop-blur-md rounded-lg border border-ivory/20 shadow-xl animate-fade-in">
+              <nav className="flex flex-col py-1">
+                {menuItems.map(item => (
+                  <a 
+                    key={item.label} 
+                    href={item.href} 
+                    className="text-ivory/80 hover:text-ivory hover:bg-ivory/10 transition-colors duration-200 font-medium px-2 py-1.5 text-xs whitespace-nowrap" 
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </>
         )}
       </div>
     </header>
