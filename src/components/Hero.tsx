@@ -3,23 +3,17 @@ import brandingWork1 from "@/assets/branding-work-1.jpg";
 import brandingWork2 from "@/assets/branding-work-2.jpg";
 import aesthetic1 from "@/assets/aesthetic-1.jpg";
 import heroMixedMedia from "@/assets/hero-mixed-media.jpg";
-
 const Hero = () => {
-  return (
-    <div>
+  return <div>
       {/* Section 1: Hero Slice */}
       <section className="hero-slice relative h-[calc(35vh+3cm)] md:h-[calc(70vh+3cm)] lg:h-[calc(80vh+3cm)] xl:h-[calc(85vh+3cm)] overflow-hidden">
-        <img 
-          src={heroMixedMedia} 
-          alt="Mixed media composition with professional portrait" 
-          className="absolute inset-0 w-full h-full object-cover object-center" 
-        />
+        <img src={heroMixedMedia} alt="Mixed media composition with professional portrait" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 max-w-4xl mx-auto px-6">
-            <h1 className="hero-title text-6xl font-bold text-ivory leading-tight">My professional showcase</h1>
-            <p className="hero-sub text-xl text-ivory/90 max-w-2xl mx-auto">
+            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight">My professional showcase</h1>
+            <p className="hero-sub text-lg md:text-xl text-ivory/90 max-w-2xl mx-auto">
               Bridging technology and creativity to build meaningful digital experiences
             </p>
             
@@ -47,8 +41,6 @@ const Hero = () => {
 
       {/* Section 3: Projects Slice */}
       
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
