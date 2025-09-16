@@ -23,8 +23,18 @@ const Skills = () => {
     skills: ["Team Leadership", "Project Management", "Agile/Scrum", "Cross-functional Collaboration", "Mentoring", "Communication", "Problem Solving", "Decision Making"],
     color: "text-burgundy"
   }];
-  return <section id="skills" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
+  return <section id="skills" className="py-20 bg-gradient-subtle relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-midnight-blue/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-16 w-24 h-24 bg-burgundy/8 rounded-full animate-pulse delay-300"></div>
+        <div className="absolute bottom-32 left-20 w-20 h-20 bg-moss-green/12 rounded-full animate-pulse delay-700"></div>
+        <div className="absolute bottom-20 right-24 w-28 h-28 bg-midnight-blue/8 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-60 left-1/4 w-16 h-16 bg-burgundy/6 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-80 right-1/3 w-36 h-36 bg-moss-green/8 rounded-full animate-pulse delay-200"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 inline-block whitespace-nowrap">
             Skills & Expertise
@@ -46,42 +56,42 @@ const Skills = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-6 text-sm">
+              <div className="grid md:grid-cols-2 gap-6 text-base">
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <GraduationCap className="w-4 h-4 text-primary" />
-                      <span className="font-medium">Bachelor's in Applied Sciences</span>
+                      <GraduationCap className="w-5 h-5 text-primary" />
+                      <span className="font-medium text-lg">Bachelor's in Applied Sciences</span>
                     </div>
-                    <p className="text-muted-foreground ml-6">IT & Business Administration, Digital Services - Haaga-Helia</p>
+                    <p className="text-muted-foreground ml-7">IT & Business Administration, Digital Services - Haaga-Helia</p>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <GraduationCap className="w-4 h-4 text-primary" />
-                      <span className="font-medium">University Psychology Studies</span>
+                      <GraduationCap className="w-5 h-5 text-primary" />
+                      <span className="font-medium text-lg">University Psychology Studies</span>
                     </div>
-                    <p className="text-muted-foreground ml-6">5+ Bachelor's level courses - University of Helsinki</p>
+                    <p className="text-muted-foreground ml-7">5+ Bachelor's level courses - University of Helsinki</p>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <GraduationCap className="w-4 h-4 text-secondary" />
-                      <span className="font-medium">IB Diploma</span>
+                      <GraduationCap className="w-5 h-5 text-secondary" />
+                      <span className="font-medium text-lg">IB Diploma</span>
                     </div>
-                    <p className="text-muted-foreground ml-6">International Baccalaureate - Secondary Education</p>
+                    <p className="text-muted-foreground ml-7">International Baccalaureate - Secondary Education</p>
                   </div>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <Globe className="w-4 h-4 text-primary" />
-                    <span className="font-medium">Languages</span>
+                    <Globe className="w-5 h-5 text-primary" />
+                    <span className="font-medium text-lg">Languages</span>
                   </div>
-                  <div className="ml-6 space-y-1">
-                    <Badge variant="secondary" className="mr-2">English (Fluent)</Badge>
-                    <Badge variant="secondary" className="mr-2">Finnish (Native)</Badge>
-                    <Badge variant="secondary">Russian (Native)</Badge>
+                  <div className="ml-7 space-y-1">
+                    <Badge variant="secondary" className="mr-2 text-sm">English (Fluent)</Badge>
+                    <Badge variant="secondary" className="mr-2 text-sm">Finnish (Native)</Badge>
+                    <Badge variant="secondary" className="text-sm">Russian (Native)</Badge>
                   </div>
                 </div>
               </div>
@@ -101,16 +111,16 @@ const Skills = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-8 text-sm">
+              <div className="grid md:grid-cols-2 gap-8 text-base">
                 {skillCategories.map((category, index) => <div key={index} className="space-y-3">
                     <div className="flex items-center space-x-2">
                       <div className={category.color}>
                         {category.icon}
                       </div>
-                      <span className="font-medium text-base">{category.title}</span>
+                      <span className="font-medium text-lg">{category.title}</span>
                     </div>
                     <div className="ml-8 flex flex-wrap gap-1.5">
-                      {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-xs py-0.5 px-2">
+                      {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-sm py-1 px-3">
                           {skill}
                         </Badge>)}
                     </div>
