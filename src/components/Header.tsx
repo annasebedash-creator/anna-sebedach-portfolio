@@ -55,7 +55,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation - Back on the right */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 mt-1">
             {menuItems.map(item => (
               <a 
                 key={item.label} 
