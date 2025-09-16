@@ -86,7 +86,7 @@ const Header = () => {
             <div className="md:hidden fixed inset-0 bg-black/10 backdrop-blur-md -z-10" onClick={() => setIsMenuOpen(false)} />
             
             {/* Menu dropdown */}
-            <div className="md:hidden absolute right-2 top-14 w-28 bg-black/60 backdrop-blur-lg rounded-lg border border-ivory/30 shadow-xl animate-fade-in">
+            <div className="md:hidden absolute right-2 top-14 w-28 bg-black/60 backdrop-blur-lg rounded-lg shadow-xl animate-fade-in">
               <nav className="flex flex-col py-1">
                 {menuItems.map(item => (
                   <a 
