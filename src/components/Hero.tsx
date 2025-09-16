@@ -6,7 +6,7 @@ import heroMixedMedia from "@/assets/hero-mixed-media.jpg";
 const Hero = () => {
   return <div>
       {/* Section 1: Hero Slice */}
-      <section className="hero-slice relative h-[calc(35vh+3cm)] md:h-[calc(60vh+3cm)] lg:h-[calc(80vh+3cm)] xl:h-[calc(65vh+3cm)] overflow-hidden">
+      <section className="hero-slice relative h-[calc(35vh+3cm)] md:h-[calc(45vh+3cm)] lg:h-[calc(55vh+3cm)] xl:h-[calc(65vh+3cm)] overflow-hidden">
         <img src={heroMixedMedia} alt="Mixed media composition with professional portrait" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
