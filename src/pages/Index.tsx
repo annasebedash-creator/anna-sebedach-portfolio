@@ -5,20 +5,23 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <MobileMenuProvider>
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Hero />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </MobileMenuProvider>
   );
 };
 
