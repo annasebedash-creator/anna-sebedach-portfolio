@@ -32,25 +32,25 @@ const Skills = () => {
         {/* Desktop: Hero-inspired geometric composition */}
         <div className="hidden md:block">
           {/* Left side vertical elements - mimicking portrait composition */}
-          <div className="absolute left-0 top-1/4 w-1 h-96 bg-gradient-to-b from-midnight-blue/20 via-midnight-blue/8 to-transparent"></div>
-          <div className="absolute left-8 top-1/3 w-px h-80 bg-gradient-to-b from-burgundy/15 via-burgundy/6 to-transparent"></div>
-          <div className="absolute left-4 top-1/2 w-0.5 h-64 bg-gradient-to-b from-moss-green/12 via-moss-green/5 to-transparent"></div>
+          <div className="absolute left-0 top-1/4 w-2 h-96 bg-gradient-to-b from-midnight-blue/20 via-midnight-blue/8 to-transparent"></div>
+          <div className="absolute left-10 top-1/3 w-1 h-80 bg-gradient-to-b from-burgundy/15 via-burgundy/6 to-transparent"></div>
+          <div className="absolute left-5 top-1/2 w-1 h-64 bg-gradient-to-b from-moss-green/12 via-moss-green/5 to-transparent"></div>
           
           {/* Right side vertical elements - balanced composition */}
-          <div className="absolute right-0 top-1/6 w-1 h-80 bg-gradient-to-b from-burgundy/18 via-burgundy/7 to-transparent"></div>
-          <div className="absolute right-6 top-1/4 w-px h-96 bg-gradient-to-b from-midnight-blue/12 via-midnight-blue/5 to-transparent"></div>
-          <div className="absolute right-3 top-2/5 w-0.5 h-72 bg-gradient-to-b from-moss-green/10 via-moss-green/4 to-transparent"></div>
+          <div className="absolute right-0 top-1/6 w-2 h-80 bg-gradient-to-b from-burgundy/18 via-burgundy/7 to-transparent"></div>
+          <div className="absolute right-8 top-1/4 w-1 h-96 bg-gradient-to-b from-midnight-blue/12 via-midnight-blue/5 to-transparent"></div>
+          <div className="absolute right-4 top-2/5 w-1 h-72 bg-gradient-to-b from-moss-green/10 via-moss-green/4 to-transparent"></div>
           
           {/* Horizontal accent lines - creating depth */}
-          <div className="absolute top-20 left-12 w-32 h-px bg-gradient-to-r from-midnight-blue/15 to-transparent"></div>
-          <div className="absolute top-1/3 right-16 w-40 h-px bg-gradient-to-l from-burgundy/12 to-transparent"></div>
-          <div className="absolute bottom-32 left-20 w-28 h-px bg-gradient-to-r from-moss-green/10 to-transparent"></div>
+          <div className="absolute top-20 left-12 w-40 h-0.5 bg-gradient-to-r from-midnight-blue/15 to-transparent"></div>
+          <div className="absolute top-1/3 right-16 w-48 h-0.5 bg-gradient-to-l from-burgundy/12 to-transparent"></div>
+          <div className="absolute bottom-32 left-20 w-36 h-0.5 bg-gradient-to-r from-moss-green/10 to-transparent"></div>
           
           {/* Corner accent elements */}
-          <div className="absolute top-16 left-6 w-3 h-3 bg-midnight-blue/15 rotate-45"></div>
-          <div className="absolute top-24 right-10 w-2 h-8 bg-burgundy/10 rotate-12"></div>
-          <div className="absolute bottom-28 left-12 w-4 h-2 bg-moss-green/12 rotate-45"></div>
-          <div className="absolute bottom-16 right-8 w-2 h-6 bg-midnight-blue/8 rotate-[-15deg]"></div>
+          <div className="absolute top-16 left-6 w-4 h-4 bg-midnight-blue/15 rotate-45"></div>
+          <div className="absolute top-24 right-10 w-3 h-10 bg-burgundy/10 rotate-12"></div>
+          <div className="absolute bottom-28 left-12 w-5 h-3 bg-moss-green/12 rotate-45"></div>
+          <div className="absolute bottom-16 right-8 w-3 h-8 bg-midnight-blue/8 rotate-[-15deg]"></div>
           
           {/* Subtle texture overlays */}
           <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-midnight-blue/3 via-midnight-blue/1 to-transparent opacity-60"></div>
