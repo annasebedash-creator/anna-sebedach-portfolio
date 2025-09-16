@@ -24,30 +24,39 @@ const Skills = () => {
     color: "text-burgundy"
   }];
   return <section id="skills" className="py-20 bg-gradient-subtle relative overflow-hidden">
-      {/* Background decorative elements */}
+      {/* Background decorative elements - inspired by hero image composition */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Main decorative circles */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-midnight-blue/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-16 w-24 h-24 bg-burgundy/8 rounded-full animate-pulse delay-300"></div>
-        <div className="absolute bottom-32 left-20 w-20 h-20 bg-moss-green/12 rounded-full animate-pulse delay-700"></div>
-        <div className="absolute bottom-20 right-24 w-28 h-28 bg-midnight-blue/8 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-60 left-1/4 w-16 h-16 bg-burgundy/6 rounded-full animate-pulse delay-500"></div>
-        <div className="absolute top-80 right-1/3 w-36 h-36 bg-moss-green/8 rounded-full animate-pulse delay-200"></div>
+        {/* Mobile: Simple light background */}
+        <div className="md:hidden absolute inset-0 bg-muted/20"></div>
         
-        {/* Additional subtle elements inspired by hero image */}
-        <div className="absolute top-1/4 left-0 w-2 h-40 bg-gradient-to-b from-midnight-blue/15 to-transparent animate-pulse delay-800"></div>
-        <div className="absolute top-1/2 right-0 w-2 h-32 bg-gradient-to-b from-burgundy/12 to-transparent animate-pulse delay-400"></div>
-        <div className="absolute bottom-1/4 left-0 w-3 h-28 bg-gradient-to-t from-moss-green/10 to-transparent animate-pulse delay-600"></div>
-        
-        {/* Floating geometric shapes */}
-        <div className="absolute top-32 right-1/4 w-4 h-4 bg-midnight-blue/15 rotate-45 animate-pulse delay-900"></div>
-        <div className="absolute top-3/4 left-1/3 w-6 h-6 bg-burgundy/10 rotate-12 animate-pulse delay-1200"></div>
-        <div className="absolute bottom-40 right-1/5 w-5 h-5 bg-moss-green/12 rounded-full animate-pulse delay-300"></div>
-        
-        {/* Subtle gradient overlays */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-radial from-midnight-blue/5 to-transparent animate-pulse delay-1500"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-radial from-burgundy/4 to-transparent animate-pulse delay-800"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-moss-green/3 to-transparent animate-pulse delay-2000"></div>
+        {/* Desktop: Hero-inspired geometric composition */}
+        <div className="hidden md:block">
+          {/* Left side vertical elements - mimicking portrait composition */}
+          <div className="absolute left-0 top-1/4 w-1 h-96 bg-gradient-to-b from-midnight-blue/20 via-midnight-blue/8 to-transparent"></div>
+          <div className="absolute left-8 top-1/3 w-px h-80 bg-gradient-to-b from-burgundy/15 via-burgundy/6 to-transparent"></div>
+          <div className="absolute left-4 top-1/2 w-0.5 h-64 bg-gradient-to-b from-moss-green/12 via-moss-green/5 to-transparent"></div>
+          
+          {/* Right side vertical elements - balanced composition */}
+          <div className="absolute right-0 top-1/6 w-1 h-80 bg-gradient-to-b from-burgundy/18 via-burgundy/7 to-transparent"></div>
+          <div className="absolute right-6 top-1/4 w-px h-96 bg-gradient-to-b from-midnight-blue/12 via-midnight-blue/5 to-transparent"></div>
+          <div className="absolute right-3 top-2/5 w-0.5 h-72 bg-gradient-to-b from-moss-green/10 via-moss-green/4 to-transparent"></div>
+          
+          {/* Horizontal accent lines - creating depth */}
+          <div className="absolute top-20 left-12 w-32 h-px bg-gradient-to-r from-midnight-blue/15 to-transparent"></div>
+          <div className="absolute top-1/3 right-16 w-40 h-px bg-gradient-to-l from-burgundy/12 to-transparent"></div>
+          <div className="absolute bottom-32 left-20 w-28 h-px bg-gradient-to-r from-moss-green/10 to-transparent"></div>
+          
+          {/* Corner accent elements */}
+          <div className="absolute top-16 left-6 w-3 h-3 bg-midnight-blue/15 rotate-45"></div>
+          <div className="absolute top-24 right-10 w-2 h-8 bg-burgundy/10 rotate-12"></div>
+          <div className="absolute bottom-28 left-12 w-4 h-2 bg-moss-green/12 rotate-45"></div>
+          <div className="absolute bottom-16 right-8 w-2 h-6 bg-midnight-blue/8 rotate-[-15deg]"></div>
+          
+          {/* Subtle texture overlays */}
+          <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-midnight-blue/3 via-midnight-blue/1 to-transparent opacity-60"></div>
+          <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-burgundy/2 via-burgundy/1 to-transparent opacity-70"></div>
+          <div className="absolute bottom-0 left-1/4 right-1/4 h-1/3 bg-gradient-to-t from-moss-green/2 to-transparent opacity-50"></div>
+        </div>
       </div>
       
       <div className="container mx-auto px-6 relative">
