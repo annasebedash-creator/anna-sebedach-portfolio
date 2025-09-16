@@ -78,15 +78,15 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation - Small and right-aligned */}
+        {/* Mobile Navigation - Compact and right-aligned */}
         {isMenuOpen && (
-          <div className="md:hidden absolute right-6 top-full mt-2 w-48 bg-black/80 backdrop-blur-md rounded-lg border border-ivory/20 shadow-lg">
-            <nav className="flex flex-col py-2">
+          <div className="md:hidden absolute right-6 top-full mt-2 w-32 bg-black/80 backdrop-blur-md rounded-lg border border-ivory/20 shadow-lg">
+            <nav className="flex flex-col py-1">
               {menuItems.map(item => (
                 <a 
                   key={item.label} 
                   href={item.href} 
-                  className="text-ivory/80 hover:text-ivory hover:bg-ivory/10 transition-colors duration-200 font-medium px-4 py-2 text-sm" 
+                  className="text-ivory/80 hover:text-ivory hover:bg-ivory/10 transition-colors duration-200 font-medium px-3 py-1.5 text-sm whitespace-nowrap" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
