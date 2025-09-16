@@ -29,8 +29,8 @@ const Skills = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 inline-block whitespace-nowrap">
             Skills & Expertise
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto whitespace-nowrap">
-            A comprehensive blend of technical proficiency and business acumen
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Technical expertise combined with strategic thinking
           </p>
         </div>
 
