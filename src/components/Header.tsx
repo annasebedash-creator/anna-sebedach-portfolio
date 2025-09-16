@@ -62,27 +62,16 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Navigation - Always visible */}
-          <nav className="md:hidden flex items-center space-x-3 text-sm">
-            {menuItems.filter((_, index) => index < 4).map(item => (
-              <a 
-                key={item.label} 
-                href={item.href} 
-                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium"
-              >
-                {item.label}
-              </a>
-            ))}
-            <Button variant="ghost" size="icon" className="text-ivory hover:bg-ivory/20 p-1" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="More menu">
-              {isMenuOpen ? <X size={16} /> : <Menu size={16} />}
-            </Button>
-          </nav>
+          {/* Mobile Menu Button */}
+          <Button variant="ghost" size="icon" className="md:hidden text-ivory hover:bg-ivory/20" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </Button>
         </div>
 
-        {/* Mobile Additional Menu */}
+        {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-ivory/20">
             <nav className="flex flex-col space-y-4 pt-4">
-              {menuItems.filter((_, index) => index >= 4).map(item => <a key={item.label} href={item.href} className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2 text-xl" onClick={() => setIsMenuOpen(false)}>
+              {menuItems.map(item => <a key={item.label} href={item.href} className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2 text-xl" onClick={() => setIsMenuOpen(false)}>
                   {item.label}
                 </a>)}
             </nav>
