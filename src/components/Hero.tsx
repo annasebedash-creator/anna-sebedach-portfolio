@@ -10,7 +10,7 @@ const Hero = () => {
   
   return <div>
       {/* Section 1: Hero Slice */}
-      <section className={`hero-slice relative h-[calc(35vh+3cm)] md:h-[calc(70vh+3cm)] lg:h-[calc(80vh+3cm)] xl:h-[calc(85vh+3cm)] overflow-hidden transition-all duration-300 ${isMenuOpen ? 'blur-sm' : ''}`}>
+      <section className={`hero-slice relative h-[calc(35vh+3cm)] md:h-[calc(70vh+3cm)] lg:h-[calc(80vh+3cm)] xl:h-[calc(85vh+3cm)] overflow-hidden transition-all duration-300 ${isMenuOpen ? 'blur-[1px]' : ''}`}>
         <img src={heroMixedMedia} alt="Mixed media composition with professional portrait" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
