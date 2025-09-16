@@ -23,14 +23,14 @@ const Hero = () => {
             
             <div className="hero-ctas flex gap-4 justify-center pt-6">
               <Button 
-                className="bg-burgundy hover:bg-burgundy/90 text-ivory px-8 py-4 text-lg md:text-xl"
+                className="bg-burgundy hover:bg-burgundy/90 text-ivory px-6 py-3"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View Projects
               </Button>
               <Button 
                 variant="outline" 
-                className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-8 py-4 text-lg md:text-xl"
+                className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-6 py-3"
                 onClick={() => window.open('/lovable-uploads/c5833f94-f48a-41dc-b71d-c627829e9ba7.png', '_blank')}
               >
                 Download CV
