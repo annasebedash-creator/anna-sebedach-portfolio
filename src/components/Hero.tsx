@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import brandingWork1 from "@/assets/branding-work-1.jpg";
 import brandingWork2 from "@/assets/branding-work-2.jpg";
 import aesthetic1 from "@/assets/aesthetic-1.jpg";
+import heroMixedMedia from "@/assets/hero-mixed-media.jpg";
 const Hero = () => {
   return <div>
       {/* Section 1: Hero Slice */}
       <section className="hero-slice relative h-[calc(35vh+3cm)] overflow-hidden">
-        <img src="/lovable-uploads/4f99b67f-5796-4f42-9124-a97a96986460.png" alt="Where Code Meets Design" className="absolute inset-0 w-full h-full object-cover object-top md:object-[50%_20%] lg:object-center" />
+        <img src={heroMixedMedia} alt="Mixed media composition with professional portrait" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-blue/30 via-midnight-blue/50 to-midnight-blue/70"></div>
         
         <div className="absolute inset-0 flex items-center justify-center">
