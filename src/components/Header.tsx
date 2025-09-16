@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -23,26 +24,18 @@ const Header = () => {
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
-  const menuItems = [{
-    label: "Home",
-    href: "#home"
-  }, {
-    label: "About",
-    href: "#about"
-  }, {
-    label: "Skills",
-    href: "#skills"
-  }, {
-    label: "Projects",
-    href: "#projects"
-  }, {
-    label: "Experience",
-    href: "#experience"
-  }, {
-    label: "Contact",
-    href: "#contact"
-  }];
-  return <header className={`fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+
+  const menuItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Experience", href: "#experience" },
+    { label: "Contact", href: "#contact" }
+  ];
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-midnight-blue/80 backdrop-blur-md transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto px-[24px] py-4">
         <div className="flex items-center justify-between mx-0 px-0 py-0 my-0 rounded-none">
           <div className="text-2xl font-bold text-ivory">
@@ -62,21 +55,45 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button variant="ghost" size="icon" className="md:hidden text-ivory hover:bg-ivory/20" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          {/* Mobile Navigation - Always visible */}
+          <nav className="md:hidden flex items-center space-x-4">
+            {menuItems.slice(0, 4).map(item => (
+              <a 
+                key={item.label} 
+                href={item.href} 
+                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium text-sm"
+              >
+                {item.label}
+              </a>
+            ))}
+            
+            {/* Mobile Menu Button for additional items */}
+            <Button variant="ghost" size="icon" className="text-ivory hover:bg-ivory/20" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </Button>
+          </nav>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-ivory/20">
+        {/* Mobile Dropdown for additional items */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-ivory/20">
             <nav className="flex flex-col space-y-4 pt-4">
-              {menuItems.map(item => <a key={item.label} href={item.href} className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2 text-xl" onClick={() => setIsMenuOpen(false)}>
+              {menuItems.slice(4).map(item => (
+                <a 
+                  key={item.label} 
+                  href={item.href} 
+                  className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2 text-lg" 
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item.label}
-                </a>)}
+                </a>
+              ))}
             </nav>
-          </div>}
+          </div>
+        )}
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;
