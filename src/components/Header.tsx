@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -23,6 +24,7 @@ const Header = () => {
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
+
   const menuItems = [{
     label: "Home",
     href: "#home"
@@ -42,41 +44,60 @@ const Header = () => {
     label: "Contact",
     href: "#contact"
   }];
-  return <header className={`fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto px-[24px] py-4">
-        <div className="flex items-center justify-between mx-0 px-0 py-0 my-0 rounded-none">
-          <div className="text-2xl font-bold text-ivory">
+        <div className="flex items-center mx-0 px-0 py-0 my-0 rounded-none">
+          <div className="text-2xl font-bold text-ivory mr-8">
             Portfolio
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Main Navigation - Always visible, responsive sizing */}
+          <nav className="hidden sm:flex items-center space-x-3 md:space-x-6 flex-1">
             {menuItems.map(item => (
               <a 
                 key={item.label} 
                 href={item.href} 
-                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium text-xl"
+                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium text-sm md:text-lg lg:text-xl whitespace-nowrap"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button variant="ghost" size="icon" className="md:hidden text-ivory hover:bg-ivory/20" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+          {/* Mobile Menu Button - Only on very small screens */}
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="sm:hidden text-ivory hover:bg-ivory/20 ml-auto" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            aria-label="Toggle menu"
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-ivory/20">
-            <nav className="flex flex-col space-y-4 pt-4">
-              {menuItems.map(item => <a key={item.label} href={item.href} className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2 text-xl" onClick={() => setIsMenuOpen(false)}>
+        {/* Mobile Navigation - Positioned to avoid hero content overlap */}
+        {isMenuOpen && (
+          <div className="sm:hidden mt-4 pb-4 border-t border-ivory/20 bg-black/40 backdrop-blur-md rounded-lg">
+            <nav className="flex flex-col space-y-2 pt-4 px-4">
+              {menuItems.map(item => (
+                <a 
+                  key={item.label} 
+                  href={item.href} 
+                  className="text-ivory/80 hover:text-ivory transition-colors duration-200 font-medium py-2 text-lg" 
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item.label}
-                </a>)}
+                </a>
+              ))}
             </nav>
-          </div>}
+          </div>
+        )}
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;
