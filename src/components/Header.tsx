@@ -50,7 +50,7 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto px-[24px] py-3">
         <div className="flex items-center justify-between mx-0 px-0 py-0 my-0 rounded-none">
-          <div className="text-2xl font-bold text-ivory">
+          <div className="text-3xl lg:text-4xl font-bold text-ivory">
             Portfolio
           </div>
 
@@ -60,7 +60,7 @@ const Header = () => {
               <a 
                 key={item.label} 
                 href={item.href} 
-                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium text-xl"
+                className="text-ivory/90 hover:text-ivory transition-colors duration-200 font-medium text-xl lg:text-2xl"
               >
                 {item.label}
               </a>
