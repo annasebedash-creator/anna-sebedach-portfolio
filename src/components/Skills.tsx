@@ -151,6 +151,9 @@ const Skills = () => {
                 </div>
                 <span>Skills & Expertise</span>
               </CardTitle>
+              <p className="text-muted-foreground text-sm mt-3">
+                Some tools were used in specific projects or AI-assisted environments. Others are part of my current learning process.
+              </p>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-8 text-base">
