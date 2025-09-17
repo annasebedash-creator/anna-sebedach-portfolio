@@ -172,9 +172,9 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Showcasing innovative solutions that bridge technology and business value
-          </p>
+           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+             Showcasing innovative solutions that bridge technology and business value, driven by personal curiosities and interests
+           </p>
         </div>
 
         <div ref={projectsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
