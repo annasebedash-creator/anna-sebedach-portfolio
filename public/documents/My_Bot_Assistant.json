@@ -1,0 +1,1261 @@
+{
+  "name": "My Bot Assistant",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "a0bf9719-4272-46f6-ab3b-eda6f7b44fd8",
+              "operator": {
+                "type": "object",
+                "operation": "exists",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.message.voice }}",
+              "rightValue": ""
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "99d6e2e6-e8a5-4a34-9404-0e25ddeb8386",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -272,
+        160
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "id": "f9f79f9d-a94b-4a79-b9aa-ea9c34265b3b",
+      "name": "Speech to Text",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "position": [
+        -336,
+        416
+      ],
+      "typeVersion": 1.3,
+      "credentials": {
+        "openAiApi": {
+          "id": "vJy3LBOd5lxn9JKc",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "text",
+              "stringValue": "={{ $json.message.voice.mime_type }}\n"
+            },
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "c9f42f42-bab5-40f9-88ce-23878d557e46",
+      "name": "Voice or Text",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -464,
+        160
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.message.voice.file_id }}",
+        "additionalFields": {}
+      },
+      "id": "d69365f0-4dbd-443d-b378-af7d18be40ca",
+      "name": "Get Voice File",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        -464,
+        416
+      ],
+      "typeVersion": 1.1,
+      "webhookId": "86f4613a-227d-4b76-b72f-fcead53be03c",
+      "credentials": {
+        "telegramApi": {
+          "id": "B6PphJPkAliC1Ieh",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Voice message transcription\n",
+        "height": 263,
+        "width": 384,
+        "color": 5
+      },
+      "id": "0b06f59b-07e3-4ba5-957c-8afcc4dec9e0",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -496,
+        320
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        256,
+        512
+      ],
+      "id": "c3b6ec6b-b10c-42c7-ba67-46eb5adedcab",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "vJy3LBOd5lxn9JKc",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Assistant",
+        "height": 272,
+        "width": 416,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        208,
+        96
+      ],
+      "id": "f5bb70b0-9e31-4722-a279-b642c2357030",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "User message replies",
+        "height": 96,
+        "width": 150,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        672,
+        208
+      ],
+      "id": "ddcb344c-b76b-45cd-9203-644cde9c7ae3",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "Pulls out Google Calendar events",
+        "height": 80,
+        "width": 208,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        448,
+        496
+      ],
+      "id": "86c0aebe-9afc-4dd4-b9c4-6dca6dc74bb0",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "value": "anna.sebedash@gmail.com",
+          "mode": "list",
+          "cachedResultName": "anna.sebedash@gmail.com"
+        },
+        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}",
+        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', ``, 'string') }}",
+        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        576,
+        528
+      ],
+      "id": "577f0ba8-8a86-49cb-ba5a-48b6655aa298",
+      "name": "Events Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "hjNmw8IGaxsUawCr",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Message format",
+        "height": 608,
+        "width": 224,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        -112
+      ],
+      "id": "4ffefb7c-d235-4bf7-99dd-cc018a0e5a1a",
+      "name": "Sticky Note16"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=UserText: {{ $json.message.text }},\nChatID: {{ $json.message.chat.id }},\nToday: {{$now}}.\nОтветь мне в телеграмме.",
+        "options": {
+          "systemMessage": "=\n\nYou are a smart assistant. People write to you via Telegram, use the Telegram tool for communication. If some data exists in the context of the dialogue, you don’t need to re-query services for it; just return the answer.\nYou have access to services:\n- TickTick — for tasks\n- Google Calendar — for meetings, you have several calendars\n- Telegram — for user communication\n- OpenWeatherMap — for weather\n- Notion — for working with databases and pages\n\nThe main knowledge source is Notion; first look for matches there, then on the internet.\n\nRules of operation\n\n1) Tasks (TickTick)\n- Check for duplicates in tasks, in case the user forgot they already created such a task.\n- Create all tasks only in TickTick.\n- Be sure to add the tag #systemai.\n- If the user asks about tasks — fetch them and present as a list.\n- If the user asks to show tasks:\n  - Present task lists or meetings as a list.\n\n2) Calendar and meetings\n- Read from multiple Google Calendars\n- Show upcoming events by day, by calendar, or by tag/attendee\n– When user asks to add an event (e.g., “Add an event titled ...”):\nExtract and assign the string specified after the word “titled” as the event’s title (Google Calendar summary).\nAny additional text should be treated as the event notes/description (optional).\nIf no title is provided, prompt the user to supply one before creation.\n- Create events with natural language (e.g., “Lunch with Sam at 12:30”)\n- Conflict detection and gentle conflict notifications\n- Reminders and follow-ups, synced with TickTick when applicable\n\n\n3) Weather and daily briefings\n- Fetch current conditions and 5- to 7-day forecast from OpenWeatherMap\n- Location-aware prompts (default city, which is Helsinki  with option to override)\n- Smart tips based on forecast (e.g., bring an umbrella if rain is forecast)\n- Weather-driven reminders (e.g., “heat wave alert” or “sun protection today”)\n\n4) Knowledge base and notes\n- Notion as primary knowledge source with fallback to web search\n- Query Notion databases/pages to fetch summaries, meeting notes, project docs\n- Create and link Notion pages from chat (notes, tasks, SOPs)\n- Tagging and indexing for quick retrieval\n\n5) Notion-first discovery\n- Intelligence layer that prioritizes Notion results\n- Caching and relevance scoring to reduce latency\n- Template suggestions for common docs (meeting notes, project plan, weekly recap)\n\n6) User context and personalization\n- Remember user preferences (tone, fallback language, prefixes)\n- Persist conversation context within a session and optionally across sessions\n- Privacy controls: opt-out of data retention, data access scopes\n\n7) Multimodal and rich responses\n- Use Telegram features: inline keyboards, reply markups, buttons for quick actions\n- Rich formatting in messages (bold, lists, emojis)\n- Quick actions: “Create task,” “Show today’s events,” “Weather now”\n\n8) Error handling and reliability\n- Clear error messages with guidance\n- Idempotent operations where possible\n- Retry strategies for flaky API calls\n- Fallback data sources if a service is unavailable (Notion cache, local memory)\n\n9) Security and permissions\n- Least privilege: request only needed scopes for TickTick, Google Calendar, Notion, etc.\n- Secure storage for tokens (encrypted, rotated)\n- User verification or PIN for sensitive actions (optional)\n\nData model and flow design\n- Entities: User, Task, Event, Weather, NotionPage, NotionDatabase, Reminder, Context\n- Actions: Create, Read, Update, Delete (as appropriate), Search, Sync\n- Flows:\n  - Message received → Intent recognition → Entity extraction → External API call → Compose response → Send via Telegram\n  - Sync cycle: periodic background job to refresh tasks/events/weather\n- Idempotency keys for repeated requests\n- Caching strategy: short-term cache for weather and Notion lookups\n\nDialog design and UX patterns\n- Clear intents: “Add task,” “Show today’s events,” “What’s the weather?”\n- Progressive disclosure: start with a summary, offer expansions via inline buttons\n- Concise tone with helpful tips\n- Short, actionable responses for on-the-go usage\n- Localization: detect and support multiple languages if needed\n\nAPI and integration details (practical tips)\n- TickTick: create/update tasks with tags, due dates, reminders\n- Google Calendar: read multiple calendars, create events, check conflicts\n- OpenWeatherMap: current weather, forecast, units (metric/imperial)\n- Notion: fetch pages/databases, create notes, link pages\n- Telegram: use inline keyboards, callbacks, chat actions (typing, uploading)\n- Observability: logging, metrics (requests/sec, error rate), tracing for flows\n\nFailure modes and safeguards\n- Graceful degradation when a service is down\n- Clear user-friendly messages for failures\n- Retry dashboards and user-visible status indicators\n\n",
+          "maxIterations": 10
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        288,
+        176
+      ],
+      "id": "4703324f-7ed2-405a-bfae-8eb1518eca87",
+      "name": "Tasker",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -688,
+        160
+      ],
+      "id": "2faf322e-d1c7-45df-8039-195ae683670a",
+      "name": "Main pipe",
+      "webhookId": "39f4e6a3-be08-408e-a737-ee841193e33f",
+      "credentials": {
+        "telegramApi": {
+          "id": "B6PphJPkAliC1Ieh",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        32,
+        176
+      ],
+      "id": "234672e2-f495-4119-a69f-0349d27736da",
+      "name": "toJSON"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  return {\n    json: {\n      message: {\n         text: item.json.text,\n        chat:{\n          id: $('Main pipe').first().json.message.chat.id\n        }\n      }\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        32,
+        336
+      ],
+      "id": "1bfc92b5-7af6-4cbe-906d-bb0e472d981a",
+      "name": "toJSON1"
+    },
+    {
+      "parameters": {
+        "content": "Custom TickTick API HTTP REQ\nGets tasks from TickTick from a project Test",
+        "height": 96,
+        "width": 272,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2064,
+        544
+      ],
+      "id": "da0dd5f1-40c0-4f90-b414-a225fdce6a9d",
+      "name": "Sticky Note22"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Get Tasks from TickTick",
+        "url": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('URL', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        2272,
+        592
+      ],
+      "id": "95bba022-cf02-4e99-8b69-61d35c16ef63",
+      "name": "Get Tasks From TickTick",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.message.chat.id }}",
+        "contextWindowLength": "={{ 15 }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        256,
+        912
+      ],
+      "id": "af15945b-4fba-4954-9967-99e9354dcf46",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "anna.sebedash@gmail.com",
+          "mode": "list",
+          "cachedResultName": "anna.sebedash@gmail.com"
+        },
+        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+        "additionalFields": {
+          "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        816,
+        528
+      ],
+      "id": "88749de9-4c20-46b7-8b26-69c7e2bb790c",
+      "name": "Google Calendar Create Meeting",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "hjNmw8IGaxsUawCr",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Creates events in Google Calendar",
+        "height": 80,
+        "width": 192,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        704,
+        496
+      ],
+      "id": "90bf6e7f-6152-42ce-8f28-4597584bc38a",
+      "name": "Sticky Note24"
+    },
+    {
+      "parameters": {
+        "content": "Контекст и память",
+        "height": 560,
+        "width": 166,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        208,
+        848
+      ],
+      "id": "5a070c01-df28-4aae-8ae6-b06010bfebf9",
+      "name": "Sticky Note25"
+    },
+    {
+      "parameters": {
+        "content": "Custom TickTick API HTTP REQ\nGets all of its projects from TickTick",
+        "height": 112,
+        "width": 272,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2384,
+        560
+      ],
+      "id": "a17c613b-f439-4b3f-8932-e0c94c21c68d",
+      "name": "Sticky Note26"
+    },
+    {
+      "parameters": {
+        "pageId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Parent_Page', ``, 'string') }}",
+          "__regex": "(?:https|http)://www\\.notion\\.so/(?:[a-z0-9-]{2,}/)?(?:[a-zA-Z0-9-]{1,}-)?([0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12})"
+        },
+        "title": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Title', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notionTool",
+      "typeVersion": 2.2,
+      "position": [
+        1296,
+        560
+      ],
+      "id": "5fe4bf54-b6ca-405b-9c38-62337b8891fb",
+      "name": "Create a page in Notion2",
+      "credentials": {
+        "notionApi": {
+          "id": "9CSwzD5HZgv1rZKv",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Search_Text', ``, 'string') }}",
+        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}",
+        "simple": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Simplify', ``, 'boolean') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notionTool",
+      "typeVersion": 2.2,
+      "position": [
+        1088,
+        560
+      ],
+      "id": "dfdd4eb1-ae64-44c5-ba19-f074a4bb45eb",
+      "name": "Search a page in Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "9CSwzD5HZgv1rZKv",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Searches for the needed page",
+        "height": 80,
+        "width": 150,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        992,
+        512
+      ],
+      "id": "099e7c96-f0fc-42a6-8423-a048e5da3637",
+      "name": "Sticky Note12"
+    },
+    {
+      "parameters": {
+        "content": "Creates a page on a defined category (summary, notes) ",
+        "height": 80,
+        "width": 192,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        512
+      ],
+      "id": "cc04833d-a454-431b-9144-77e246f45e9c",
+      "name": "Sticky Note13"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Database', ``, 'string') }}",
+          "mode": "id",
+          "__regex": "^([0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12})"
+        },
+        "title": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Title', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notionTool",
+      "typeVersion": 2.2,
+      "position": [
+        1872,
+        544
+      ],
+      "id": "14a1ac78-a1ae-48e8-866d-49f35673e2ee",
+      "name": "Create a database page in Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "9CSwzD5HZgv1rZKv",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Puts info to a specific BD",
+        "height": 96,
+        "width": 192,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1728,
+        512
+      ],
+      "id": "f196c355-ffc5-4b4f-844a-de1872c5adca",
+      "name": "Sticky Note14"
+    },
+    {
+      "parameters": {
+        "content": "Takes all the info about all BDs that are connected to the integration ",
+        "height": 112,
+        "width": 176,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1504,
+        512
+      ],
+      "id": "2dd0d8a0-906f-413e-8c22-0589e54dc0d2",
+      "name": "Sticky Note15"
+    },
+    {
+      "parameters": {
+        "content": "Searches for weather",
+        "height": 112,
+        "width": 406,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        448,
+        848
+      ],
+      "id": "c536c7e7-cfbf-4b53-be5c-730dd4ed3b95",
+      "name": "Sticky Note18"
+    },
+    {
+      "parameters": {
+        "content": "You are a smart assistant.\nYou have access to services:\nTickTick — for tasks\nGoogle Calendar — for meetings\nTelegram — for communicating with the user\nOpenWeatherMap — for weather\nNotion — for working with databases and pages\n\nRules of operation\n\nTasks (TickTick)\n\nCreate all tasks only in TickTick.\nобязательно add the tag #systemai. (Here: Always add the tag #systemai.)\nIf the user asks about tasks — fetch them and display as a list.\nMeetings (Google Calendar)\n\nIf the user wants to schedule a meeting:\nCheck if the time is free.\nIf free — create the meeting.\nIf busy — inform the user and offer the nearest free slots.\nNotion\n\nYou can fetch databases, search the database, create pages, search pages.\nWhen creating a page, clarify with the user into which database to save it (if it isn’t obvious).\nSummary from links\n\nIf the user provides a link:\nFirst, make a brief summary (2–4 sentences).\nCreate a new page in Notion and save the summary there (title = article name or URL).\nIn Telegram, send a confirmation: “I made a summary and saved it in Notion.”\nAdd the brief content.\nPersonal materials\n\nIf the user uploads personal files or notes:\nDetermine the type of material (e.g., document, photo, article, outline).\nSave it to the corresponding folder (database) in Notion.\nAfter saving, send a Telegram message: “File added to the [folder name] section in Notion.”\nAdd a link or ID of the created page.\nWeather (OpenWeatherMap)\n\nIf the user asks about the weather — fetch the forecast and send it briefly.\nGeneral rules\n\nYou may ask a maximum of 2 clarifying questions.\nIf there is enough information — act immediately.\nIf the request is not within functionality — search the web.\nAll responses should always be sent in Telegram.\nIn responses, you may use lists and Telegram formatting to avoid dryness.\nMessages should be short (2–3 sentences).\nLists of tasks or meetings should be formatted as a list.",
+        "height": 1184,
+        "width": 656,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1440,
+        64
+      ],
+      "id": "45f6dc1a-17b1-416c-8fc6-2e258943624d",
+      "name": "Sticky Note27"
+    },
+    {
+      "parameters": {
+        "jsCode": "return {\njson: {\nmessage: {\ntext: `Morning briefing\nThe briefing should include:\n\n📌 Today’s and tomorrow’s tasks from TickTick (#systemai).\n📅 Today’s and tomorrow’s meetings from Google Calendar.\n🌤️ Weather forecast in Helsinki (OpenWeatherMap).\nPresent everything in a single message with emojis, lists, and a light, positive style. Consider the weather forecast and give a helpful tip.\n\nReply to me on Telegram.`,\nchat:{\nid: 1286641254,\n}\n}\n}\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        32,
+        -16
+      ],
+      "id": "cce2c08a-a767-49e7-a9bb-884242a7943b",
+      "name": "DailyPrompt?"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -688,
+        -32
+      ],
+      "id": "411f8d7a-58d0-4d34-a1f2-8b757d65aa38",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "content": "AI",
+        "height": 368,
+        "width": 176,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        208,
+        464
+      ],
+      "id": "80657207-7370-4bcb-b3f0-4d15080a0be2",
+      "name": "Sticky Note28"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        256,
+        656
+      ],
+      "id": "7fd53652-1d8c-4ffd-864b-d6b74a358f57",
+      "name": "Google Gemini Chat Model",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        256,
+        1056
+      ],
+      "id": "726bd09c-9090-46a5-9353-a4f72597c4de",
+      "name": "Postgres Chat Memory",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.5,
+      "position": [
+        256,
+        1248
+      ],
+      "id": "1c8efd0b-56fb-4313-b80e-30a17ec4752c",
+      "name": "Redis Chat Memory",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "Long term memory on external source",
+        "height": 96,
+        "width": 224,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        96,
+        1024
+      ],
+      "id": "d6e628e1-5c28-431d-ab3c-baf5c5148ec4",
+      "name": "Sticky Note29"
+    },
+    {
+      "parameters": {
+        "content": "24 hour memory on an external service",
+        "height": 96,
+        "width": 224,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        96,
+        1216
+      ],
+      "id": "197bd421-1977-47c3-a3c7-63a01c9a6e11",
+      "name": "Sticky Note30"
+    },
+    {
+      "parameters": {
+        "content": "Google Calendar",
+        "height": 288,
+        "width": 528,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        400,
+        464
+      ],
+      "id": "31ad1348-afd9-4a98-b16c-d6ba074ef5e3",
+      "name": "Sticky Note31"
+    },
+    {
+      "parameters": {
+        "content": "Notion Pages",
+        "height": 288,
+        "width": 528,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        944,
+        464
+      ],
+      "id": "079186ff-444d-454c-b97b-7257814f655c",
+      "name": "Sticky Note32"
+    },
+    {
+      "parameters": {
+        "content": "Notion DB",
+        "height": 576,
+        "width": 528,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1488,
+        464
+      ],
+      "id": "94d36bb0-683d-4e4b-ba59-8c8ee30f3f48",
+      "name": "Sticky Note33"
+    },
+    {
+      "parameters": {
+        "content": "TickTick",
+        "height": 288,
+        "width": 1216,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2032,
+        464
+      ],
+      "id": "94905cd3-4fbc-4ea8-bf21-21ea975033e1",
+      "name": "Sticky Note34"
+    },
+    {
+      "parameters": {
+        "content": "OpenWeatherMap",
+        "height": 288,
+        "width": 528,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        400,
+        784
+      ],
+      "id": "280b4d04-fad2-4791-8cc5-3e55c4c2234b",
+      "name": "Sticky Note35"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "get",
+        "pageId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Database_Page', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.notionTool",
+      "typeVersion": 2.2,
+      "position": [
+        1616,
+        816
+      ],
+      "id": "c7627824-a698-41ab-8d8f-d23adbfd45da",
+      "name": "Get a database page in Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "9CSwzD5HZgv1rZKv",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Get Projects from TickTick",
+        "url": "=https://api.ticktick.com/open/v1/project",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "tickTickOAuth2Api",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        2608,
+        608
+      ],
+      "id": "7c7c190f-7009-43bd-9b65-3b170d9f60de",
+      "name": "Get Projects1"
+    },
+    {
+      "parameters": {
+        "content": "Custom TickTick API HTTP REQ\nTo create a task",
+        "height": 112,
+        "width": 272,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2704,
+        544
+      ],
+      "id": "a844fc75-d19b-4574-8472-4bc166dcc25f",
+      "name": "Sticky Note36"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Create task in TickTick",
+        "method": "POST",
+        "url": "=https://api.ticktick.com/open/v1/task",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "tickTickOAuth2Api",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('JSON', ``, 'json') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        2896,
+        592
+      ],
+      "id": "8110100f-f6dd-4ecf-8355-c3f6f213ac99",
+      "name": "Create Task TickTIck"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Chat_ID', ``, 'string') }}",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Text', ``, 'string') }}",
+        "additionalFields": {
+          "appendAttribution": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Append_n8n_Attribution', ``, 'boolean') }}"
+        }
+      },
+      "type": "n8n-nodes-base.telegramTool",
+      "typeVersion": 1.2,
+      "position": [
+        624,
+        256
+      ],
+      "id": "d31e49e2-3388-4299-ab6c-1c3e1d48ecd7",
+      "name": "Telegram",
+      "webhookId": "b67019b7-ad58-4f6d-9b9c-ce745be7b96d",
+      "credentials": {
+        "telegramApi": {
+          "id": "B6PphJPkAliC1Ieh",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "locationSelection": "cityId",
+        "cityId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('City_ID', ``, 'number') }}",
+        "language": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Language', ``, 'string') }}"
+      },
+      "type": "n8n-nodes-base.openWeatherMapTool",
+      "typeVersion": 1,
+      "position": [
+        528,
+        896
+      ],
+      "id": "de50c1c5-5404-4fa0-bf87-ef5790a69b02",
+      "name": "One day weather",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "Cdb5k2hnVTMoEaSJ",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "5DayForecast",
+        "locationSelection": "cityId",
+        "cityId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('City_ID', ``, 'number') }}",
+        "language": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Language', ``, 'string') }}"
+      },
+      "type": "n8n-nodes-base.openWeatherMapTool",
+      "typeVersion": 1,
+      "position": [
+        672,
+        896
+      ],
+      "id": "d030d689-61b7-4588-90ca-a2266cb94a1e",
+      "name": "5 days forecast",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "Cdb5k2hnVTMoEaSJ",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": {
+          "__rl": true,
+          "value": "6a1d16d3-a8cb-4042-ab0e-21cfd1c2be89",
+          "mode": "list",
+          "cachedResultName": "HELLO",
+          "cachedResultUrl": "https://www.notion.so/6a1d16d3a8cb4042ab0e21cfd1c2be89"
+        },
+        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notionTool",
+      "typeVersion": 2.2,
+      "position": [
+        1616,
+        576
+      ],
+      "id": "a8227a1c-6c29-4c02-8cdb-004eb76a91dd",
+      "name": "Get many database pages in Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "9CSwzD5HZgv1rZKv",
+          "name": "Notion account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Get Voice File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "toJSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Speech to Text": {
+      "main": [
+        [
+          {
+            "node": "toJSON1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Voice or Text": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Voice File": {
+      "main": [
+        [
+          {
+            "node": "Speech to Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Events Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Main pipe": {
+      "main": [
+        [
+          {
+            "node": "Voice or Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "toJSON": {
+      "main": [
+        [
+          {
+            "node": "Tasker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "toJSON1": {
+      "main": [
+        [
+          {
+            "node": "Tasker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Tasks From TickTick": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar Create Meeting": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a page in Notion2": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search a page in Notion": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a database page in Notion": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DailyPrompt?": {
+      "main": [
+        [
+          {
+            "node": "Tasker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "DailyPrompt?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a database page in Notion": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Projects1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Task TickTIck": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One day weather": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5 days forecast": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many database pages in Notion": {
+      "ai_tool": [
+        [
+          {
+            "node": "Tasker",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Helsinki",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "59f2e529-b92b-438b-8a4f-12d497699eba",
+  "meta": {
+    "instanceId": "9e073a6f25766ee38720492d93fbfce5ecf4dff4713f3023e6b2c0db167679cb"
+  },
+  "id": "pia3iNEscDcHtzeX",
+  "tags": []
+}

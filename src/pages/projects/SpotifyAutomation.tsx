@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, ExternalLink, Github, Calendar, Music, Zap } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Calendar, Bot, Zap, MessageSquare, Database, Cloud } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -42,13 +42,13 @@ const SpotifyAutomation = () => {
                 <span>Back to Projects</span>
               </button>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Automated Spotify Playlist Creator
+                Telegram Bot Assistant
               </h1>
               <p className="text-xl text-white/90 mb-8">
-                Intelligent n8n automation workflow that analyzes user listening patterns, mood preferences, and social trends to automatically curate personalized Spotify playlists
+                Intelligent n8n workflow automation that integrates multiple services including Telegram, TickTick, Google Calendar, Notion, and OpenWeatherMap to streamline daily productivity and workflow management
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["n8n", "Spotify API", "REST APIs", "Automation", "Data Analysis", "Webhooks"].map((tag, index) => (
+                {["n8n", "Telegram Bot API", "Voice Recognition", "Task Management", "Calendar Integration", "Notion API", "Weather API"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -70,33 +70,33 @@ const SpotifyAutomation = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    Built an intelligent n8n automation workflow that analyzes user listening patterns, mood preferences, 
-                    and social trends to automatically curate personalized Spotify playlists. The system integrates multiple 
-                    APIs, implements machine learning algorithms for music recommendation, and provides scheduling and 
-                    collaborative features for enhanced user engagement.
+                    Built an intelligent n8n automation workflow that serves as a personal Telegram bot assistant. 
+                    The system integrates multiple productivity services including TickTick for task management, 
+                    Google Calendar for scheduling, Notion for knowledge management, and OpenWeatherMap for weather updates. 
+                    Features voice message transcription, automatic task creation, meeting scheduling, and content summarization.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <Music className="w-8 h-8" />
+                        <MessageSquare className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">1000+</div>
-                      <div className="text-sm text-muted-foreground">Songs Analyzed</div>
+                      <div className="text-2xl font-bold text-primary">5+</div>
+                      <div className="text-sm text-muted-foreground">Service Integrations</div>
+                    </div>
+                    <div className="text-center space-y-2">
+                      <div className="text-primary mx-auto w-fit">
+                        <Bot className="w-8 h-8" />
+                      </div>
+                      <div className="text-2xl font-bold text-primary">Automated</div>
+                      <div className="text-sm text-muted-foreground">Task Management</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Zap className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">Automated</div>
-                      <div className="text-sm text-muted-foreground">Playlist Creation</div>
-                    </div>
-                    <div className="text-center space-y-2">
-                      <div className="text-primary mx-auto w-fit">
-                        <Calendar className="w-8 h-8" />
-                      </div>
-                      <div className="text-2xl font-bold text-primary">Weekly</div>
-                      <div className="text-sm text-muted-foreground">Updates</div>
+                      <div className="text-2xl font-bold text-primary">Real-time</div>
+                      <div className="text-sm text-muted-foreground">Workflow Processing</div>
                     </div>
                   </div>
                 </CardContent>
@@ -110,35 +110,35 @@ const SpotifyAutomation = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Intelligent Analysis</h4>
+                      <h4 className="font-semibold text-primary">Voice & Communication</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• User listening pattern analysis</li>
-                        <li>• Mood and genre preference detection</li>
-                        <li>• Social trend integration</li>
+                        <li>• Voice message transcription using OpenAI</li>
+                        <li>• Intelligent text processing</li>
+                        <li>• Multi-format message handling</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">API Integration</h4>
+                      <h4 className="font-semibold text-primary">Task Management</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Spotify Web API integration</li>
-                        <li>• Last.fm scrobbling data</li>
-                        <li>• Music recommendation services</li>
+                        <li>• TickTick integration for task creation</li>
+                        <li>• Automatic task tagging (#systemai)</li>
+                        <li>• Task listing and status updates</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Automation Features</h4>
+                      <h4 className="font-semibold text-primary">Calendar & Scheduling</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Scheduled playlist updates</li>
-                        <li>• Webhook-triggered actions</li>
-                        <li>• Multi-user collaboration</li>
+                        <li>• Google Calendar integration</li>
+                        <li>• Meeting availability checking</li>
+                        <li>• Smart scheduling assistance</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Data Processing</h4>
+                      <h4 className="font-semibold text-primary">Knowledge Management</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Real-time audio feature analysis</li>
-                        <li>• Machine learning recommendations</li>
-                        <li>• Playlist optimization algorithms</li>
+                        <li>• Notion database integration</li>
+                        <li>• Link summarization and storage</li>
+                        <li>• Personal file organization</li>
                       </ul>
                     </div>
                   </div>
@@ -157,35 +157,35 @@ const SpotifyAutomation = () => {
                       <div className="space-y-1 text-sm text-muted-foreground">
                         <p>n8n Workflow Engine</p>
                         <p>Webhook Integration</p>
-                        <p>Cron Scheduling</p>
+                        <p>Conditional Logic</p>
                         <p>Error Handling</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">APIs</h4>
-                      <div>
-                        <p>Spotify Web API</p>
-                        <p>Last.fm API</p>
-                        <p>REST Endpoints</p>
-                        <p>OAuth Authentication</p>
+                      <h4 className="font-semibold text-primary mb-2">Communication</h4>
+                      <div className="space-y-1 text-sm text-muted-foreground">
+                        <p>Telegram Bot API</p>
+                        <p>Voice Message Processing</p>
+                        <p>OpenAI Speech-to-Text</p>
+                        <p>Message Formatting</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Data Analysis</h4>
+                      <h4 className="font-semibold text-primary mb-2">Productivity APIs</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Audio Feature Analysis</p>
-                        <p>Statistical Processing</p>
-                        <p>Preference Learning</p>
-                        <p>Trend Detection</p>
+                        <p>TickTick Task Management</p>
+                        <p>Google Calendar API</p>
+                        <p>Notion Database API</p>
+                        <p>OpenWeatherMap API</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Infrastructure</h4>
+                      <h4 className="font-semibold text-primary mb-2">Features</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Docker Containers</p>
-                        <p>Database Storage</p>
-                        <p>Queue Management</p>
-                        <p>Monitoring & Logging</p>
+                        <p>Content Summarization</p>
+                        <p>File Upload Management</p>
+                        <p>Smart Scheduling</p>
+                        <p>Real-time Processing</p>
                       </div>
                     </div>
                   </div>
@@ -194,13 +194,13 @@ const SpotifyAutomation = () => {
 
               {/* Project Actions */}
               <div className="flex justify-center space-x-4">
-                <Button size="lg" className="shadow-card">
+                <Button size="lg" className="shadow-card" onClick={() => window.open('https://github.com/annasebedash-creator/My-Telegram-Bot.git', '_blank')}>
                   <Github className="w-4 h-4 mr-2" />
                   View Code
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
+                <Button size="lg" variant="outline" className="shadow-card" onClick={() => window.open('/documents/My_Bot_Assistant.json', '_blank')}>
+                  <Database className="w-4 h-4 mr-2" />
+                  n8n Workflow
                 </Button>
               </div>
             </div>
