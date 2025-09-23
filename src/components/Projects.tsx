@@ -37,12 +37,12 @@ const Projects = () => {
       slug: "/projects/supply-chain-optimization"
     },
     {
-      title: "SQL & Data Management Fusion Project",
-      description: "Comprehensive suite of SQL and data management solutions integrating theoretical concepts with practical database design and implementation.",
-      tags: ["SQL Server", "ER Modeling", "Normalization", "Transaction Control"],
-      category: "Database Engineering",
-      gradient: "bg-umber",
-      slug: "/projects/financial-reporting"
+      title: "Telegram Bot Assistant",
+      description: "Built an intelligent n8n automation workflow that integrates with TickTick, Google Calendar, Notion, and OpenWeatherMap to create a comprehensive personal productivity assistant with voice transcription and smart task management.",
+      tags: ["n8n", "Telegram Bot API", "TickTick API", "Google Calendar", "Notion", "OpenAI", "Workflow Automation"],
+      category: "Workflow Automation",
+      gradient: "bg-moss-green",
+      slug: "/projects/spotify-automation"
     },
     {
       title: "Finland Mental Health Research Dashboard",
@@ -51,6 +51,14 @@ const Projects = () => {
       category: "Data Science",
       gradient: "bg-gradient-primary",
       slug: "/projects/ecommerce-analytics"
+    },
+    {
+      title: "SQL & Data Management Fusion Project",
+      description: "Comprehensive suite of SQL and data management solutions integrating theoretical concepts with practical database design and implementation.",
+      tags: ["SQL Server", "ER Modeling", "Normalization", "Transaction Control"],
+      category: "Database Engineering",
+      gradient: "bg-umber",
+      slug: "/projects/financial-reporting"
     },
     {
       title: "Sauna Slot Booking System",
@@ -83,14 +91,6 @@ const Projects = () => {
       category: "3D Design & Animation",
       gradient: "bg-burgundy",
       slug: "/projects/blender-portfolio"
-    },
-    {
-      title: "Automated Spotify Playlist Creator",
-      description: "Built an intelligent n8n automation workflow that analyzes user listening patterns, mood preferences, and social trends to automatically curate personalized Spotify playlists with scheduling and collaborative features.",
-      tags: ["n8n", "Spotify API", "REST APIs", "Automation", "Data Analysis", "Webhooks"],
-      category: "Workflow Automation",
-      gradient: "bg-moss-green",
-      slug: "/projects/spotify-automation"
     },
     {
       title: "Extended Essay in Psychology: Mental Imagery in Social Anxiety Disorder",
