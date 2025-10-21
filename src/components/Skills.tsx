@@ -3,24 +3,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code2, Database, Cloud, BarChart3, Users, Target, Briefcase, TrendingUp, GraduationCap, Globe } from "lucide-react";
 const Skills = () => {
   const skillCategories = [{
-    title: "Technical Skills",
+    title: "Digital & Tools",
     icon: <Code2 className="w-6 h-6" />,
-    skills: ["JavaScript", "TypeScript", "React", "Node.js", "Python", "SQL", "MongoDB", "AWS", "Docker", "Git", "CI/CD", "REST APIs"],
+    skills: ["OpenAI", "n8n", "LangChain", "Telegram Bot API", "Google Sheets (API)", "Power BI", "SQL", "HTML", "CSS", "JavaScript (basic)"],
     color: "text-primary"
   }, {
-    title: "Data & Analytics",
+    title: "Design & Communication",
     icon: <Database className="w-6 h-6" />,
-    skills: ["Data Analysis", "SQL", "Power BI", "Tableau", "Excel", "Statistical Analysis", "KPI Design", "Data Visualization", "Reporting"],
+    skills: ["Conversation Flow Design", "UX", "Copywriting", "Content Creation", "Social Media Strategy", "Brand Storytelling", "Video Editing"],
     color: "text-secondary"
   }, {
-    title: "Business Strategy",
+    title: "Business & Project Management",
     icon: <BarChart3 className="w-6 h-6" />,
-    skills: ["Strategic Planning", "Market Analysis", "Process Optimization", "Financial Analysis", "Risk Management", "Stakeholder Management", "Change Management", "Business Intelligence"],
+    skills: ["Customer Experience Optimization", "Project Coordination", "Analytics & Reporting", "Market Analysis", "Event Planning"],
     color: "text-accent"
   }, {
-    title: "Leadership & Management",
+    title: "Soft Skills",
     icon: <Users className="w-6 h-6" />,
-    skills: ["Team Leadership", "Project Management", "Agile/Scrum", "Cross-functional Collaboration", "Mentoring", "Communication", "Problem Solving", "Decision Making"],
+    skills: ["Communication", "Initiative", "Problem Solving", "Adaptability"],
     color: "text-burgundy"
   }];
   return <section id="skills" className="py-20 bg-gradient-subtle relative overflow-hidden">
@@ -123,16 +123,14 @@ const Skills = () => {
                   
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <Target className="w-5 h-5 text-accent" />
-                      <span className="font-medium text-lg">Certifications</span>
+                      <Briefcase className="w-5 h-5 text-accent" />
+                      <span className="font-medium text-lg">Experience</span>
                     </div>
-                    <div className="ml-7 space-y-1">
-                      <Badge variant="secondary" className="mr-2 text-sm">AWS Cloud Practitioner</Badge>
-                      <Badge variant="secondary" className="mr-2 text-sm">Google Analytics</Badge>
-                      <Badge variant="secondary" className="mr-2 text-sm">Agile & Scrum</Badge>
-                      <Badge variant="secondary" className="mr-2 text-sm">Project Management</Badge>
-                      <Badge variant="secondary" className="mr-2 text-sm">Microsoft Office Specialist</Badge>
-                      <Badge variant="secondary" className="text-sm">Power BI</Badge>
+                    <div className="ml-7 space-y-1 text-muted-foreground text-sm">
+                      <p>• Dance Instructor & Content Creator (2022 - Present)</p>
+                      <p>• Youth Work Leader - City of Helsinki (2022)</p>
+                      <p>• Communications Office Intern (2021)</p>
+                      <p>• SLUSH Volunteer (2024, 2025)</p>
                     </div>
                   </div>
                 </div>
@@ -179,20 +177,20 @@ const Skills = () => {
         <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
           {[{
           icon: <Target className="w-8 h-8" />,
-          value: "5+",
+          value: "3+",
           label: "Years Experience"
         }, {
           icon: <Briefcase className="w-8 h-8" />,
-          value: "20+",
+          value: "15+",
           label: "Projects Completed"
         }, {
           icon: <BarChart3 className="w-8 h-8" />,
-          value: "100+",
-          label: "Data Points Analyzed"
+          value: "3",
+          label: "Languages Spoken"
         }, {
-          icon: <Cloud className="w-8 h-8" />,
-          value: "3+",
-          label: "Certifications"
+          icon: <GraduationCap className="w-8 h-8" />,
+          value: "2026",
+          label: "Graduating"
         }].map((metric, index) => <div key={index} className="text-center space-y-2">
               <div className="text-primary mx-auto w-fit">
                 {metric.icon}
