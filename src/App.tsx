@@ -19,6 +19,7 @@ import SpotifyAutomation from "./pages/projects/SpotifyAutomation";
 import PsychologyExtendedEssay from "./pages/projects/PsychologyExtendedEssay";
 import WatsonxAssistant from "./pages/projects/WatsonxAssistant";
 import FiHealthcareVoiceDemo from "./pages/projects/FiHealthcareVoiceDemo";
+import MessukeskusProduction from "./pages/projects/MessukeskusProduction";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/projects/messukeskus-production" element={<MessukeskusProduction />} />
           <Route path="/projects/fi-healthcare-voice-demo" element={<FiHealthcareVoiceDemo />} />
           <Route path="/projects/ecommerce-analytics" element={<EcommerceAnalytics />} />
           <Route path="/projects/supply-chain-optimization" element={<SupplyChainOptimization />} />

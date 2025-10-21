@@ -21,6 +21,14 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Messukeskus Production Pack System",
+      description: "Bilingual production documentation toolkit for live event management, automating programme validation, conflict detection, and multi-department coordination through Google Sheets + Apps Script with automated PDF generation.",
+      tags: ["Google Sheets", "Apps Script", "PDF Generation", "Event Production", "Bilingual", "Workflow Automation", "JavaScript"],
+      category: "Production & Event Management",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/messukeskus-production"
+    },
+    {
       title: "FI Healthcare Receptionist - Voice Agent Demo",
       description: "Enterprise-grade conversation design showcase featuring Finnish healthcare receptionist simulation with streaming, barge-in, real-time analytics, and bilingual support with sub-200ms perceived responsiveness.",
       tags: ["Voice AI", "Conversation Design", "Finnish", "Healthcare", "Streaming", "Analytics", "Bilingual", "JavaScript"],
