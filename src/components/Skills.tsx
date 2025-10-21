@@ -8,19 +8,19 @@ const Skills = () => {
     skills: ["OpenAI API", "n8n", "LangChain", "Voice AI (Whisper, TTS)", "Telegram Bot API", "IBM Watsonx", "Conversation Design", "NLP"],
     color: "text-primary"
   }, {
-    title: "Web Development",
+    title: "Technical Development",
     icon: <Database className="w-6 h-6" />,
-    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Node.js", "Supabase", "API Integration", "Google Apps Script"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Node.js", "SQL", "Power BI", "Python", "Streamlit", "Pandas", "Supabase", "API Integration", "Google Apps Script"],
     color: "text-secondary"
   }, {
-    title: "Data & Analytics",
+    title: "Design & Content",
     icon: <BarChart3 className="w-6 h-6" />,
-    skills: ["SQL", "Power BI", "Python", "Streamlit", "Pandas", "Data Visualization", "Analytics & Reporting", "Market Analysis"],
+    skills: ["UX Design", "Copywriting", "Content Creation", "Social Media Strategy", "Brand Storytelling", "Video Editing", "3D Modeling (Blender)", "Data Visualization"],
     color: "text-accent"
   }, {
-    title: "Design & Communication",
+    title: "Business & Project Management",
     icon: <Users className="w-6 h-6" />,
-    skills: ["UX Design", "Copywriting", "Content Creation", "Social Media Strategy", "Brand Storytelling", "Video Editing", "3D Modeling (Blender)"],
+    skills: ["Customer Experience Optimization", "Project Coordination", "Event Planning", "Analytics & Reporting", "Market Analysis", "Strategic Planning", "Stakeholder Management", "Agile/Scrum"],
     color: "text-burgundy"
   }];
   return <section id="skills" className="py-20 bg-gradient-subtle relative overflow-hidden">
