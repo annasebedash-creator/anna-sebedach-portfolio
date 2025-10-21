@@ -37,14 +37,6 @@ const Projects = () => {
       slug: "/projects/messukeskus-production"
     },
     {
-      title: "FI Healthcare Receptionist - Voice Agent Demo",
-      description: "Enterprise-grade conversation design showcase featuring Finnish healthcare receptionist simulation with streaming, barge-in, real-time analytics, and bilingual support with sub-200ms perceived responsiveness.",
-      tags: ["Voice AI", "Conversation Design", "Finnish", "Healthcare", "Streaming", "Analytics", "Bilingual", "JavaScript"],
-      category: "Voice AI & Conversation Design",
-      gradient: "bg-gradient-primary",
-      slug: "/projects/fi-healthcare-voice-demo"
-    },
-    {
       title: "Bias & Fallacy Lab",
       description: "Designed and developed a gamified web platform that teaches logical fallacies and cognitive biases through interactive scenarios, adaptive feedback, and dynamic practice system.",
       tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
@@ -139,6 +131,14 @@ const Projects = () => {
       category: "Research Technology",
       gradient: "bg-burgundy",
       slug: "/projects/customer-relationship"
+    },
+    {
+      title: "FI Healthcare Receptionist - Voice Agent Demo",
+      description: "Enterprise-grade conversation design showcase featuring Finnish healthcare receptionist simulation with streaming, barge-in, real-time analytics, and bilingual support with sub-200ms perceived responsiveness.",
+      tags: ["Voice AI", "Conversation Design", "Finnish", "Healthcare", "Streaming", "Analytics", "Bilingual", "JavaScript"],
+      category: "Voice AI & Conversation Design",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/fi-healthcare-voice-demo"
     }
   ];
 

@@ -3,24 +3,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code2, Database, Cloud, BarChart3, Users, Target, Briefcase, TrendingUp, GraduationCap, Globe } from "lucide-react";
 const Skills = () => {
   const skillCategories = [{
-    title: "Technical Skills",
+    title: "AI & Automation",
     icon: <Code2 className="w-6 h-6" />,
-    skills: ["JavaScript", "TypeScript", "React", "Node.js", "Python", "SQL", "MongoDB", "AWS", "Docker", "Git", "CI/CD", "REST APIs"],
+    skills: ["OpenAI API", "n8n", "LangChain", "Voice AI (Whisper, TTS)", "Telegram Bot API", "IBM Watsonx", "Conversation Design", "NLP"],
     color: "text-primary"
   }, {
-    title: "Data & Analytics",
+    title: "Web Development",
     icon: <Database className="w-6 h-6" />,
-    skills: ["Data Analysis", "SQL", "Power BI", "Tableau", "Excel", "Statistical Analysis", "KPI Design", "Data Visualization", "Reporting"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Node.js", "Supabase", "API Integration", "Google Apps Script"],
     color: "text-secondary"
   }, {
-    title: "Business Strategy",
+    title: "Data & Analytics",
     icon: <BarChart3 className="w-6 h-6" />,
-    skills: ["Strategic Planning", "Market Analysis", "Process Optimization", "Financial Analysis", "Risk Management", "Stakeholder Management", "Change Management", "Business Intelligence"],
+    skills: ["SQL", "Power BI", "Python", "Streamlit", "Pandas", "Data Visualization", "Analytics & Reporting", "Market Analysis"],
     color: "text-accent"
   }, {
-    title: "Leadership & Management",
+    title: "Design & Communication",
     icon: <Users className="w-6 h-6" />,
-    skills: ["Team Leadership", "Project Management", "Agile/Scrum", "Cross-functional Collaboration", "Mentoring", "Communication", "Problem Solving", "Decision Making"],
+    skills: ["UX Design", "Copywriting", "Content Creation", "Social Media Strategy", "Brand Storytelling", "Video Editing", "3D Modeling (Blender)"],
     color: "text-burgundy"
   }];
   return <section id="skills" className="py-20 bg-gradient-subtle relative overflow-hidden">
