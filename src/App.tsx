@@ -20,6 +20,7 @@ import PsychologyExtendedEssay from "./pages/projects/PsychologyExtendedEssay";
 import WatsonxAssistant from "./pages/projects/WatsonxAssistant";
 import FiHealthcareVoiceDemo from "./pages/projects/FiHealthcareVoiceDemo";
 import MessukeskusProduction from "./pages/projects/MessukeskusProduction";
+import VoiceAIDanceStudio from "./pages/projects/VoiceAIDanceStudio";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/projects/voice-ai-dance-studio" element={<VoiceAIDanceStudio />} />
           <Route path="/projects/messukeskus-production" element={<MessukeskusProduction />} />
           <Route path="/projects/fi-healthcare-voice-demo" element={<FiHealthcareVoiceDemo />} />
           <Route path="/projects/ecommerce-analytics" element={<EcommerceAnalytics />} />

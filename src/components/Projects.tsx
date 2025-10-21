@@ -21,6 +21,14 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Voice AI Dance Studio Assistant",
+      description: "Bilingual AI assistant transforming dance studio customer service through natural voice conversations. Handles class inquiries and registrations with voice input/output in Finnish and English via Telegram, featuring real-time analytics and automated workflow orchestration.",
+      tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],
+      category: "Voice AI & Conversational Design",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/voice-ai-dance-studio"
+    },
+    {
       title: "Messukeskus Production Pack System",
       description: "Bilingual production documentation toolkit for live event management, automating programme validation, conflict detection, and multi-department coordination through Google Sheets + Apps Script with automated PDF generation.",
       tags: ["Google Sheets", "Apps Script", "PDF Generation", "Event Production", "Bilingual", "Workflow Automation", "JavaScript"],
