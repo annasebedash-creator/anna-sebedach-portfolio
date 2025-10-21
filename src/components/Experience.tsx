@@ -8,7 +8,7 @@ const Experience = () => {
       title: "Dance Instructor & Content Creator",
       company: "Girlhood Studio and many other studios",
       location: "Helsinki, Finland",
-      period: "2022 - Present",
+      period: "2024 - Present",
       type: "Freelance",
       description: "Led brand strategy and multi-channel content creation to expand digital presence across multiple dance organizations. Managed end-to-end production of marketing materials, social media, and videos while teaching dance classes.",
       achievements: [
