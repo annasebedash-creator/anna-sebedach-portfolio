@@ -26,7 +26,8 @@ const Projects = () => {
       tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],
       category: "Voice AI & Conversational Design",
       gradient: "bg-gradient-primary",
-      slug: "/projects/voice-ai-dance-studio"
+      slug: "/projects/voice-ai-dance-studio",
+      pattern: "voice-ai"
     },
     {
       title: "Messukeskus Production Pack System",
@@ -34,7 +35,8 @@ const Projects = () => {
       tags: ["Google Sheets", "Apps Script", "PDF Generation", "Event Production", "Bilingual", "Workflow Automation", "JavaScript"],
       category: "Production & Event Management",
       gradient: "bg-gradient-accent",
-      slug: "/projects/messukeskus-production"
+      slug: "/projects/messukeskus-production",
+      pattern: "event-production"
     },
     {
       title: "Bias & Fallacy Lab",
@@ -42,7 +44,8 @@ const Projects = () => {
       tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
       category: "Educational Technology",
       gradient: "bg-moss-green",
-      slug: "/projects/digital-transformation"
+      slug: "/projects/digital-transformation",
+      pattern: "education"
     },
     {
       title: "Psychology Concepts Learning Platform",
@@ -50,7 +53,8 @@ const Projects = () => {
       tags: ["Cursor AI", "Markdown", "Mermaid.js", "Python", "Psychology"],
       category: "Educational Technology",
       gradient: "bg-gradient-accent",
-      slug: "/projects/supply-chain-optimization"
+      slug: "/projects/supply-chain-optimization",
+      pattern: "psychology"
     },
     {
       title: "Telegram Bot Assistant",
@@ -58,7 +62,8 @@ const Projects = () => {
       tags: ["n8n", "Telegram Bot API", "TickTick API", "Google Calendar", "Notion", "OpenAI", "Workflow Automation"],
       category: "Workflow Automation",
       gradient: "bg-moss-green",
-      slug: "/projects/spotify-automation"
+      slug: "/projects/spotify-automation",
+      pattern: "automation"
     },
     {
       title: "Finland Mental Health Research Dashboard",
@@ -66,7 +71,8 @@ const Projects = () => {
       tags: ["Python", "Streamlit", "Pandas", "THL API", "Eurostat"],
       category: "Data Science",
       gradient: "bg-gradient-primary",
-      slug: "/projects/ecommerce-analytics"
+      slug: "/projects/ecommerce-analytics",
+      pattern: "data-analytics"
     },
     {
       title: "SQL & Data Management Fusion Project",
@@ -74,7 +80,8 @@ const Projects = () => {
       tags: ["SQL Server", "ER Modeling", "Normalization", "Transaction Control"],
       category: "Database Engineering",
       gradient: "bg-umber",
-      slug: "/projects/financial-reporting"
+      slug: "/projects/financial-reporting",
+      pattern: "database"
     },
     {
       title: "Sauna Slot Booking System",
@@ -82,7 +89,8 @@ const Projects = () => {
       tags: ["UML", "Requirements Engineering", "Risk Analysis", "Software Design"],
       category: "Software Engineering",
       gradient: "bg-secondary",
-      slug: "/projects/process-automation"
+      slug: "/projects/process-automation",
+      pattern: "software-design"
     },
     {
       title: "Smart Home IoT Ecosystem",
@@ -90,7 +98,8 @@ const Projects = () => {
       tags: ["Arduino", "Raspberry Pi", "MQTT", "Node.js", "InfluxDB", "Grafana"],
       category: "IoT & Hardware",
       gradient: "bg-gradient-primary",
-      slug: "/projects/iot-ecosystem"
+      slug: "/projects/iot-ecosystem",
+      pattern: "iot"
     },
     {
       title: "Cross-Functional Team Leadership Initiative",
@@ -98,7 +107,8 @@ const Projects = () => {
       tags: ["Agile", "Scrum", "Stakeholder Management", "Team Leadership", "Risk Management"],
       category: "Project Management",
       gradient: "bg-gradient-accent",
-      slug: "/projects/team-leadership"
+      slug: "/projects/team-leadership",
+      pattern: "leadership"
     },
     {
       title: "3D Animation & Motion Graphics Portfolio",
@@ -106,7 +116,8 @@ const Projects = () => {
       tags: ["Blender", "3D Modeling", "Animation", "Cycles Rendering", "Motion Graphics", "VFX"],
       category: "3D Design & Animation",
       gradient: "bg-burgundy",
-      slug: "/projects/blender-portfolio"
+      slug: "/projects/blender-portfolio",
+      pattern: "3d-design"
     },
     {
       title: "Extended Essay in Psychology: Mental Imagery in Social Anxiety Disorder",
@@ -114,7 +125,8 @@ const Projects = () => {
       tags: ["Psychology Research", "Academic Writing", "Literature Review", "IB Extended Essay", "Mental Health", "Cognitive Behavioral Therapy"],
       category: "Academic Research",
       gradient: "bg-burgundy",
-      slug: "/projects/psychology-extended-essay"
+      slug: "/projects/psychology-extended-essay",
+      pattern: "research"
     },
     {
       title: "IBM Watsonx Assistant with Embedded Analytics",
@@ -122,7 +134,8 @@ const Projects = () => {
       tags: ["JavaScript", "Node.js", "IBM Watsonx", "Chart.js", "API Integration", "Conversational AI"],
       category: "AI Development",
       gradient: "bg-gradient-accent",
-      slug: "/projects/watsonx-assistant"
+      slug: "/projects/watsonx-assistant",
+      pattern: "ai-chatbot"
     },
     {
       title: "QualiLab – Qualitative Data Analysis Platform",
@@ -130,7 +143,8 @@ const Projects = () => {
       tags: ["Next.js", "React", "Supabase", "NLP", "OpenAI API"],
       category: "Research Technology",
       gradient: "bg-burgundy",
-      slug: "/projects/customer-relationship"
+      slug: "/projects/customer-relationship",
+      pattern: "research-tech"
     },
     {
       title: "FI Healthcare Receptionist - Voice Agent Demo",
@@ -138,7 +152,8 @@ const Projects = () => {
       tags: ["Voice AI", "Conversation Design", "Finnish", "Healthcare", "Streaming", "Analytics", "Bilingual", "JavaScript"],
       category: "Voice AI & Conversation Design",
       gradient: "bg-gradient-primary",
-      slug: "/projects/fi-healthcare-voice-demo"
+      slug: "/projects/fi-healthcare-voice-demo",
+      pattern: "voice-healthcare"
     }
   ];
 
@@ -206,9 +221,8 @@ const Projects = () => {
             <Link key={index} to={`${project.slug}?${showAllProjects ? 'expanded=true&' : ''}scrollTo=${encodeURIComponent(project.slug)}`} className="group">
               <Card data-slug={project.slug} className="project-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 h-full">
                 <CardHeader className="pb-4">
-                  <div className={`h-32 rounded-lg ${project.gradient} mb-4 relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute bottom-3 left-3">
+                  <div className={`h-32 rounded-lg ${project.gradient} mb-4 relative overflow-hidden project-bg-${project.pattern}`}>
+                    <div className="absolute bottom-3 left-3 z-10">
                       <Badge variant="secondary" className="text-xs">
                         {project.category}
                       </Badge>
