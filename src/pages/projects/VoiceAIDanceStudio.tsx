@@ -193,7 +193,7 @@ const VoiceAIDanceStudio = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <a 
                   href="https://docs.google.com/document/d/1wpBpnfO8D_MRbsGmTOjOy3FX-rwnAztQlt0ebMjdqVc/edit?usp=sharing" 
                   target="_blank" 
@@ -212,6 +212,16 @@ const VoiceAIDanceStudio = () => {
                   <Button size="lg" variant="outline" className="shadow-card">
                     <FileSpreadsheet className="w-4 h-4 mr-2" />
                     Analytics Data
+                  </Button>
+                </a>
+                <a 
+                  href="https://www.notion.so/Voice-AI-Dance-Studio-Assistant-98f2eda91f8a4b63b25eb858ff745db0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" variant="outline" className="shadow-card">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Project Notes
                   </Button>
                 </a>
               </div>

@@ -194,7 +194,7 @@ const MessukeskusProduction = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <a 
                   href="https://docs.google.com/spreadsheets/d/1lwZiRB4U5z9_YG2Qp3NiRdW8uLDuV_q_9oQq92HgIsc/edit?gid=1088821087#gid=1088821087" 
                   target="_blank" 
@@ -213,6 +213,16 @@ const MessukeskusProduction = () => {
                   <Button size="lg" variant="outline" className="shadow-card">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Production PDF
+                  </Button>
+                </a>
+                <a 
+                  href="https://www.notion.so/Messukeskus-Production-Pack-System-EN-e932b38f20564a4d9db3d8e0cbfdd157" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" variant="outline" className="shadow-card">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Project Notes
                   </Button>
                 </a>
               </div>
