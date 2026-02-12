@@ -222,7 +222,7 @@ const MessukeskusProduction = () => {
                 >
                   <Button size="lg" variant="outline" className="shadow-card">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Project Notes
+                    Project Demo
                   </Button>
                 </a>
               </div>
