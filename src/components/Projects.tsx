@@ -57,6 +57,15 @@ const Projects = () => {
       pattern: "psychology"
     },
     {
+      title: "Order Management & Invoicing System",
+      description: "Built a complete internal order-to-invoice workflow for a non-profit, centralizing order tracking, invoicing, customer communication, and reporting using existing office tools with zero additional software costs.",
+      tags: ["Excel", "Outlook", "Power BI", "Teams", "WooCommerce", "Procountor", "SOP Documentation"],
+      category: "Business Operations",
+      gradient: "bg-umber",
+      slug: "/projects/order-management-system",
+      pattern: "order-mgmt"
+    },
+    {
       title: "Telegram Bot Assistant",
       description: "Built an intelligent n8n automation workflow that integrates with TickTick, Google Calendar, Notion, and OpenWeatherMap to create a comprehensive personal productivity assistant with voice transcription and smart task management.",
       tags: ["n8n", "Telegram Bot API", "TickTick API", "Google Calendar", "Notion", "OpenAI", "Workflow Automation"],

@@ -21,6 +21,7 @@ import WatsonxAssistant from "./pages/projects/WatsonxAssistant";
 import FiHealthcareVoiceDemo from "./pages/projects/FiHealthcareVoiceDemo";
 import MessukeskusProduction from "./pages/projects/MessukeskusProduction";
 import VoiceAIDanceStudio from "./pages/projects/VoiceAIDanceStudio";
+import OrderManagementSystem from "./pages/projects/OrderManagementSystem";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/projects/spotify-automation" element={<SpotifyAutomation />} />
           <Route path="/projects/psychology-extended-essay" element={<PsychologyExtendedEssay />} />
           <Route path="/projects/watsonx-assistant" element={<WatsonxAssistant />} />
+          <Route path="/projects/order-management-system" element={<OrderManagementSystem />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
