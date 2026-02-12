@@ -20,6 +20,21 @@ const Experience = () => {
       skills: ["Content Creation", "Brand Strategy", "Video Production", "Social Media Marketing", "Dance Instruction", "Community Building"]
     },
     {
+      title: "Volunteer",
+      company: "SLUSH",
+      location: "Helsinki, Finland",
+      period: "2024 & 2025",
+      type: "Volunteer",
+      description: "Supported operations and guest experience at one of Europe's top tech/startup events. Contributed to various aspects of event organization and attendee experience in the Nordic startup ecosystem.",
+      achievements: [
+        "Supported operations and guest experience at major European tech event",
+        "Contributed to event organization and logistics management",
+        "Engaged with international startup community and industry professionals",
+        "Helped create memorable experiences for thousands of attendees"
+      ],
+      skills: ["Event Operations", "Guest Experience", "Startup Ecosystem", "International Relations", "Team Collaboration"]
+    },
+    {
       title: "Youth Work Leader (Content, Media & Teaching)",
       company: "City of Helsinki",
       location: "Helsinki, Finland",
@@ -33,36 +48,6 @@ const Experience = () => {
         "Increased engagement through strategic outreach and community building"
       ],
       skills: ["Digital Content Production", "Event Management", "Social Media Marketing", "Youth Work", "Community Outreach"]
-    },
-    {
-      title: "Communications Office Intern",
-      company: "City of Helsinki",
-      location: "Helsinki, Finland",
-      period: "Summer 2021",
-      type: "Internship",
-      description: "Created digital media, coordinated outreach, and produced promotional articles. Supported key initiatives through video production and multimedia communication across various city projects.",
-      achievements: [
-        "Created digital media and coordinated effective outreach campaigns",
-        "Produced promotional articles and multimedia content",
-        "Supported key city initiatives through comprehensive video production",
-        "Contributed to multimedia communication strategies across departments"
-      ],
-      skills: ["Digital Media Creation", "Video Production", "Article Writing", "Communications", "Multimedia Production"]
-    },
-    {
-      title: "Volunteer",
-      company: "SLUSH",
-      location: "Helsinki, Finland",
-      period: "Summer 2021",
-      type: "Volunteer",
-      description: "Supported operations and guest experience at one of Europe's top tech/startup events. Contributed to various aspects of event organization and attendee experience in the Nordic startup ecosystem.",
-      achievements: [
-        "Supported operations and guest experience at major European tech event",
-        "Contributed to event organization and logistics management",
-        "Engaged with international startup community and industry professionals",
-        "Helped create memorable experiences for thousands of attendees"
-      ],
-      skills: ["Event Operations", "Guest Experience", "Startup Ecosystem", "International Relations", "Team Collaboration"]
     },
     {
       title: "Youth Journalist",
