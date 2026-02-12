@@ -504,4 +504,28 @@ All colors MUST be HSL.
     height: 21px;
     background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.25) 40%, transparent 40%);
   }
+
+  /* Order Management - Clipboard/checklist pattern */
+  .project-bg-order-mgmt::before {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    right: 18px;
+    width: 40px;
+    height: 55px;
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    opacity: 0.7;
+  }
+  
+  .project-bg-order-mgmt::after {
+    content: '';
+    position: absolute;
+    bottom: 55px;
+    right: 26px;
+    width: 24px;
+    height: 6px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
+  }
 }
