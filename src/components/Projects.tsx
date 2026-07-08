@@ -21,6 +21,15 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Tutor AI Assistant",
+      description: "Trilingual (RU/FI/EN) AI customer-service agent built and deployed to production for my own tutoring business. RAG-grounded answers from the business knowledge base, lead qualification, and trial-lesson booking straight into a database — try the live demo.",
+      tags: ["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Trilingual", "Prompt Engineering"],
+      category: "Applied AI · Live in Production",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/tutor-ai-assistant",
+      pattern: "voice-ai"
+    },
+    {
       title: "Voice AI Dance Studio Assistant",
       description: "Bilingual AI assistant transforming dance studio customer service through natural voice conversations. Handles class inquiries and registrations with voice input/output in Finnish and English via Telegram, featuring real-time analytics and automated workflow orchestration.",
       tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],

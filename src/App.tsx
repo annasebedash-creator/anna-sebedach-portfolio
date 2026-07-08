@@ -22,6 +22,7 @@ import FiHealthcareVoiceDemo from "./pages/projects/FiHealthcareVoiceDemo";
 import MessukeskusProduction from "./pages/projects/MessukeskusProduction";
 import VoiceAIDanceStudio from "./pages/projects/VoiceAIDanceStudio";
 import OrderManagementSystem from "./pages/projects/OrderManagementSystem";
+import TutorAIAssistant from "./pages/projects/TutorAIAssistant";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/projects/tutor-ai-assistant" element={<TutorAIAssistant />} />
           <Route path="/projects/voice-ai-dance-studio" element={<VoiceAIDanceStudio />} />
           <Route path="/projects/messukeskus-production" element={<MessukeskusProduction />} />
           <Route path="/projects/fi-healthcare-voice-demo" element={<FiHealthcareVoiceDemo />} />
