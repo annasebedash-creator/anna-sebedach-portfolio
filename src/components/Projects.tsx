@@ -44,7 +44,7 @@ const Projects = () => {
       tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
       category: "Educational Technology",
       gradient: "bg-moss-green",
-      slug: "/projects/digital-transformation",
+      slug: "/projects/bias-fallacy-lab",
       pattern: "education"
     },
     {
@@ -53,7 +53,7 @@ const Projects = () => {
       tags: ["Cursor AI", "Markdown", "Mermaid.js", "Python", "Psychology"],
       category: "Educational Technology",
       gradient: "bg-gradient-accent",
-      slug: "/projects/supply-chain-optimization",
+      slug: "/projects/psychology-learning-platform",
       pattern: "psychology"
     },
     {
@@ -71,7 +71,7 @@ const Projects = () => {
       tags: ["n8n", "Telegram Bot API", "TickTick API", "Google Calendar", "Notion", "OpenAI", "Workflow Automation"],
       category: "Workflow Automation",
       gradient: "bg-moss-green",
-      slug: "/projects/spotify-automation",
+      slug: "/projects/telegram-bot-assistant",
       pattern: "automation"
     },
     {
@@ -80,7 +80,7 @@ const Projects = () => {
       tags: ["Python", "Streamlit", "Pandas", "THL API", "Eurostat"],
       category: "Data Science",
       gradient: "bg-gradient-primary",
-      slug: "/projects/ecommerce-analytics",
+      slug: "/projects/finland-mental-health-dashboard",
       pattern: "data-analytics"
     },
     {
@@ -89,7 +89,7 @@ const Projects = () => {
       tags: ["SQL Server", "ER Modeling", "Normalization", "Transaction Control"],
       category: "Database Engineering",
       gradient: "bg-umber",
-      slug: "/projects/financial-reporting",
+      slug: "/projects/sql-data-management",
       pattern: "database"
     },
     {
@@ -98,7 +98,7 @@ const Projects = () => {
       tags: ["UML", "Requirements Engineering", "Risk Analysis", "Software Design"],
       category: "Software Engineering",
       gradient: "bg-secondary",
-      slug: "/projects/process-automation",
+      slug: "/projects/sauna-booking-system",
       pattern: "software-design"
     },
     {
@@ -152,7 +152,7 @@ const Projects = () => {
       tags: ["Next.js", "React", "Supabase", "NLP", "OpenAI API"],
       category: "Research Technology",
       gradient: "bg-burgundy",
-      slug: "/projects/customer-relationship",
+      slug: "/projects/qualilab",
       pattern: "research-tech"
     },
     {

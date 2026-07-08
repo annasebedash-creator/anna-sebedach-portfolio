@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const DigitalTransformation = () => {
+const BiasFallacyLab = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -218,4 +218,4 @@ const DigitalTransformation = () => {
   );
 };
 
-export default DigitalTransformation;
+export default BiasFallacyLab;

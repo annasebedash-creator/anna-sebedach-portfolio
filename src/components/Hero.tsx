@@ -16,9 +16,12 @@ const Hero = () => {
         
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 max-w-4xl mx-auto px-6">
-            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight">My professional showcase</h1>
+            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight">Anna Sebedach</h1>
             <p className="hero-sub text-xl md:text-2xl lg:text-3xl text-ivory/90 max-w-2xl mx-auto">
-              Bridging technology and creativity to build meaningful digital experiences
+              I build AI assistants, automation workflows and data tools
+            </p>
+            <p className="text-base md:text-lg text-ivory/80 max-w-2xl mx-auto">
+              Business & IT student at Haaga-Helia · Helsinki · Open to IT internships from autumn 2026
             </p>
             
             <div className="hero-ctas flex gap-4 justify-center pt-6">

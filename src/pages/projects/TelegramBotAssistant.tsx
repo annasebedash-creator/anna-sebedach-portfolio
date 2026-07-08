@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, ExternalLink, Github, Calendar, Users, Target } from "lucide-react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { ArrowLeft, ExternalLink, Github, Calendar, Bot, Zap, MessageSquare, Database, Cloud } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const EcommerceAnalytics = () => {
+const TelegramBotAssistant = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,24 +31,24 @@ const EcommerceAnalytics = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-primary">
+        <section className="py-16 bg-moss-green">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <button 
                 onClick={handleBackToProjects}
-                className="inline-flex items-center space-x-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors cursor-pointer"
+                className="inline-flex items-center space-x-2 text-white/80 hover:text-white mb-6 transition-colors cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Projects</span>
               </button>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Finland Mental Health Research Dashboard
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Telegram Bot Assistant
               </h1>
-              <p className="text-xl text-primary-foreground/90 mb-8">
-                A research-grade analytical pipeline and interactive dashboard to examine the evolution of mental health indicators in Finland
+              <p className="text-xl text-white/90 mb-8">
+                Intelligent n8n workflow automation that integrates multiple services including Telegram, TickTick, Google Calendar, Notion, and OpenWeatherMap to streamline daily productivity and workflow management
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["Python", "Streamlit", "Pandas", "THL API", "Eurostat"].map((tag, index) => (
+                {["n8n", "Telegram Bot API", "Voice Recognition", "Task Management", "Calendar Integration", "Notion API", "Weather API"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -70,30 +70,33 @@ const EcommerceAnalytics = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    Developed a research-grade analytical pipeline and interactive dashboard to examine the evolution of mental health indicators in Finland, including suicide burden, alcohol consumption, depressive symptoms, and antidepressant use. Integrated data from multiple public health sources (THL, Eurostat, Our World in Data) into a unified framework, performing advanced statistical analyses and generating both static reports and an interactive web-based exploration tool. The project demonstrates the combination of IT engineering, data science, and psychological theory in applied research.
+                    Built an intelligent n8n automation workflow that serves as a personal Telegram bot assistant. 
+                    The system integrates multiple productivity services including TickTick for task management, 
+                    Google Calendar for scheduling, Notion for knowledge management, and OpenWeatherMap for weather updates. 
+                    Features voice message transcription, automatic task creation, meeting scheduling, and content summarization.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <Target className="w-8 h-8" />
+                        <MessageSquare className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">4</div>
-                      <div className="text-sm text-muted-foreground">Data Sources</div>
+                      <div className="text-2xl font-bold text-primary">5+</div>
+                      <div className="text-sm text-muted-foreground">Service Integrations</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <Users className="w-8 h-8" />
+                        <Bot className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">Advanced</div>
-                      <div className="text-sm text-muted-foreground">Statistical Analysis</div>
+                      <div className="text-2xl font-bold text-primary">Automated</div>
+                      <div className="text-sm text-muted-foreground">Task Management</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <Calendar className="w-8 h-8" />
+                        <Zap className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">Interactive</div>
-                      <div className="text-sm text-muted-foreground">Dashboard</div>
+                      <div className="text-2xl font-bold text-primary">Real-time</div>
+                      <div className="text-sm text-muted-foreground">Workflow Processing</div>
                     </div>
                   </div>
                 </CardContent>
@@ -107,35 +110,35 @@ const EcommerceAnalytics = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Automated Data Ingestion</h4>
+                      <h4 className="font-semibold text-primary">Voice & Communication</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Heterogeneous APIs integration (THL, Eurostat, OWID)</li>
-                        <li>• Caching and error handling</li>
-                        <li>• Modular pipeline architecture</li>
+                        <li>• Voice message transcription using OpenAI</li>
+                        <li>• Intelligent text processing</li>
+                        <li>• Multi-format message handling</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Statistical Analysis</h4>
+                      <h4 className="font-semibold text-primary">Task Management</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Correlation and lag analysis</li>
-                        <li>• Interrupted time series modeling</li>
-                        <li>• Advanced statistical methods</li>
+                        <li>• TickTick integration for task creation</li>
+                        <li>• Automatic task tagging (#systemai)</li>
+                        <li>• Task listing and status updates</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Reporting & Visualization</h4>
+                      <h4 className="font-semibold text-primary">Calendar & Scheduling</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Publication-ready static reports (PDF)</li>
-                        <li>• Interactive Streamlit dashboard</li>
-                        <li>• Data filtering and download capabilities</li>
+                        <li>• Google Calendar integration</li>
+                        <li>• Meeting availability checking</li>
+                        <li>• Smart scheduling assistance</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Framework Integration</h4>
+                      <h4 className="font-semibold text-primary">Knowledge Management</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Psychological theory integration</li>
-                        <li>• Contextual annotations</li>
-                        <li>• Professional dashboard design</li>
+                        <li>• Notion database integration</li>
+                        <li>• Link summarization and storage</li>
+                        <li>• Personal file organization</li>
                       </ul>
                     </div>
                   </div>
@@ -150,39 +153,39 @@ const EcommerceAnalytics = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-4 gap-4">
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Languages/Libraries</h4>
+                      <h4 className="font-semibold text-primary mb-2">Automation</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Python</p>
-                        <p>Pandas</p>
-                        <p>NumPy</p>
-                        <p>Statsmodels</p>
+                        <p>n8n Workflow Engine</p>
+                        <p>Webhook Integration</p>
+                        <p>Conditional Logic</p>
+                        <p>Error Handling</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Visualization</h4>
+                      <h4 className="font-semibold text-primary mb-2">Communication</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Streamlit</p>
-                        <p>Matplotlib</p>
-                        <p>Seaborn</p>
-                        <p>Plotly</p>
+                        <p>Telegram Bot API</p>
+                        <p>Voice Message Processing</p>
+                        <p>OpenAI Speech-to-Text</p>
+                        <p>Message Formatting</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Data Sources</h4>
+                      <h4 className="font-semibold text-primary mb-2">Productivity APIs</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>THL Sotkanet API</p>
-                        <p>Eurostat API</p>
-                        <p>Our World in Data</p>
-                        <p>OECD Health Statistics</p>
+                        <p>TickTick Task Management</p>
+                        <p>Google Calendar API</p>
+                        <p>Notion Database API</p>
+                        <p>OpenWeatherMap API</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Development</h4>
+                      <h4 className="font-semibold text-primary mb-2">Features</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Virtual environments (venv)</p>
-                        <p>Modular Python architecture</p>
-                        <p>Logging</p>
-                        <p>Markdown documentation</p>
+                        <p>Content Summarization</p>
+                        <p>File Upload Management</p>
+                        <p>Smart Scheduling</p>
+                        <p>Real-time Processing</p>
                       </div>
                     </div>
                   </div>
@@ -191,17 +194,13 @@ const EcommerceAnalytics = () => {
 
               {/* Project Actions */}
               <div className="flex justify-center space-x-4">
-                <Button size="lg" className="shadow-card" asChild>
-                  <a href="https://github.com/annasebedash-creator/Finland-Psychology-Report-Dashboard" target="_blank" rel="noopener noreferrer">
-                    <Github className="w-4 h-4 mr-2" />
-                    View Code
-                  </a>
+                <Button size="lg" className="shadow-card" onClick={() => window.open('https://github.com/annasebedash-creator/My-Telegram-Bot.git', '_blank')}>
+                  <Github className="w-4 h-4 mr-2" />
+                  View Code
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
-                  <a href="https://finland-psychology-report-dashboard-kjtvduh5rphhid7jnwysqf.streamlit.app/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </a>
+                <Button size="lg" variant="outline" className="shadow-card" onClick={() => window.open('/documents/My_Bot_Assistant.json', '_blank')}>
+                  <Database className="w-4 h-4 mr-2" />
+                  n8n Workflow
                 </Button>
               </div>
             </div>
@@ -213,4 +212,4 @@ const EcommerceAnalytics = () => {
   );
 };
 
-export default EcommerceAnalytics;
+export default TelegramBotAssistant;

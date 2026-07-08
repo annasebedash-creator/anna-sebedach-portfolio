@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink, Github, Calendar, Users, Target } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const CustomerRelationship = () => {
+const FinlandMentalHealthDashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -42,13 +42,13 @@ const CustomerRelationship = () => {
                 <span>Back to Projects</span>
               </button>
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                QualiLab – Qualitative Data Analysis Platform
+                Finland Mental Health Research Dashboard
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                A research-grade web application for qualitative data analysis in psychology with NLP pipelines and collaborative coding
+                A research-grade analytical pipeline and interactive dashboard to examine the evolution of mental health indicators in Finland
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["Next.js", "React", "Supabase", "NLP", "OpenAI API"].map((tag, index) => (
+                {["Python", "Streamlit", "Pandas", "THL API", "Eurostat"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -70,7 +70,7 @@ const CustomerRelationship = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    Designed and implemented a research-grade web application for qualitative data analysis in psychology. The platform enables researchers to upload transcripts and open-ended survey responses, automatically segment and categorize the text using NLP pipelines, and collaborate on human-in-the-loop coding with inter-rater reliability statistics. QualiLab bridges IT engineering and psychological research methodology, providing both automation and rigorous control.
+                    Developed a research-grade analytical pipeline and interactive dashboard to examine the evolution of mental health indicators in Finland, including suicide burden, alcohol consumption, depressive symptoms, and antidepressant use. Integrated data from multiple public health sources (THL, Eurostat, Our World in Data) into a unified framework, performing advanced statistical analyses and generating both static reports and an interactive web-based exploration tool. The project demonstrates the combination of IT engineering, data science, and psychological theory in applied research.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
@@ -78,22 +78,22 @@ const CustomerRelationship = () => {
                       <div className="text-primary mx-auto w-fit">
                         <Target className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">NLP</div>
-                      <div className="text-sm text-muted-foreground">Automated Processing</div>
+                      <div className="text-2xl font-bold text-primary">4</div>
+                      <div className="text-sm text-muted-foreground">Data Sources</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Users className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">Collaborative</div>
-                      <div className="text-sm text-muted-foreground">Review Environment</div>
+                      <div className="text-2xl font-bold text-primary">Advanced</div>
+                      <div className="text-sm text-muted-foreground">Statistical Analysis</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Calendar className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">Research</div>
-                      <div className="text-sm text-muted-foreground">Grade Platform</div>
+                      <div className="text-2xl font-bold text-primary">Interactive</div>
+                      <div className="text-sm text-muted-foreground">Dashboard</div>
                     </div>
                   </div>
                 </CardContent>
@@ -107,35 +107,35 @@ const CustomerRelationship = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Automated Text Processing</h4>
+                      <h4 className="font-semibold text-primary">Automated Data Ingestion</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Upload CSV, TXT, or PDF files</li>
-                        <li>• PII redaction and metadata handling</li>
-                        <li>• Document segmentation</li>
+                        <li>• Heterogeneous APIs integration (THL, Eurostat, OWID)</li>
+                        <li>• Caching and error handling</li>
+                        <li>• Modular pipeline architecture</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">NLP-Powered Coding</h4>
+                      <h4 className="font-semibold text-primary">Statistical Analysis</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Sentiment and emotion analysis</li>
-                        <li>• Topic modeling with confidence scores</li>
-                        <li>• Model versioning for reproducibility</li>
+                        <li>• Correlation and lag analysis</li>
+                        <li>• Interrupted time series modeling</li>
+                        <li>• Advanced statistical methods</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Collaborative Review</h4>
+                      <h4 className="font-semibold text-primary">Reporting & Visualization</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Human-in-the-loop coding workflows</li>
-                        <li>• Role-based access control</li>
-                        <li>• Keyboard-driven review interface</li>
+                        <li>• Publication-ready static reports (PDF)</li>
+                        <li>• Interactive Streamlit dashboard</li>
+                        <li>• Data filtering and download capabilities</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Analytics & Reporting</h4>
+                      <h4 className="font-semibold text-primary">Framework Integration</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Inter-rater reliability statistics</li>
-                        <li>• Interactive dashboards</li>
-                        <li>• Publication-ready exports</li>
+                        <li>• Psychological theory integration</li>
+                        <li>• Contextual annotations</li>
+                        <li>• Professional dashboard design</li>
                       </ul>
                     </div>
                   </div>
@@ -150,39 +150,39 @@ const CustomerRelationship = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-4 gap-4">
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Frontend & UI</h4>
+                      <h4 className="font-semibold text-primary mb-2">Languages/Libraries</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Next.js</p>
-                        <p>React</p>
-                        <p>TailwindCSS</p>
-                        <p>Responsive design</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Backend & APIs</h4>
-                      <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Supabase (Postgres)</p>
-                        <p>Edge Functions</p>
-                        <p>Row-level security</p>
-                        <p>Deno/TypeScript</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">NLP & Processing</h4>
-                      <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>OpenAI API</p>
-                        <p>HuggingFace models</p>
-                        <p>RoBERTa/DistilBERT</p>
-                        <p>Topic modeling</p>
+                        <p>Python</p>
+                        <p>Pandas</p>
+                        <p>NumPy</p>
+                        <p>Statsmodels</p>
                       </div>
                     </div>
                     <div>
                       <h4 className="font-semibold text-primary mb-2">Visualization</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Chart.js/Plotly</p>
-                        <p>PDF generation</p>
-                        <p>Structured reporting</p>
-                        <p>Audit trails</p>
+                        <p>Streamlit</p>
+                        <p>Matplotlib</p>
+                        <p>Seaborn</p>
+                        <p>Plotly</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Data Sources</h4>
+                      <div className="space-y-1 text-sm text-muted-foreground">
+                        <p>THL Sotkanet API</p>
+                        <p>Eurostat API</p>
+                        <p>Our World in Data</p>
+                        <p>OECD Health Statistics</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Development</h4>
+                      <div className="space-y-1 text-sm text-muted-foreground">
+                        <p>Virtual environments (venv)</p>
+                        <p>Modular Python architecture</p>
+                        <p>Logging</p>
+                        <p>Markdown documentation</p>
                       </div>
                     </div>
                   </div>
@@ -191,13 +191,17 @@ const CustomerRelationship = () => {
 
               {/* Project Actions */}
               <div className="flex justify-center space-x-4">
-                <Button size="lg" className="shadow-card">
-                  <Github className="w-4 h-4 mr-2" />
-                  View Code
+                <Button size="lg" className="shadow-card" asChild>
+                  <a href="https://github.com/annasebedash-creator/Finland-Psychology-Report-Dashboard" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    View Code
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
+                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                  <a href="https://finland-psychology-report-dashboard-kjtvduh5rphhid7jnwysqf.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Live Demo
+                  </a>
                 </Button>
               </div>
             </div>
@@ -209,4 +213,4 @@ const CustomerRelationship = () => {
   );
 };
 
-export default CustomerRelationship;
+export default FinlandMentalHealthDashboard;

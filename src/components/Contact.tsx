@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Send } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -33,8 +33,8 @@ const Contact = () => {
                 {
                   icon: <Mail className="w-5 h-5" />,
                   label: "Email",
-                  value: "anna.sebedash.email@gmail.com",
-                  link: "mailto:anna.sebedash.email@gmail.com"
+                  value: "anna.sebedash@gmail.com",
+                  link: "mailto:anna.sebedash@gmail.com"
                 },
                 {
                   icon: <Phone className="w-5 h-5" />,
@@ -75,9 +75,8 @@ const Contact = () => {
               <h4 className="font-semibold text-primary mb-4">Connect with me</h4>
               <div className="flex space-x-4">
                 {[
-                  { icon: <Linkedin className="w-5 h-5" />, href: "#", label: "LinkedIn" },
-                  { icon: <Github className="w-5 h-5" />, href: "#", label: "GitHub" },
-                  { icon: <Mail className="w-5 h-5" />, href: "#", label: "Email" }
+                  { icon: <Github className="w-5 h-5" />, href: "https://github.com/annasebedash-creator", label: "GitHub" },
+                  { icon: <Mail className="w-5 h-5" />, href: "mailto:anna.sebedash@gmail.com", label: "Email" }
                 ].map((social, index) => (
                   <Button
                     key={index}
@@ -86,7 +85,11 @@ const Contact = () => {
                     asChild
                     className="shadow-card hover:shadow-elegant transition-all duration-200"
                   >
-                    <a href={social.href} aria-label={social.label}>
+                    <a
+                      href={social.href}
+                      aria-label={social.label}
+                      {...(social.href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
+                    >
                       {social.icon}
                     </a>
                   </Button>
