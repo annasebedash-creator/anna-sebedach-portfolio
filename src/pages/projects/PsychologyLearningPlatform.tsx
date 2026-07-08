@@ -194,7 +194,7 @@ const PsychologyLearningPlatform = () => {
                 <Button 
                   size="lg" 
                   className="shadow-card"
-                  onClick={() => window.open('https://github.com/annasebedash-creator/Psychology-Learning-Platfrom', '_blank')}
+                  onClick={() => window.open('https://github.com/annasebedash-creator/Psychology-Learning-Platform', '_blank')}
                 >
                   <Github className="w-4 h-4 mr-2" />
                   View Code
@@ -203,7 +203,7 @@ const PsychologyLearningPlatform = () => {
                   size="lg" 
                   variant="outline" 
                   className="shadow-card"
-                  onClick={() => window.open('https://annasebedash-creator.github.io/Psychology-Learning-Platfrom/', '_blank')}
+                  onClick={() => window.open('https://annasebedash-creator.github.io/Psychology-Learning-Platform/', '_blank')}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
