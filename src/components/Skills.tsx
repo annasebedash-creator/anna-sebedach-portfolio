@@ -124,15 +124,12 @@ const Skills = () => {
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
                       <Target className="w-5 h-5 text-accent" />
-                      <span className="font-medium text-lg">Certifications</span>
+                      <span className="font-medium text-lg">Currently Studying Toward</span>
                     </div>
                     <div className="ml-7 space-y-1">
                       <Badge variant="secondary" className="mr-2 text-sm">AWS Cloud Practitioner</Badge>
                       <Badge variant="secondary" className="mr-2 text-sm">Google Analytics</Badge>
-                      <Badge variant="secondary" className="mr-2 text-sm">Agile & Scrum</Badge>
-                      <Badge variant="secondary" className="mr-2 text-sm">Project Management</Badge>
-                      <Badge variant="secondary" className="mr-2 text-sm">Microsoft Office Specialist</Badge>
-                      <Badge variant="secondary" className="text-sm">Power BI</Badge>
+                      <Badge variant="secondary" className="text-sm">Power BI (PL-300)</Badge>
                     </div>
                   </div>
                 </div>
@@ -187,8 +184,8 @@ const Skills = () => {
           label: "Technologies & Tools"
         }, {
           icon: <Cloud className="w-8 h-8" />,
-          value: "6",
-          label: "Certifications"
+          value: "4",
+          label: "AI Assistants Built"
         }, {
           icon: <BarChart3 className="w-8 h-8" />,
           value: "3",
