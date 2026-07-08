@@ -178,21 +178,21 @@ const Skills = () => {
         {/* Key Metrics */}
         <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
           {[{
-          icon: <Target className="w-8 h-8" />,
-          value: "5+",
-          label: "Years Experience"
-        }, {
           icon: <Briefcase className="w-8 h-8" />,
-          value: "20+",
+          value: "16",
           label: "Projects Completed"
         }, {
-          icon: <BarChart3 className="w-8 h-8" />,
-          value: "100+",
-          label: "Data Points Analyzed"
+          icon: <Target className="w-8 h-8" />,
+          value: "20+",
+          label: "Technologies & Tools"
         }, {
           icon: <Cloud className="w-8 h-8" />,
-          value: "3+",
+          value: "6",
           label: "Certifications"
+        }, {
+          icon: <BarChart3 className="w-8 h-8" />,
+          value: "3",
+          label: "Working Languages"
         }].map((metric, index) => <div key={index} className="text-center space-y-2">
               <div className="text-primary mx-auto w-fit">
                 {metric.icon}

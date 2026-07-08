@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, ExternalLink, Github, Calendar, FileText, Users } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Calendar, Users, Target } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const ProcessAutomation = () => {
+const QualiLab = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const ProcessAutomation = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-r from-secondary to-secondary/80">
+        <section className="py-16 bg-gradient-primary">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <button 
@@ -42,13 +42,13 @@ const ProcessAutomation = () => {
                 <span>Back to Projects</span>
               </button>
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Sauna Slot Booking System
+                QualiLab – Qualitative Data Analysis Platform
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Full requirements specification for a digital sauna booking system, covering complete requirements engineering process from stakeholder needs to technical documentation
+                A research-grade web application for qualitative data analysis in psychology with NLP pipelines and collaborative coding
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["UML", "Requirements Engineering", "Risk Analysis", "Software Design"].map((tag, index) => (
+                {["Next.js", "React", "Supabase", "NLP", "OpenAI API"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -70,34 +70,30 @@ const ProcessAutomation = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    Designed a full requirements specification for a digital sauna booking system used in a housing company context. 
-                    The project covered the complete requirements engineering process: eliciting stakeholder needs, analyzing and 
-                    prioritizing requirements, modeling the system through UML use cases, class diagrams, and UI sketches, and 
-                    defining both functional and non-functional requirements. The outcome was a professional-grade Software 
-                    Requirements Specification (SRS) that demonstrates proficiency in translating stakeholder goals into structured technical documentation.
+                    Designed and implemented a research-grade web application for qualitative data analysis in psychology. The platform enables researchers to upload transcripts and open-ended survey responses, automatically segment and categorize the text using NLP pipelines, and collaborate on human-in-the-loop coding with inter-rater reliability statistics. QualiLab bridges IT engineering and psychological research methodology, providing both automation and rigorous control.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <Users className="w-8 h-8" />
+                        <Target className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">3</div>
-                      <div className="text-sm text-muted-foreground">Stakeholder Types</div>
+                      <div className="text-2xl font-bold text-primary">NLP</div>
+                      <div className="text-sm text-muted-foreground">Automated Processing</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
-                        <FileText className="w-8 h-8" />
+                        <Users className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">15+</div>
-                      <div className="text-sm text-muted-foreground">Use Cases</div>
+                      <div className="text-2xl font-bold text-primary">Collaborative</div>
+                      <div className="text-sm text-muted-foreground">Review Environment</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
                         <Calendar className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">3</div>
-                      <div className="text-sm text-muted-foreground">Months Duration</div>
+                      <div className="text-2xl font-bold text-primary">Research</div>
+                      <div className="text-sm text-muted-foreground">Grade Platform</div>
                     </div>
                   </div>
                 </CardContent>
@@ -111,35 +107,35 @@ const ProcessAutomation = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Use Case Modeling</h4>
+                      <h4 className="font-semibold text-primary">Automated Text Processing</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Detailed use cases for residents, caretakers, and housing company</li>
-                        <li>• Account creation and slot booking workflows</li>
-                        <li>• Notification and feedback systems</li>
+                        <li>• Upload CSV, TXT, or PDF files</li>
+                        <li>• PII redaction and metadata handling</li>
+                        <li>• Document segmentation</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">UML Diagrams</h4>
+                      <h4 className="font-semibold text-primary">NLP-Powered Coding</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Use case diagrams and class diagrams</li>
-                        <li>• Sitemap sketches and UI wireframes</li>
-                        <li>• System logic and data flow visualization</li>
+                        <li>• Sentiment and emotion analysis</li>
+                        <li>• Topic modeling with confidence scores</li>
+                        <li>• Model versioning for reproducibility</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Data Dictionary & Domain Model</h4>
+                      <h4 className="font-semibold text-primary">Collaborative Review</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• User, Resident, Apartment, Sauna entities</li>
-                        <li>• Time Slot and Reservation modeling</li>
-                        <li>• Attributes, IDs, and data examples</li>
+                        <li>• Human-in-the-loop coding workflows</li>
+                        <li>• Role-based access control</li>
+                        <li>• Keyboard-driven review interface</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Risk Analysis</h4>
+                      <h4 className="font-semibold text-primary">Analytics & Reporting</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• Risk register with probability-impact scoring</li>
-                        <li>• Monthly risk evolution tracking</li>
-                        <li>• Mitigation and recovery plans</li>
+                        <li>• Inter-rater reliability statistics</li>
+                        <li>• Interactive dashboards</li>
+                        <li>• Publication-ready exports</li>
                       </ul>
                     </div>
                   </div>
@@ -154,39 +150,39 @@ const ProcessAutomation = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-4 gap-4">
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Modeling & Documentation</h4>
+                      <h4 className="font-semibold text-primary mb-2">Frontend & UI</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>UML Diagrams</p>
-                        <p>Use Case Modeling</p>
-                        <p>Class Diagrams</p>
-                        <p>Object Models</p>
+                        <p>Next.js</p>
+                        <p>React</p>
+                        <p>TailwindCSS</p>
+                        <p>Responsive design</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Design Tools</h4>
+                      <h4 className="font-semibold text-primary mb-2">Backend & APIs</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Figma (UI Sketches)</p>
-                        <p>Excel (Analysis)</p>
-                        <p>Word/PDF Reports</p>
-                        <p>Risk Registers</p>
+                        <p>Supabase (Postgres)</p>
+                        <p>Edge Functions</p>
+                        <p>Row-level security</p>
+                        <p>Deno/TypeScript</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Standards & Frameworks</h4>
+                      <h4 className="font-semibold text-primary mb-2">NLP & Processing</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>IEEE SRS Standards</p>
-                        <p>ISO/IEC Guidelines</p>
-                        <p>Function Point Analysis</p>
-                        <p>GDPR Compliance</p>
+                        <p>OpenAI API</p>
+                        <p>HuggingFace models</p>
+                        <p>RoBERTa/DistilBERT</p>
+                        <p>Topic modeling</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Methodologies</h4>
+                      <h4 className="font-semibold text-primary mb-2">Visualization</h4>
                       <div className="space-y-1 text-sm text-muted-foreground">
-                        <p>Requirements Elicitation</p>
-                        <p>Human-Centered Design</p>
-                        <p>Risk-Based Management</p>
-                        <p>Scope Validation</p>
+                        <p>Chart.js/Plotly</p>
+                        <p>PDF generation</p>
+                        <p>Structured reporting</p>
+                        <p>Audit trails</p>
                       </div>
                     </div>
                   </div>
@@ -197,11 +193,11 @@ const ProcessAutomation = () => {
               <div className="flex justify-center space-x-4">
                 <Button size="lg" className="shadow-card">
                   <Github className="w-4 h-4 mr-2" />
-                  View Requirements
+                  View Code
                 </Button>
                 <Button size="lg" variant="outline" className="shadow-card">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  UML Diagrams
+                  Live Demo
                 </Button>
               </div>
             </div>
@@ -213,4 +209,4 @@ const ProcessAutomation = () => {
   );
 };
 
-export default ProcessAutomation;
+export default QualiLab;
