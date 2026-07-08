@@ -48,7 +48,7 @@ const FinlandMentalHealthDashboard = () => {
                 A research-grade analytical pipeline and interactive dashboard to examine the evolution of mental health indicators in Finland
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["Python", "Streamlit", "Pandas", "THL API", "Eurostat"].map((tag, index) => (
+                {["Python", "Streamlit", "Pandas", "THL API", "Eurostat", "Docker", "GitHub Actions CI"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
