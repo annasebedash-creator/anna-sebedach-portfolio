@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Github, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Github, Send } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -75,6 +75,7 @@ const Contact = () => {
               <h4 className="font-semibold text-primary mb-4">Connect with me</h4>
               <div className="flex space-x-4">
                 {[
+                  { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/anna-sebedach-b66478218", label: "LinkedIn" },
                   { icon: <Github className="w-5 h-5" />, href: "https://github.com/annasebedash-creator", label: "GitHub" },
                   { icon: <Mail className="w-5 h-5" />, href: "mailto:anna.sebedash@gmail.com", label: "Email" }
                 ].map((social, index) => (
