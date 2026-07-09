@@ -5,7 +5,7 @@ const Skills = () => {
   const skillCategories = [{
     title: "AI & Automation",
     icon: <Code2 className="w-6 h-6" />,
-    skills: ["OpenAI API", "n8n", "LangChain", "Voice AI (Whisper, TTS)", "Telegram Bot API", "IBM Watsonx", "Conversation Design", "NLP"],
+    skills: ["OpenAI API", "Claude Code", "Claude Design", "AI Workflow Design", "n8n", "LangChain", "Voice AI (Whisper, TTS)", "Telegram Bot API", "IBM Watsonx", "Conversation Design", "NLP"],
     color: "text-primary"
   }, {
     title: "Technical Development",

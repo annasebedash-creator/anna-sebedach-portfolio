@@ -21,6 +21,15 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "AI-Native Proposal Workflow System",
+      description: "Claude Code + Claude Design workflow system built during a pilot at Coventures (Helsinki venture-building company): turns client-meeting transcripts into structured proposal decks with criteria-driven selection of reference cases (38) and expert profiles (43). Used on real client proposals; anonymized case study.",
+      tags: ["Claude Code", "Claude Design", "AI Workflow Design", "Prompt Engineering", "Knowledge Management", "Sales Enablement", "Markdown/GitHub"],
+      category: "AI Workflow Systems · Company Pilot",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/coventures-ai-workflow",
+      pattern: "automation"
+    },
+    {
       title: "Tutor AI Assistant",
       description: "Trilingual (RU/FI/EN) AI customer-service agent built and deployed to production for my own tutoring business. RAG-grounded answers from the business knowledge base, lead qualification, and trial-lesson booking straight into a database — try the live demo.",
       tags: ["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Trilingual", "Prompt Engineering"],

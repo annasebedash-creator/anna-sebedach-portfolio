@@ -5,6 +5,21 @@ import { Calendar, MapPin, Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
+      title: "AI Workflow & Sales Enablement Trainee",
+      company: "Coventures",
+      location: "Helsinki, Finland",
+      period: "June – July 2026",
+      type: "Pilot Project",
+      description: "Built and tested AI-native workflow systems (Claude Code + Claude Design) for a venture-building and consulting company transitioning to an AI-native operating model: proposal generation from meeting transcripts, criteria-driven selection of reference cases and expert profiles, and an AI-readable company knowledge vault.",
+      achievements: [
+        "Built a transcript-to-proposal pipeline: context questions, slide-by-slide outline with placeholder discipline, and Claude Design handoff to a 56-slide-variant template — used on real client proposals",
+        "Reverse-engineered 7 past proposal decks into a modular slide catalog and selection playbooks",
+        "Structured 38 case references and 43 expert profiles into criteria-driven, quality-ruled libraries",
+        "Migrated ~50 project folders of scattered knowledge into an AI-readable markdown vault with internal/public separation, validation-agent checks, and documentation for future users"
+      ],
+      skills: ["Claude Code", "Claude Design", "AI Workflow Design", "Prompt Engineering", "Knowledge Management", "Sales Enablement", "Process Analysis", "Human-in-the-loop QA"]
+    },
+    {
       title: "Dance Instructor & Content Creator",
       company: "Girlhood Studio and many other studios",
       location: "Helsinki, Finland",
@@ -74,7 +89,8 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Digital services specialist with experience in content creation, youth engagement, and communications
+            From AI workflow development for companies to content creation and communications — experience bridging technology and business
+
           </p>
         </div>
 
