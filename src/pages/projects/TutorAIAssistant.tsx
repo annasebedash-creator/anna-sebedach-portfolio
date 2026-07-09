@@ -90,8 +90,8 @@ const TutorAIAssistant = () => {
                       <div className="text-primary mx-auto w-fit">
                         <Target className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">RAG</div>
-                      <div className="text-sm text-muted-foreground">Grounded Answers</div>
+                      <div className="text-2xl font-bold text-primary">18/18</div>
+                      <div className="text-sm text-muted-foreground">Factual Accuracy (evals)</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
@@ -144,6 +144,46 @@ const TutorAIAssistant = () => {
                       </ul>
                     </div>
                   </div>
+                </CardContent>
+              </Card>
+
+              {/* Evaluation */}
+              <Card className="shadow-card">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-primary">Evaluated, Not Just Built</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    The agent ships with an automated evaluation harness: a 24-question multilingual test set
+                    (Russian, Finnish, English) scored for factual accuracy, refusal correctness on out-of-scope
+                    questions, and reply-language consistency, plus an end-to-end booking scenario verified
+                    against the database.
+                  </p>
+                  <div className="grid md:grid-cols-4 gap-4 text-center">
+                    <div>
+                      <div className="text-xl font-bold text-primary">18/18</div>
+                      <div className="text-sm text-muted-foreground">Factual accuracy</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-primary">5/6</div>
+                      <div className="text-sm text-muted-foreground">Correct refusals</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-primary">23/24</div>
+                      <div className="text-sm text-muted-foreground">Language consistency</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-primary">PASS</div>
+                      <div className="text-sm text-muted-foreground">Booking end-to-end</div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    The evals earned their keep immediately: they caught a language-switching regression (the
+                    Russian-heavy knowledge base pulling English questions into Russian answers) and showed that a
+                    "clarified" prompt actually made it worse — the fix was an explicit conditional language rule,
+                    verified by re-running the suite. Run-to-run variance (±1–2 questions) is documented in the
+                    results rather than hidden.
+                  </p>
                 </CardContent>
               </Card>
 
