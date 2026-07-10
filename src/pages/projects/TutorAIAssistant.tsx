@@ -48,7 +48,7 @@ const TutorAIAssistant = () => {
                 A trilingual RAG-powered customer-service agent built and deployed for a real business — my own language-tutoring service
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Trilingual"].map((tag, index) => (
+                {["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Playwright", "CI", "Trilingual"].map((tag, index) => (
                   <Badge key={index} variant="secondary" className="bg-white/20 text-white">
                     {tag}
                   </Badge>
@@ -136,11 +136,12 @@ const TutorAIAssistant = () => {
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">Production Engineering</h4>
+                      <h4 className="font-semibold text-primary">Production Engineering & QA</h4>
                       <ul className="space-y-2 text-muted-foreground">
                         <li>• Deployed on Vercel with encrypted environment secrets</li>
-                        <li>• Per-IP rate limiting protects the public demo</li>
-                        <li>• Input validation and graceful degradation (mock mode)</li>
+                        <li>• 20 Playwright tests (desktop + mobile WebKit, API contract, rate limiting) in CI on every push</li>
+                        <li>• Risk-based test plan and real bug reports in the repo</li>
+                        <li>• Per-IP rate limiting and input validation protect the public demo</li>
                       </ul>
                     </div>
                   </div>
