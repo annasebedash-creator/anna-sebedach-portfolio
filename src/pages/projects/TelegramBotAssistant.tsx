@@ -193,8 +193,8 @@ const TelegramBotAssistant = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
-                <Button size="lg" className="shadow-card" onClick={() => window.open('https://github.com/annasebedash-creator/My-Telegram-Bot.git', '_blank')}>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button size="lg" className="shadow-card" onClick={() => window.open('https://github.com/annasebedash-creator/My-Telegram-Bot', '_blank')}>
                   <Github className="w-4 h-4 mr-2" />
                   View Code
                 </Button>

@@ -132,7 +132,7 @@ const TutorAIAssistant = () => {
                       <ul className="space-y-2 text-muted-foreground">
                         <li>• Collects name, contact, level and learning goals in conversation</li>
                         <li>• Structured booking records stored in Postgres</li>
-                        <li>• Confirmation flow prevents duplicate bookings</li>
+                        <li>• Explicit confirmation step before any booking is stored — no wrong-data bookings</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
@@ -236,7 +236,7 @@ const TutorAIAssistant = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="shadow-card" asChild>
                   <a href="https://github.com/annasebedash-creator/tutor-ai-assistant" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />

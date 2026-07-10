@@ -190,7 +190,7 @@ const FinlandMentalHealthDashboard = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="shadow-card" asChild>
                   <a href="https://github.com/annasebedash-creator/Finland-Psychology-Report-Dashboard" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />

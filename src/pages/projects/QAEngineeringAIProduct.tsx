@@ -45,7 +45,7 @@ const QAEngineeringAIProduct = () => {
                 QA & Test Automation for a Production AI Product
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                A complete QA process built from scratch for my live AI customer-service agent — risk-based test plan, cross-browser automation, LLM evals, and real bug reports
+                A QA process built from scratch to break the product before its users do — risk-based test plan, cross-browser automation, LLM evals, and real bug reports
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
                 {["Playwright", "Test Automation", "API Testing", "LLM Evals", "GitHub Actions CI", "Mobile Testing", "Bug Reporting", "TypeScript"].map((tag, index) => (
@@ -97,7 +97,7 @@ const QAEngineeringAIProduct = () => {
                         <Bug className="w-8 h-8" />
                       </div>
                       <div className="text-2xl font-bold text-primary">3</div>
-                      <div className="text-sm text-muted-foreground">Real Defects Written Up</div>
+                      <div className="text-sm text-muted-foreground">Findings Written Up as Reports</div>
                     </div>
                   </div>
                 </CardContent>
@@ -114,7 +114,7 @@ const QAEngineeringAIProduct = () => {
                       <ul className="space-y-2 text-muted-foreground">
                         <li>• Seven failure modes ranked by business impact — wrong prices to customers, lost bookings, API-cost blowout</li>
                         <li>• Every risk mapped to the test layer that covers it</li>
-                        <li>• Documented sprint regression strategy</li>
+                        <li>• Regression habits built for a two-week-sprint cadence</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
@@ -151,7 +151,7 @@ const QAEngineeringAIProduct = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
-                    Three defects found, fixed and written up as engineer-actionable reports: a
+                    Three findings — two defects and one judgment call — written up as engineer-actionable reports: a
                     language-switching regression where the Russian-heavy knowledge base pulled English
                     questions into Russian answers (caught by the eval suite — and the first "fix" measurably
                     made it worse, proving prompt edits need regression tests like any code change); a
@@ -166,7 +166,7 @@ const QAEngineeringAIProduct = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="shadow-card" asChild>
                   <a href="https://github.com/annasebedash-creator/tutor-ai-assistant" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />

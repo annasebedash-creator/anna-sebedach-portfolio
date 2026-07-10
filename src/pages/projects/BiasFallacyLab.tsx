@@ -190,11 +190,11 @@ const BiasFallacyLab = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button 
                   size="lg" 
                   className="shadow-card"
-                  onClick={() => window.open('https://github.com/annasebedash-creator/bias-lab', '_blank')}
+                  onClick={() => window.open('https://github.com/annasebedash-creator/Bias-Lab', '_blank')}
                 >
                   <Github className="w-4 h-4 mr-2" />
                   View Code

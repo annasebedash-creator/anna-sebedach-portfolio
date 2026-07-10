@@ -194,7 +194,7 @@ const TeamLeadership = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="shadow-card">
                   <Github className="w-4 h-4 mr-2" />
                   View Code

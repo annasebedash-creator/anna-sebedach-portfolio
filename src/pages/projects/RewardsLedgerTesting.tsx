@@ -75,7 +75,7 @@ const RewardsLedgerTesting = () => {
                     shouldn't. Each one is leaked money for the business or a one-star review from the user.
                     I studied real rewards products and their public user complaints, distilled the
                     commercially riskiest failure modes, then built a small reference ledger and a test suite
-                    that hunts exactly those bugs. The ledger is ~100 lines — the tests are the point.
+                    that hunts exactly those bugs. At bottom this is data-accuracy testing: the balance a user sees must equal what the event history proves — the same discipline as verifying a dashboard number against its source data. The ledger is ~100 lines — the tests are the point.
                   </p>
 
                   <div className="grid md:grid-cols-3 gap-6">
@@ -83,7 +83,7 @@ const RewardsLedgerTesting = () => {
                       <div className="text-primary mx-auto w-fit">
                         <Coins className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">22</div>
+                      <div className="text-2xl font-bold text-primary">23</div>
                       <div className="text-sm text-muted-foreground">Tests, All Business-Rule Named</div>
                     </div>
                     <div className="text-center space-y-2">
@@ -115,7 +115,7 @@ const RewardsLedgerTesting = () => {
                       <ul className="space-y-2 text-muted-foreground">
                         <li>• Same purchase via receipt photo AND card feed — credited once</li>
                         <li>• Duplicate receipt submissions rejected</li>
-                        <li>• The #1 exploit surface when scanning and card-mining coexist</li>
+                        <li>• The #1 exploit surface when receipt scanning and card-linked feeds coexist</li>
                       </ul>
                     </div>
                     <div className="space-y-4">
@@ -128,7 +128,7 @@ const RewardsLedgerTesting = () => {
                     <div className="space-y-4">
                       <h4 className="font-semibold text-primary">Expiry Boundaries</h4>
                       <ul className="space-y-2 text-muted-foreground">
-                        <li>• 180-day inactivity expiry tested to the millisecond</li>
+                        <li>• Inactivity expiry (180 days in this reference) tested to the millisecond boundary</li>
                         <li>• Activity resets the clock; merchant-side refunds don't count as activity</li>
                       </ul>
                     </div>
@@ -161,7 +161,7 @@ const RewardsLedgerTesting = () => {
               </Card>
 
               {/* Project Actions */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="shadow-card" asChild>
                   <a href="https://github.com/annasebedash-creator/rewards-ledger-testing" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
