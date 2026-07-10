@@ -25,6 +25,7 @@ import OrderManagementSystem from "./pages/projects/OrderManagementSystem";
 import TutorAIAssistant from "./pages/projects/TutorAIAssistant";
 import CoventuresAIWorkflow from "./pages/projects/CoventuresAIWorkflow";
 import QAEngineeringAIProduct from "./pages/projects/QAEngineeringAIProduct";
+import RewardsLedgerTesting from "./pages/projects/RewardsLedgerTesting";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/projects/coventures-ai-workflow" element={<CoventuresAIWorkflow />} />
           <Route path="/projects/tutor-ai-assistant" element={<TutorAIAssistant />} />
           <Route path="/projects/qa-ai-product" element={<QAEngineeringAIProduct />} />
+          <Route path="/projects/rewards-ledger-testing" element={<RewardsLedgerTesting />} />
           <Route path="/projects/voice-ai-dance-studio" element={<VoiceAIDanceStudio />} />
           <Route path="/projects/messukeskus-production" element={<MessukeskusProduction />} />
           <Route path="/projects/fi-healthcare-voice-demo" element={<FiHealthcareVoiceDemo />} />

@@ -48,6 +48,15 @@ const Projects = () => {
       pattern: "software-design"
     },
     {
+      title: "Testing the Money Path — Rewards Ledger",
+      description: "Studied real loyalty apps' public user complaints, distilled the commercially riskiest failure modes (double-crediting, expiry boundaries, refund claw-backs), then built a reference points-ledger and 22 tests that hunt exactly those bugs — including property-based tests over thousands of random event sequences.",
+      tags: ["TypeScript", "Vitest", "Property-Based Testing", "fast-check", "Test Design", "GitHub Actions CI"],
+      category: "QA & Test Design",
+      gradient: "bg-umber",
+      slug: "/projects/rewards-ledger-testing",
+      pattern: "database"
+    },
+    {
       title: "Voice AI Dance Studio Assistant",
       description: "Bilingual AI assistant transforming dance studio customer service through natural voice conversations. Handles class inquiries and registrations with voice input/output in Finnish and English via Telegram, featuring real-time analytics and automated workflow orchestration.",
       tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],
