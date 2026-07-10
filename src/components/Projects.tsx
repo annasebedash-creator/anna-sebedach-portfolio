@@ -39,6 +39,15 @@ const Projects = () => {
       pattern: "voice-ai"
     },
     {
+      title: "QA & Test Automation for an AI Product",
+      description: "Built the QA process from scratch for my production AI agent: risk-based test plan, 20 Playwright tests across desktop and mobile WebKit (UI, API contract, rate limiting) in CI, an LLM eval harness that caught a real prompt regression, and engineer-actionable bug reports — all public on GitHub.",
+      tags: ["Playwright", "Test Automation", "API Testing", "LLM Evals", "GitHub Actions", "Mobile Testing", "Bug Reporting", "TypeScript"],
+      category: "QA & Test Automation",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/qa-ai-product",
+      pattern: "software-design"
+    },
+    {
       title: "Voice AI Dance Studio Assistant",
       description: "Bilingual AI assistant transforming dance studio customer service through natural voice conversations. Handles class inquiries and registrations with voice input/output in Finnish and English via Telegram, featuring real-time analytics and automated workflow orchestration.",
       tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],
