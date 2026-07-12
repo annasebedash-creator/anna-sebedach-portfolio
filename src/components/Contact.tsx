@@ -6,6 +6,22 @@ import { Mail, MapPin, Phone, Linkedin, Github, Send } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const fullName = `${firstName} ${lastName}`.trim();
+    const body = `From: ${fullName}${email ? ` <${email}>` : ""}\n\n${message}`;
+    const mailto = `mailto:anna.sebedash@gmail.com?subject=${encodeURIComponent(
+      subject || "Portfolio contact"
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  };
+
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-6">
