@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Github, Coins, Repeat, CalendarClock } from "lucide-react";
+import { ArrowLeft, Github, Coins, Repeat, CalendarClock, Play, CheckCircle } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -163,9 +163,21 @@ const RewardsLedgerTesting = () => {
               {/* Project Actions */}
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="shadow-card" asChild>
+                  <a href="https://stackblitz.com/github/annasebedash-creator/Rewards-Ledger-testing?file=tests%2Fledger.test.ts" target="_blank" rel="noopener noreferrer">
+                    <Play className="w-4 h-4 mr-2" />
+                    Run the Tests in Your Browser
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="shadow-card" asChild>
                   <a href="https://github.com/annasebedash-creator/rewards-ledger-testing" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     Code & Tests
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                  <a href="https://github.com/annasebedash-creator/rewards-ledger-testing/actions" target="_blank" rel="noopener noreferrer">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    CI Runs
                   </a>
                 </Button>
               </div>

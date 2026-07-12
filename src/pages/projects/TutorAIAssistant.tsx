@@ -249,6 +249,12 @@ const TutorAIAssistant = () => {
                     Try the Live Demo
                   </a>
                 </Button>
+                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                  <a href="https://github.com/annasebedash-creator/tutor-ai-assistant/blob/main/evals/RESULTS.md" target="_blank" rel="noopener noreferrer">
+                    <Target className="w-4 h-4 mr-2" />
+                    Eval Results
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
