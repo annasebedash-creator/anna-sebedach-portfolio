@@ -106,7 +106,7 @@ const Skills = () => {
                       <GraduationCap className="w-5 h-5 text-primary" />
                       <span className="font-medium text-lg">University Psychology Studies</span>
                     </div>
-                    <p className="text-muted-foreground ml-7">5+ Bachelor's level courses - University of Helsinki</p>
+                    <p className="text-muted-foreground ml-7">10+ Bachelor's level courses - University of Helsinki</p>
                   </div>
                   
                   <div className="space-y-2">
