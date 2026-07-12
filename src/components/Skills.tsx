@@ -5,23 +5,33 @@ const Skills = () => {
   const skillCategories = [{
     title: "AI & Automation",
     icon: <Code2 className="w-6 h-6" />,
-    skills: ["OpenAI API", "Claude Code", "Claude Design", "AI Workflow Design", "n8n", "LangChain", "Voice AI (Whisper, TTS)", "Telegram Bot API", "IBM Watsonx", "Conversation Design", "NLP"],
+    skills: ["OpenAI API", "Claude Code", "Claude Design", "AI Workflow Design", "RAG (pgvector)", "Prompt Engineering", "n8n", "LangChain", "Voice AI (Whisper, TTS)", "Telegram Bot API", "IBM Watsonx", "Conversation Design"],
     color: "text-primary"
   }, {
-    title: "Technical Development",
+    title: "QA & Testing",
+    icon: <Target className="w-6 h-6" />,
+    skills: ["Playwright (E2E, API, cross-browser)", "Vitest", "Property-Based Testing (fast-check)", "LLM Evaluation Harnesses", "Risk-Based Test Planning", "Bug Reporting", "Exploratory Testing"],
+    color: "text-burgundy"
+  }, {
+    title: "Development & Cloud",
     icon: <Database className="w-6 h-6" />,
-    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Node.js", "SQL", "Power BI", "Python", "Streamlit", "Pandas", "Supabase", "API Integration", "Google Apps Script"],
+    skills: ["TypeScript", "JavaScript", "React", "Next.js", "HTML/CSS", "Node.js", "Supabase (Postgres)", "REST API Integration", "Git & GitHub", "GitHub Actions (CI)", "Docker", "Vercel", "Google Apps Script"],
     color: "text-secondary"
   }, {
-    title: "Design & Content",
+    title: "Data & Analytics",
     icon: <BarChart3 className="w-6 h-6" />,
-    skills: ["UX Design", "Copywriting", "Content Creation", "Social Media Strategy", "Brand Storytelling", "Video Editing", "3D Modeling (Blender)", "Data Visualization"],
+    skills: ["Python", "Pandas", "Streamlit", "SQL", "Data Visualization", "Power BI"],
     color: "text-accent"
   }, {
     title: "Business & Project Management",
     icon: <Users className="w-6 h-6" />,
-    skills: ["Customer Experience Optimization", "Project Coordination", "Event Planning", "Analytics & Reporting", "Market Analysis", "Strategic Planning", "Stakeholder Management", "Agile/Scrum"],
-    color: "text-burgundy"
+    skills: ["Project Coordination", "Market Analysis", "Analytics & Reporting", "Customer Experience Optimization", "Stakeholder Management", "Agile/Scrum", "MS Office & Google Workspace"],
+    color: "text-primary"
+  }, {
+    title: "Design & Content",
+    icon: <Globe className="w-6 h-6" />,
+    skills: ["UX Design", "Content Creation", "Copywriting", "Social Media Strategy", "Brand Storytelling", "Video Editing", "3D Modeling (Blender)"],
+    color: "text-secondary"
   }];
   return <section id="skills" className="py-20 bg-gradient-subtle relative overflow-hidden">
       {/* Background decorative elements - inspired by hero image composition */}
