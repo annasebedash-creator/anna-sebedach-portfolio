@@ -162,19 +162,19 @@ const RewardsLedgerTesting = () => {
 
               {/* Project Actions */}
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="shadow-card" asChild>
+                <Button size="lg" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://stackblitz.com/github/annasebedash-creator/rewards-ledger-testing?file=tests%2Fledger.test.ts" target="_blank" rel="noopener noreferrer">
                     <Play className="w-4 h-4 mr-2" />
                     Run the Tests in Your Browser
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://github.com/annasebedash-creator/rewards-ledger-testing" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     Code & Tests
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://github.com/annasebedash-creator/rewards-ledger-testing/actions" target="_blank" rel="noopener noreferrer">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     CI Runs

@@ -200,7 +200,7 @@ const MessukeskusProduction = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button size="lg" className="shadow-card">
+                  <Button size="lg" className="shadow-card max-w-full whitespace-normal h-auto">
                     <FileSpreadsheet className="w-4 h-4 mr-2" />
                     Master Sheet
                   </Button>
@@ -210,7 +210,7 @@ const MessukeskusProduction = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button size="lg" variant="outline" className="shadow-card">
+                  <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Production PDF
                   </Button>
@@ -220,7 +220,7 @@ const MessukeskusProduction = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button size="lg" variant="outline" className="shadow-card">
+                  <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Project Demo
                   </Button>

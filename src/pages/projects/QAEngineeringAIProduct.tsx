@@ -167,31 +167,31 @@ const QAEngineeringAIProduct = () => {
 
               {/* Project Actions */}
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="shadow-card" asChild>
+                <Button size="lg" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://github.com/annasebedash-creator/tutor-ai-assistant/blob/main/TEST-PLAN.md" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Read the Test Plan
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://github.com/annasebedash-creator/tutor-ai-assistant/blob/main/BUG-REPORTS.md" target="_blank" rel="noopener noreferrer">
                     <Bug className="w-4 h-4 mr-2" />
                     Read the Bug Reports
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://github.com/annasebedash-creator/tutor-ai-assistant/actions" target="_blank" rel="noopener noreferrer">
                     <ShieldCheck className="w-4 h-4 mr-2" />
                     CI Runs
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://github.com/annasebedash-creator/tutor-ai-assistant" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     Full Repo
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://tutor-ai-assistant.vercel.app" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     The Product Under Test

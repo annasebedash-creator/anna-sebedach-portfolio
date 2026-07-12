@@ -191,13 +191,13 @@ const FinlandMentalHealthDashboard = () => {
 
               {/* Project Actions */}
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="shadow-card" asChild>
+                <Button size="lg" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://github.com/annasebedash-creator/Finland-Psychology-Report-Dashboard" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     View Code
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card" asChild>
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto" asChild>
                   <a href="https://finland-psychology-report-dashboard-kjtvduh5rphhid7jnwysqf.streamlit.app/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo

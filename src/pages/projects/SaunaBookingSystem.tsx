@@ -195,11 +195,11 @@ const SaunaBookingSystem = () => {
 
               {/* Project Actions */}
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="shadow-card">
+                <Button size="lg" className="shadow-card max-w-full whitespace-normal h-auto">
                   <Github className="w-4 h-4 mr-2" />
                   View Requirements
                 </Button>
-                <Button size="lg" variant="outline" className="shadow-card">
+                <Button size="lg" variant="outline" className="shadow-card max-w-full whitespace-normal h-auto">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   UML Diagrams
                 </Button>

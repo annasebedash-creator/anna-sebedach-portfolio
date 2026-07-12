@@ -36,7 +36,7 @@ const FiHealthcareVoiceDemo = () => {
                   Live Demo
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="shadow-card">
+              <Button asChild variant="outline" size="lg" className="shadow-card max-w-full whitespace-normal h-auto">
                 <a href="https://github.com/annasebedash-creator/FI-Healthcare-Voice-Demo" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5 mr-2" />
                   View Code
