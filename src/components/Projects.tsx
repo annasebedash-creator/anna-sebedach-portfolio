@@ -49,7 +49,7 @@ const Projects = () => {
     },
     {
       title: "Testing the Money Path — Rewards Ledger",
-      description: "Studied real loyalty apps' public user complaints, distilled the commercially riskiest failure modes (double-crediting, expiry boundaries, refund claw-backs), then built a reference points-ledger and 23 tests that hunt exactly those bugs — including 1,000-run property-based tests that found (and now guard against) a real pending-settlement defect.",
+      description: "Studied real loyalty apps' public user complaints, distilled the commercially riskiest failure modes (double-crediting, expiry boundaries, refund claw-backs), then built a reference points-ledger and 25 tests that hunt exactly those bugs — including 1,000-run property-based tests that found (and now guard against) a real pending-settlement defect, plus a red-team review that exposed and fixed the suite's own blind spots.",
       tags: ["TypeScript", "Vitest", "Property-Based Testing", "fast-check", "Test Design", "GitHub Actions CI"],
       category: "QA & Test Design",
       gradient: "bg-umber",

@@ -69,7 +69,7 @@ const QAEngineeringAIProduct = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground leading-relaxed">
-                    My Tutor AI Assistant runs in production for a real business — which means bugs cost real
+                    My Tutor AI Assistant is deployed to production for my own tutoring service — which means bugs cost real
                     trust and real money. No QA process existed, so I built one, starting from the question:
                     which failures would actually hurt the business? The result is a layered, automated QA
                     system: a risk-ranked test plan, 20 automated tests across desktop and mobile browsers,
@@ -137,7 +137,7 @@ const QAEngineeringAIProduct = () => {
                       <h4 className="font-semibold text-primary">LLM Evals — Testing the Non-Deterministic</h4>
                       <ul className="space-y-2 text-muted-foreground">
                         <li>• 24-question multilingual set: factual accuracy, honest refusals, reply language</li>
-                        <li>• Caught a real prompt regression before users did</li>
+                        <li>• Caught a real prompt regression before it reached the live site</li>
                         <li>• Run-to-run variance documented, not hidden</li>
                       </ul>
                     </div>

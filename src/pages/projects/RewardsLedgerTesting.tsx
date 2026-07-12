@@ -83,7 +83,7 @@ const RewardsLedgerTesting = () => {
                       <div className="text-primary mx-auto w-fit">
                         <Coins className="w-8 h-8" />
                       </div>
-                      <div className="text-2xl font-bold text-primary">23</div>
+                      <div className="text-2xl font-bold text-primary">25</div>
                       <div className="text-sm text-muted-foreground">Tests, All Business-Rule Named</div>
                     </div>
                     <div className="text-center space-y-2">
@@ -149,7 +149,7 @@ const RewardsLedgerTesting = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
-                    Nineteen example-based tests read like a specification — each named for the business rule
+                    Twenty-two example-based tests read like a specification — each named for the business rule
                     it protects. But hand-picked examples only catch the bugs you predicted. Three
                     property-based tests (fast-check) generate thousands of random earn/spend/refund
                     histories and assert invariants that must survive <em>all</em> of them: re-reporting a
@@ -163,7 +163,7 @@ const RewardsLedgerTesting = () => {
               {/* Project Actions */}
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="shadow-card" asChild>
-                  <a href="https://stackblitz.com/github/annasebedash-creator/Rewards-Ledger-testing?file=tests%2Fledger.test.ts" target="_blank" rel="noopener noreferrer">
+                  <a href="https://stackblitz.com/github/annasebedash-creator/rewards-ledger-testing?file=tests%2Fledger.test.ts" target="_blank" rel="noopener noreferrer">
                     <Play className="w-4 h-4 mr-2" />
                     Run the Tests in Your Browser
                   </a>

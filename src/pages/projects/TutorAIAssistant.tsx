@@ -91,7 +91,7 @@ const TutorAIAssistant = () => {
                         <Target className="w-8 h-8" />
                       </div>
                       <div className="text-2xl font-bold text-primary">18/18</div>
-                      <div className="text-sm text-muted-foreground">Factual Accuracy (evals)</div>
+                      <div className="text-sm text-muted-foreground">Factual Accuracy, Latest Eval (15–18 across runs)</div>
                     </div>
                     <div className="text-center space-y-2">
                       <div className="text-primary mx-auto w-fit">
@@ -163,7 +163,7 @@ const TutorAIAssistant = () => {
                   <div className="grid md:grid-cols-4 gap-4 text-center">
                     <div>
                       <div className="text-xl font-bold text-primary">18/18</div>
-                      <div className="text-sm text-muted-foreground">Factual accuracy</div>
+                      <div className="text-sm text-muted-foreground">Factual accuracy, latest run</div>
                     </div>
                     <div>
                       <div className="text-xl font-bold text-primary">5/6</div>
