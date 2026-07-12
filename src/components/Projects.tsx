@@ -75,24 +75,6 @@ const Projects = () => {
       pattern: "event-production"
     },
     {
-      title: "Bias & Fallacy Lab",
-      description: "Designed and developed a gamified web platform that teaches logical fallacies and cognitive biases through interactive scenarios, adaptive feedback, and dynamic practice system.",
-      tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
-      category: "Educational Technology",
-      gradient: "bg-moss-green",
-      slug: "/projects/bias-fallacy-lab",
-      pattern: "education"
-    },
-    {
-      title: "Psychology Concepts Learning Platform",
-      description: "Developed an interactive learning platform systematizing psychology concepts across multiple domains through three complementary learning modes.",
-      tags: ["Cursor AI", "Markdown", "Mermaid.js", "Python", "Psychology"],
-      category: "Educational Technology",
-      gradient: "bg-gradient-accent",
-      slug: "/projects/psychology-learning-platform",
-      pattern: "psychology"
-    },
-    {
       title: "Order Management & Invoicing System",
       description: "Built a complete internal order-to-invoice workflow for a non-profit, centralizing order tracking, invoicing, customer communication, and reporting using existing office tools with zero additional software costs.",
       tags: ["Excel", "Outlook", "Power BI", "Teams", "WooCommerce", "Procountor", "SOP Documentation"],
@@ -100,15 +82,6 @@ const Projects = () => {
       gradient: "bg-umber",
       slug: "/projects/order-management-system",
       pattern: "order-mgmt"
-    },
-    {
-      title: "Telegram Bot Assistant",
-      description: "Built an intelligent n8n automation workflow that integrates with TickTick, Google Calendar, Notion, and OpenWeatherMap to create a comprehensive personal productivity assistant with voice transcription and smart task management.",
-      tags: ["n8n", "Telegram Bot API", "TickTick API", "Google Calendar", "Notion", "OpenAI", "Workflow Automation"],
-      category: "Workflow Automation",
-      gradient: "bg-moss-green",
-      slug: "/projects/telegram-bot-assistant",
-      pattern: "automation"
     },
     {
       title: "Finland Mental Health Research Dashboard",
@@ -127,6 +100,33 @@ const Projects = () => {
       gradient: "bg-umber",
       slug: "/projects/sql-data-management",
       pattern: "database"
+    },
+    {
+      title: "Bias & Fallacy Lab",
+      description: "Designed and developed a gamified web platform that teaches logical fallacies and cognitive biases through interactive scenarios, adaptive feedback, and dynamic practice system.",
+      tags: ["HTML", "CSS", "JavaScript", "JSON", "Web Audio API"],
+      category: "Educational Technology",
+      gradient: "bg-moss-green",
+      slug: "/projects/bias-fallacy-lab",
+      pattern: "education"
+    },
+    {
+      title: "Psychology Concepts Learning Platform",
+      description: "Developed an interactive learning platform systematizing psychology concepts across multiple domains through three complementary learning modes.",
+      tags: ["Cursor AI", "Markdown", "Mermaid.js", "Python", "Psychology"],
+      category: "Educational Technology",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/psychology-learning-platform",
+      pattern: "psychology"
+    },
+    {
+      title: "Telegram Bot Assistant",
+      description: "Built an intelligent n8n automation workflow that integrates with TickTick, Google Calendar, Notion, and OpenWeatherMap to create a comprehensive personal productivity assistant with voice transcription and smart task management.",
+      tags: ["n8n", "Telegram Bot API", "TickTick API", "Google Calendar", "Notion", "OpenAI", "Workflow Automation"],
+      category: "Workflow Automation",
+      gradient: "bg-moss-green",
+      slug: "/projects/telegram-bot-assistant",
+      pattern: "automation"
     },
     {
       title: "Sauna Slot Booking System",
