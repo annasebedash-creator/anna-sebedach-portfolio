@@ -124,39 +124,43 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-primary">First Name</label>
-                  <Input placeholder="John" />
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-primary">First Name</label>
+                    <Input placeholder="John" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-primary">Last Name</label>
+                    <Input placeholder="Doe" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                  </div>
                 </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-primary">Last Name</label>
-                  <Input placeholder="Doe" />
+                  <label className="text-sm font-medium text-primary">Email</label>
+                  <Input type="email" placeholder="john.doe@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-primary">Email</label>
-                <Input type="email" placeholder="john.doe@example.com" />
-              </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-primary">Subject</label>
-                <Input placeholder="Project Collaboration Opportunity" />
-              </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-primary">Subject</label>
+                  <Input placeholder="Project Collaboration Opportunity" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-primary">Message</label>
-                <Textarea 
-                  placeholder="Tell me about your project..."
-                  className="min-h-[120px]"
-                />
-              </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-primary">Message</label>
+                  <Textarea
+                    placeholder="Tell me about your project..."
+                    className="min-h-[120px]"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </div>
 
-              <Button className="w-full shadow-elegant">
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
-              </Button>
+                <Button type="submit" className="w-full shadow-elegant">
+                  <Send className="w-4 h-4 mr-2" />
+                  Send Message
+                </Button>
+              </form>
             </CardContent>
           </Card>
         </div>
