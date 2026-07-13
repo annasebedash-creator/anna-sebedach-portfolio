@@ -30,6 +30,15 @@ const Projects = () => {
       pattern: "automation"
     },
     {
+      title: "Media Signal Radar",
+      description: "Autonomous media-monitoring agent, live and running daily: GitHub Actions fetches 500+ headlines from 7 Finnish outlets each morning, an LLM classifies AI-discourse signals in a communications consultant's categories (signal type, tone, stakeholders, why-care), and a Finnish-language digest publishes itself to a public site. Blind native-speaker evals in progress.",
+      tags: ["Python", "OpenAI API", "Structured Outputs", "GitHub Actions", "GitHub Pages", "RSS", "LLM Evals", "Media Monitoring"],
+      category: "AI & Communications · Live & Autonomous",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/media-signal-radar",
+      pattern: "automation"
+    },
+    {
       title: "Finlex MCP Server",
       description: "MCP server giving AI assistants citable access to Finnish legislation: Finlex open data (Akoma Ntoso XML) structured into SQLite and served over the Model Context Protocol to Claude Desktop. Every response carries the formal citation and consolidation date; accuracy proven by a published 15/15 verification table cross-checked against live finlex.fi, enforced in CI. Docker-packaged, zero runtime API costs.",
       tags: ["MCP", "TypeScript", "SQLite", "Open Data", "XML Parsing", "Docker", "GitHub Actions", "Claude Desktop", "Legal Tech"],
