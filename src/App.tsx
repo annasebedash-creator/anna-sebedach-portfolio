@@ -24,6 +24,7 @@ import VoiceAIDanceStudio from "./pages/projects/VoiceAIDanceStudio";
 import OrderManagementSystem from "./pages/projects/OrderManagementSystem";
 import TutorAIAssistant from "./pages/projects/TutorAIAssistant";
 import CoventuresAIWorkflow from "./pages/projects/CoventuresAIWorkflow";
+import FinlexMcp from "./pages/projects/FinlexMcp";
 import QAEngineeringAIProduct from "./pages/projects/QAEngineeringAIProduct";
 import RewardsLedgerTesting from "./pages/projects/RewardsLedgerTesting";
 
@@ -39,6 +40,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects/coventures-ai-workflow" element={<CoventuresAIWorkflow />} />
+          <Route path="/projects/finlex-mcp" element={<FinlexMcp />} />
           <Route path="/projects/tutor-ai-assistant" element={<TutorAIAssistant />} />
           <Route path="/projects/qa-ai-product" element={<QAEngineeringAIProduct />} />
           <Route path="/projects/rewards-ledger-testing" element={<RewardsLedgerTesting />} />

@@ -30,6 +30,15 @@ const Projects = () => {
       pattern: "automation"
     },
     {
+      title: "Finlex MCP Server",
+      description: "MCP server giving AI assistants citable access to Finnish legislation: Finlex open data (Akoma Ntoso XML) structured into SQLite and served over the Model Context Protocol to Claude Desktop. Every response carries the formal citation and consolidation date; accuracy proven by a published 15/15 verification table cross-checked against live finlex.fi, enforced in CI. Docker-packaged, zero runtime API costs.",
+      tags: ["MCP", "TypeScript", "SQLite", "Open Data", "XML Parsing", "Docker", "GitHub Actions", "Claude Desktop", "Legal Tech"],
+      category: "AI Infrastructure · MCP Server",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/finlex-mcp",
+      pattern: "database"
+    },
+    {
       title: "Voice AI Dance Studio Assistant",
       description: "Bilingual AI assistant transforming dance studio customer service through natural voice conversations. Handles class inquiries and registrations with voice input/output in Finnish and English via Telegram, featuring real-time analytics and automated workflow orchestration.",
       tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],
