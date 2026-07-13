@@ -2,8 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Github, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { z } from "zod";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+
+const contactSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required").max(100),
+  lastName: z.string().trim().max(100).optional(),
+  email: z.string().trim().email("Please enter a valid email").max(255),
+  subject: z.string().trim().max(200).optional(),
+  message: z.string().trim().min(1, "Message cannot be empty").max(5000),
+});
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
@@ -11,15 +22,38 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const fullName = `${firstName} ${lastName}`.trim();
-    const body = `From: ${fullName}${email ? ` <${email}>` : ""}\n\n${message}`;
-    const mailto = `mailto:anna.sebedash@gmail.com?subject=${encodeURIComponent(
-      subject || "Portfolio contact"
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    const parsed = contactSchema.safeParse({ firstName, lastName, email, subject, message });
+    if (!parsed.success) {
+      toast.error(parsed.error.issues[0]?.message ?? "Please check the form");
+      return;
+    }
+
+    setSubmitting(true);
+    const { error } = await supabase.from("contact_messages").insert({
+      first_name: parsed.data.firstName,
+      last_name: parsed.data.lastName || null,
+      email: parsed.data.email,
+      subject: parsed.data.subject || null,
+      message: parsed.data.message,
+    });
+    setSubmitting(false);
+
+    if (error) {
+      console.error("Contact form error:", error);
+      toast.error("Something went wrong. Please try again or email me directly.");
+      return;
+    }
+
+    toast.success("Message sent! I'll get back to you soon.");
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
   };
 
   return (
@@ -128,7 +162,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-primary">First Name</label>
-                    <Input placeholder="John" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                    <Input placeholder="John" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-primary">Last Name</label>
@@ -138,7 +172,7 @@ const Contact = () => {
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-primary">Email</label>
-                  <Input type="email" placeholder="john.doe@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <Input type="email" placeholder="john.doe@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 </div>
 
                 <div className="space-y-2">
@@ -153,12 +187,22 @@ const Contact = () => {
                     className="min-h-[120px]"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
+                    required
                   />
                 </div>
 
-                <Button type="submit" className="w-full shadow-elegant">
-                  <Send className="w-4 h-4 mr-2" />
-                  Send Message
+                <Button type="submit" className="w-full shadow-elegant" disabled={submitting}>
+                  {submitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>
