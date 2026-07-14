@@ -30,6 +30,15 @@ const Projects = () => {
       pattern: "automation"
     },
     {
+      title: "Tutor AI Assistant",
+      description: "Trilingual (RU/FI/EN) AI customer-service agent built and deployed to production for my own tutoring business. RAG-grounded answers from the business knowledge base, lead qualification, and trial-lesson booking straight into a database — try the live demo.",
+      tags: ["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Trilingual", "Prompt Engineering"],
+      category: "Applied AI · Live in Production",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/tutor-ai-assistant",
+      pattern: "voice-ai"
+    },
+    {
       title: "Media Signal Radar",
       description: "Autonomous media-monitoring agent, live and running daily: GitHub Actions fetches 500+ headlines from 7 Finnish outlets each morning, an LLM classifies AI-discourse signals in a communications consultant's categories (signal type, tone, stakeholders, why-care), and a Finnish-language digest publishes itself to a public site. Blind native-speaker evals in progress.",
       tags: ["Python", "OpenAI API", "Structured Outputs", "GitHub Actions", "GitHub Pages", "RSS", "LLM Evals", "Media Monitoring"],
@@ -48,22 +57,13 @@ const Projects = () => {
       pattern: "database"
     },
     {
-      title: "Voice AI Dance Studio Assistant",
-      description: "Bilingual AI assistant transforming dance studio customer service through natural voice conversations. Handles class inquiries and registrations with voice input/output in Finnish and English via Telegram, featuring real-time analytics and automated workflow orchestration.",
-      tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],
-      category: "Voice AI & Conversational Design",
-      gradient: "bg-gradient-primary",
-      slug: "/projects/voice-ai-dance-studio",
-      pattern: "voice-ai"
-    },
-    {
-      title: "Tutor AI Assistant",
-      description: "Trilingual (RU/FI/EN) AI customer-service agent built and deployed to production for my own tutoring business. RAG-grounded answers from the business knowledge base, lead qualification, and trial-lesson booking straight into a database — try the live demo.",
-      tags: ["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Trilingual", "Prompt Engineering"],
-      category: "Applied AI · Live in Production",
-      gradient: "bg-gradient-primary",
-      slug: "/projects/tutor-ai-assistant",
-      pattern: "voice-ai"
+      title: "QA & Test Automation for an AI Product",
+      description: "Built the QA process from scratch for my production AI agent: risk-based test plan, 20 Playwright tests across desktop and mobile WebKit (UI, API contract, rate limiting) in CI, an LLM eval harness that caught a real prompt regression, and engineer-actionable bug reports — all public on GitHub.",
+      tags: ["Playwright", "Test Automation", "API Testing", "LLM Evals", "GitHub Actions", "Mobile Testing", "Bug Reporting", "TypeScript"],
+      category: "QA & Test Automation",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/qa-ai-product",
+      pattern: "software-design"
     },
     {
       title: "Testing the Money Path — Rewards Ledger",
@@ -75,13 +75,13 @@ const Projects = () => {
       pattern: "database"
     },
     {
-      title: "QA & Test Automation for an AI Product",
-      description: "Built the QA process from scratch for my production AI agent: risk-based test plan, 20 Playwright tests across desktop and mobile WebKit (UI, API contract, rate limiting) in CI, an LLM eval harness that caught a real prompt regression, and engineer-actionable bug reports — all public on GitHub.",
-      tags: ["Playwright", "Test Automation", "API Testing", "LLM Evals", "GitHub Actions", "Mobile Testing", "Bug Reporting", "TypeScript"],
-      category: "QA & Test Automation",
-      gradient: "bg-gradient-accent",
-      slug: "/projects/qa-ai-product",
-      pattern: "software-design"
+      title: "Voice AI Dance Studio Assistant",
+      description: "Bilingual AI assistant transforming dance studio customer service through natural voice conversations. Handles class inquiries and registrations with voice input/output in Finnish and English via Telegram, featuring real-time analytics and automated workflow orchestration.",
+      tags: ["n8n", "OpenAI", "LangChain", "Whisper", "TTS", "Voice AI", "Telegram Bot", "Bilingual", "Google Sheets", "Conversation Design"],
+      category: "Voice AI & Conversational Design",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/voice-ai-dance-studio",
+      pattern: "voice-ai"
     },
     {
       title: "Messukeskus Production Pack System",
@@ -218,7 +218,7 @@ const Projects = () => {
       slug: "/projects/fi-healthcare-voice-demo",
       pattern: "voice-healthcare"
     }
-  ];
+    ];
 
   const handleToggleProjects = () => {
     const newExpandedState = !showAllProjects;
