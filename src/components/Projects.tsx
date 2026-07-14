@@ -39,6 +39,15 @@ const Projects = () => {
       pattern: "voice-ai"
     },
     {
+      title: "Finnish Industry 5G & AI Readiness Index",
+      description: "Consulting-style market-intelligence dashboard: scores every Finnish industry sector on market attractiveness × AI/5G readiness from real Statistics Finland open data, then lands a 2×2 priority matrix and a ranked shortlist of where a telecom operator should target industrial 5G. End-to-end Python → SQL star schema → Power BI + DAX → an LLM-written executive brief.",
+      tags: ["Power BI", "DAX", "SQL", "Star Schema", "Python", "Market Intelligence", "Open Data (StatFin)", "OpenAI API"],
+      category: "Market Intelligence · Power BI",
+      gradient: "bg-gradient-accent",
+      slug: "/projects/industry-5g-readiness-index",
+      pattern: "data-analytics"
+    },
+    {
       title: "Media Signal Radar",
       description: "Autonomous media-monitoring agent, live and running daily: GitHub Actions fetches 500+ headlines from 7 Finnish outlets each morning, an LLM classifies AI-discourse signals in a communications consultant's categories (signal type, tone, stakeholders, why-care), and a Finnish-language digest publishes itself to a public site. Blind native-speaker evals in progress.",
       tags: ["Python", "OpenAI API", "Structured Outputs", "GitHub Actions", "GitHub Pages", "RSS", "LLM Evals", "Media Monitoring"],

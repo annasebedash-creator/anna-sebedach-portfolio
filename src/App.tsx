@@ -28,6 +28,7 @@ import FinlexMcp from "./pages/projects/FinlexMcp";
 import MediaSignalRadar from "./pages/projects/MediaSignalRadar";
 import QAEngineeringAIProduct from "./pages/projects/QAEngineeringAIProduct";
 import RewardsLedgerTesting from "./pages/projects/RewardsLedgerTesting";
+import IndustryReadinessIndex from "./pages/projects/IndustryReadinessIndex";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects/coventures-ai-workflow" element={<CoventuresAIWorkflow />} />
+          <Route path="/projects/industry-5g-readiness-index" element={<IndustryReadinessIndex />} />
           <Route path="/projects/finlex-mcp" element={<FinlexMcp />} />
           <Route path="/projects/media-signal-radar" element={<MediaSignalRadar />} />
           <Route path="/projects/tutor-ai-assistant" element={<TutorAIAssistant />} />
