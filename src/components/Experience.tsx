@@ -20,19 +20,19 @@ const Experience = () => {
       skills: ["Claude Code", "Claude Design", "AI Workflow Design", "Prompt Engineering", "Knowledge Management", "Sales Enablement", "Process Analysis", "Human-in-the-loop QA"]
     },
     {
-      title: "Dance Instructor & Content Creator",
-      company: "Girlhood Studio and many other studios",
+      title: "Content/Brand Manager & Dance Instructor",
+      company: "Multiple organizations incl. City of Helsinki, Girlhood Studio, Sport Club Vantaa",
       location: "Helsinki, Finland",
-      period: "2024 - Present",
+      period: "2022 - Present",
       type: "Freelance",
-      description: "Led brand strategy and multi-channel content creation to expand digital presence across multiple dance organizations. Managed end-to-end production of marketing materials, social media, and videos while teaching dance classes.",
+      description: "Run brand and content for multiple dance organizations while teaching and choreographing — and automate the admin around it. Lead multi-channel content production (marketing materials, social media, video) and developed a bilingual voice AI assistant that handles class inquiries and registrations.",
       achievements: [
-        "Led brand strategy and multi-channel content creation to expand digital presence",
-        "Managed end-to-end production of marketing materials, social media, and videos",
-        "Drove audience engagement and community growth via targeted campaigns",
-        "Successfully taught and choreographed dance classes across multiple venues"
+        "Built a bilingual voice AI assistant (Whisper, GPT, n8n) that handles class inquiries and registrations automatically — see Projects",
+        "Lead brand strategy and multi-channel content creation to expand digital presence",
+        "Manage end-to-end production of marketing materials, social media, and videos",
+        "Teach and choreograph classes across multiple studios; organize groups, performances and shoots"
       ],
-      skills: ["Content Creation", "Brand Strategy", "Video Production", "Social Media Marketing", "Dance Instruction", "Community Building"]
+      skills: ["Content Creation", "Brand Strategy", "Video Production", "Social Media Marketing", "Voice AI", "n8n Automation", "Dance Instruction"]
     },
     {
       title: "Volunteer",
@@ -63,6 +63,21 @@ const Experience = () => {
         "Increased engagement through strategic outreach and community building"
       ],
       skills: ["Digital Content Production", "Event Management", "Social Media Marketing", "Youth Work", "Community Outreach"]
+    },
+    {
+      title: "Communications Office Intern",
+      company: "City of Helsinki · Ruuti Communications Office",
+      location: "Helsinki, Finland",
+      period: "Summer 2021",
+      type: "Seasonal",
+      description: "Produced digital content and coordinated outreach for the City of Helsinki's youth communications office. Prepared articles, interviews and background material, and helped coordinate meetings between young people and city decision-makers.",
+      achievements: [
+        "Wrote and edited articles and produced digital content for the city's communication channels",
+        "Prepared interviews and background material on youth-participation projects",
+        "Coordinated meetings between young people and city officials and decision-makers",
+        "Worked end to end as part of the editorial and production process"
+      ],
+      skills: ["Content Production", "Journalism", "Interviewing", "Stakeholder Coordination", "Video Production", "Bilingual Communication"]
     },
     {
       title: "Youth Journalist",

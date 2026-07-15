@@ -30,15 +30,6 @@ const Projects = () => {
       pattern: "automation"
     },
     {
-      title: "Tutor AI Assistant",
-      description: "Trilingual (RU/FI/EN) AI customer-service agent built and deployed to production for my own tutoring business. RAG-grounded answers from the business knowledge base, lead qualification, and trial-lesson booking straight into a database — try the live demo.",
-      tags: ["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Trilingual", "Prompt Engineering"],
-      category: "Applied AI · Live in Production",
-      gradient: "bg-gradient-primary",
-      slug: "/projects/tutor-ai-assistant",
-      pattern: "voice-ai"
-    },
-    {
       title: "Finnish Industry 5G & AI Readiness Index",
       description: "Consulting-style market-intelligence dashboard: scores every Finnish industry sector on market attractiveness × AI/5G readiness from real Statistics Finland open data, then lands a 2×2 priority matrix and a ranked shortlist of where a telecom operator should target industrial 5G. End-to-end Python → SQL star schema → Power BI + DAX → an LLM-written executive brief.",
       tags: ["Power BI", "DAX", "SQL", "Star Schema", "Python", "Market Intelligence", "Open Data (StatFin)", "OpenAI API"],
@@ -64,6 +55,15 @@ const Projects = () => {
       gradient: "bg-gradient-accent",
       slug: "/projects/finlex-mcp",
       pattern: "database"
+    },
+    {
+      title: "Tutor AI Assistant",
+      description: "Trilingual (RU/FI/EN) AI customer-service agent built and deployed to production for my own tutoring business. RAG-grounded answers from the business knowledge base, lead qualification, and trial-lesson booking straight into a database — try the live demo.",
+      tags: ["Next.js", "OpenAI", "RAG", "Supabase", "pgvector", "TypeScript", "Vercel", "Trilingual", "Prompt Engineering"],
+      category: "Applied AI · Live in Production",
+      gradient: "bg-gradient-primary",
+      slug: "/projects/tutor-ai-assistant",
+      pattern: "voice-ai"
     },
     {
       title: "QA & Test Automation for an AI Product",
