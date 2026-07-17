@@ -34,7 +34,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 className="border-moss-green text-moss-green hover:bg-moss-green hover:text-ivory px-8 py-4"
-                onClick={() => window.open('/lovable-uploads/c5833f94-f48a-41dc-b71d-c627829e9ba7.png', '_blank')}
+                onClick={() => window.open('/documents/Anna_Sebedach_CV.pdf', '_blank')}
               >
                 Download CV
               </Button>
