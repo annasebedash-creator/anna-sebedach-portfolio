@@ -225,6 +225,33 @@ const IndustryReadinessIndex = () => {
                 </CardContent>
               </Card>
 
+              {/* Built in Power BI */}
+              <Card className="shadow-card">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-primary">Built in Power BI Service</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    The same model delivered as an interactive Power BI report — data connected live from the
+                    project's public CSV, a scatter priority matrix, the ranked shortlist, and a top-target KPI
+                    card on a themed canvas. Built end-to-end in Power BI Service (browser), DAX and model in
+                    the repo.
+                  </p>
+                  <figure className="rounded-lg border border-border bg-white p-3">
+                    <img
+                      src="/powerbi-report.png"
+                      alt="Power BI report showing the priority-matrix scatter chart and the ranked sector table, built in Power BI Service"
+                      className="w-full h-auto"
+                      loading="lazy"
+                    />
+                    <figcaption className="text-sm text-muted-foreground mt-2 text-center">
+                      The report in Power BI Service — priority matrix over the ranked shortlist. Exported to
+                      PDF / PowerPoint for sharing.
+                    </figcaption>
+                  </figure>
+                </CardContent>
+              </Card>
+
               {/* How it works */}
               <Card className="shadow-card">
                 <CardHeader>
