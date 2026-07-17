@@ -155,6 +155,76 @@ const IndustryReadinessIndex = () => {
                 </CardContent>
               </Card>
 
+              {/* The ranked shortlist */}
+              <Card className="shadow-card">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-primary">The Ranked Shortlist</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    The model's actual output — every Finnish sector scored and ranked. Composites are 0–100;
+                    the priority quadrant comes from splitting each axis at its cross-sector average.
+                  </p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="border-b border-border text-left text-muted-foreground">
+                          <th className="py-2 pr-3 font-semibold">#</th>
+                          <th className="py-2 pr-3 font-semibold">Sector</th>
+                          <th className="py-2 pr-3 font-semibold text-right">Attractiveness</th>
+                          <th className="py-2 pr-3 font-semibold text-right">Readiness</th>
+                          <th className="py-2 font-semibold">Priority</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {[
+                          { r: 1, s: "Manufacturing & Energy", ind: true, a: 85.9, d: 45.5, p: "Lead" },
+                          { r: 2, s: "Information & Communication", ind: false, a: 12.8, d: 94.7, p: "Selective" },
+                          { r: 3, s: "Professional & Technical", ind: false, a: 29.5, d: 68.7, p: "Selective" },
+                          { r: 4, s: "Real Estate & Admin", ind: false, a: 36.4, d: 38.9, p: "Lead" },
+                          { r: 5, s: "Wholesale & Vehicle Trade", ind: false, a: 34.6, d: 40.4, p: "Lead" },
+                          { r: 6, s: "Construction", ind: true, a: 33.4, d: 14.9, p: "Develop" },
+                          { r: 7, s: "Retail", ind: false, a: 18.9, d: 18.9, p: "Monitor" },
+                          { r: 8, s: "Transport & Storage", ind: true, a: 14.7, d: 11.1, p: "Monitor" },
+                          { r: 9, s: "Accommodation & Food", ind: false, a: 0.0, d: 9.4, p: "Monitor" },
+                        ].map((row) => {
+                          const badge: Record<string, string> = {
+                            Lead: "bg-green-100 text-green-800",
+                            Selective: "bg-blue-100 text-blue-800",
+                            Develop: "bg-amber-100 text-amber-800",
+                            Monitor: "bg-gray-100 text-gray-600",
+                          };
+                          return (
+                            <tr key={row.r} className="border-b border-border/60">
+                              <td className="py-2 pr-3 text-muted-foreground">{row.r}</td>
+                              <td className="py-2 pr-3 font-medium text-primary whitespace-nowrap">
+                                {row.s}
+                                {row.ind && (
+                                  <span className="ml-2 align-middle text-[10px] uppercase tracking-wide text-amber-600">
+                                    ● industrial
+                                  </span>
+                                )}
+                              </td>
+                              <td className="py-2 pr-3 text-right tabular-nums">{row.a.toFixed(1)}</td>
+                              <td className="py-2 pr-3 text-right tabular-nums">{row.d.toFixed(1)}</td>
+                              <td className="py-2">
+                                <span className={`inline-block rounded px-2 py-0.5 text-xs font-medium ${badge[row.p]}`}>
+                                  {row.p}
+                                </span>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Amber ● marks asset-heavy sectors most addressable by private 5G. Data: Statistics Finland
+                    (tables 14yc &amp; 13vy); scoring weights are a documented analyst framework.
+                  </p>
+                </CardContent>
+              </Card>
+
               {/* How it works */}
               <Card className="shadow-card">
                 <CardHeader>
